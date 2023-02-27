@@ -49,7 +49,8 @@
     "default": {
       "distDir": "./docs",
       "context": "browser",
-      "isLibrary": false
+      "isLibrary": false,
+      "publicUrl": "/bowlstats"
     }
   },
   "devDependencies": {
