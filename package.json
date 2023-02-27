@@ -14,6 +14,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "preinstall": "npx check-engine",
+    "prebuild": "node ./scripts/convert-data.js",
     "build": "npx parcel build",
     "work": "npx parcel"
   },
@@ -23,6 +24,7 @@
     "@leny/eslint-config": "~0.2.0",
     "@typescript-eslint/eslint-plugin": "~5.54.0",
     "@typescript-eslint/parser": "~5.54.0",
+    "bowling": "~1.4.2",
     "eslint": "~8.35.0",
     "eslint-plugin-prettier": "~4.2.1",
     "eslint-plugin-react": "~7.32.2",
