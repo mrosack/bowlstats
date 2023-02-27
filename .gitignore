@@ -4,6 +4,7 @@ syntax: glob
 ._*
 .DS_Store
 .idea
+.parcel-cache
 
 # package directories
 node_modules

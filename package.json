@@ -20,8 +20,35 @@
   },
   "author": "leny <info@flatland.be>",
   "license": "ISC",
+  "lint-staged": {
+    "*.json": [
+      "npx prettier --write"
+    ],
+    "*.yml": [
+      "npx prettier --write"
+    ],
+    "*.ts": [
+      "npx eslint --fix --cache"
+    ],
+    "*.js": [
+      "npx eslint --fix --cache"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "alias": {
+    "containers": "./src/containers",
+    "components": "./src/components",
+    "core": "./src/core"
+  },
   "devDependencies": {
     "@leny/eslint-config": "~0.2.0",
+    "@parcel/transformer-sass": "~2.8.3",
+    "@types/react": "~18.0.28",
+    "@types/react-dom": "~18.0.11",
     "@typescript-eslint/eslint-plugin": "~5.54.0",
     "@typescript-eslint/parser": "~5.54.0",
     "bowling": "~1.4.2",
@@ -35,16 +62,11 @@
     "parcel": "~2.8.3",
     "prettier": "~2.8.4"
   },
-  "lint-staged": {
-    "*.json": ["npx prettier --write"],
-    "*.yml": ["npx prettier --write"],
-    "*.ts": ["npx eslint --fix --cache"],
-    "*.js": ["npx eslint --fix --cache"]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npx lint-staged"
-    }
-  },
-  "dependencies": {}
+  "dependencies": {
+    "bulma": "~0.9.4",
+    "classnames": "~2.3.2",
+    "process": "~0.11.10",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0"
+  }
 }
