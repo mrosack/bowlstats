@@ -45,6 +45,13 @@
     "core": "./src/core",
     "types": "./src/types.ts"
   },
+  "targets":{
+    "default": {
+      "distDir": "./docs",
+      "context": "browser",
+      "isLibrary": false
+    }
+  },
   "devDependencies": {
     "@leny/eslint-config": "~0.2.0",
     "@parcel/transformer-sass": "~2.8.3",
