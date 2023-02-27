@@ -1,0 +1,48 @@
+{
+  "name": "@leny/bowlstats",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A small bowling stats tracker",
+  "engines": {
+    "node": ">=18.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leny/bowlstats.git"
+  },
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "preinstall": "npx check-engine",
+    "build": "npx parcel build",
+    "work": "npx parcel"
+  },
+  "author": "leny <info@flatland.be>",
+  "license": "ISC",
+  "devDependencies": {
+    "@leny/eslint-config": "~0.2.0",
+    "@typescript-eslint/eslint-plugin": "~5.54.0",
+    "@typescript-eslint/parser": "~5.54.0",
+    "eslint": "~8.35.0",
+    "eslint-plugin-prettier": "~4.2.1",
+    "eslint-plugin-react": "~7.32.2",
+    "eslint-plugin-react-hooks": "~4.6.0",
+    "eslint-plugin-unicorn": "~45.0.2",
+    "husky": "4",
+    "lint-staged": "~13.1.2",
+    "parcel": "~2.8.3",
+    "prettier": "~2.8.4"
+  },
+  "lint-staged": {
+    "*.json": ["npx prettier --write"],
+    "*.yml": ["npx prettier --write"],
+    "*.ts": ["npx eslint --fix --cache"],
+    "*.js": ["npx eslint --fix --cache"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "dependencies": {}
+}
