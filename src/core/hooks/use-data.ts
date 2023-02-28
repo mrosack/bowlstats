@@ -9,8 +9,9 @@ import games from "core/data.json";
 import {useMemo} from "react";
 
 export type DataHookResults = {
-    stats: GlobalStats;
     games: Array<Game>;
+    stats: GlobalStats;
+    years: Array<number>;
 };
 
 export const useData = () => {
@@ -53,8 +54,21 @@ export const useData = () => {
         return results;
     }, []);
 
+    const years: Array<number> = useMemo(
+        () =>
+            games.reduce((acc: Array<number>, game: Game) => {
+                const set: Set<number> = new Set<number>(acc);
+
+                set.add(game.date.year as number);
+
+                return Array.from(set);
+            }, []),
+        [],
+    );
+
     return {
         games,
         stats,
+        years,
     };
 };
