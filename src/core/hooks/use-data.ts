@@ -1,4 +1,4 @@
-/* @leny/bowlstats
+/* @lenybowlstats
  *
  * /src/core/hooks/use-data.js
  */
