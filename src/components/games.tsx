@@ -16,7 +16,7 @@ const Games: FC = (): ReactElement => {
 
     const years: Array<number> = useMemo(
         () =>
-            games.reduce((acc:Array<number>, game: Game) => {
+            games.reduce((acc: Array<number>, game: Game) => {
                 const set: Set<number> = new Set<number>(acc);
 
                 set.add(game.date.year as number);
@@ -30,16 +30,23 @@ const Games: FC = (): ReactElement => {
         <>
             {years.map((year: number) => (
                 <div key={year}>
-                    <h3 className={classnames("is-size-3")}>{year}</h3>
-                    {games.filter((game:Game):boolean=>game.date.year===year).reverse().map((game)=>(
-                        <GameDetails key={Object.values(game.date).join("-")} game={game} isBest={
-                            (
-                                stats.total.best===game.score
-                            )||(
-                            stats.year.year===year&&stats.year.best===game.score
-                            )
-                        } />
-                    ))}
+                    <h3 className={classnames("is-size-3", "mb-5")}>{year}</h3>
+                    {games
+                        .filter(
+                            (game: Game): boolean => game.date.year === year,
+                        )
+                        .reverse()
+                        .map(game => (
+                            <GameDetails
+                                key={Object.values(game.date).join("-")}
+                                game={game}
+                                isBest={
+                                    stats.total.best === game.score ||
+                                    (stats.year.year === year &&
+                                        stats.year.best === game.score)
+                                }
+                            />
+                        ))}
                 </div>
             ))}
         </>

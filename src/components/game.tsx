@@ -4,17 +4,17 @@
  */
 
 import type {FC, ReactElement} from "react";
-import type {Game, GameFrame} from "types";
+import type {Game} from "types";
+import type {Dayjs} from "dayjs";
 
-import {useMemo} from "react";
+import {useCallback, useState} from "react";
 import classnames from "classnames";
-import {useData} from "../core/hooks/use-data";
+import GameFrames from "components/game-frames";
+import GameStats from "components/game-stats";
+import {useMemo} from "react";
+import dayjs from "dayjs";
 
-const ballStyles:Record<string, string|number>={
-    marginTop:-1,
-    marginRight:-1,
-    marginLeft: "auto",
-}
+const NBSP: string = "\u00a0";
 
 export interface GameProps {
     game: Game;
@@ -22,70 +22,100 @@ export interface GameProps {
 }
 
 const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
+    const [showDetails, setShowDetails] = useState<boolean>(false);
+
+    const date = useMemo<Dayjs>(
+        () =>
+            dayjs(new Date(game.date.year, game.date.month - 1, game.date.day)),
+        [game],
+    );
+
+    const toggleDetails = useCallback(() => {
+        setShowDetails(!showDetails);
+    }, [showDetails]);
+
+    const $date = (
+        <div className={classnames("mr-2", "has-background-white")}>
+            <span
+                className={classnames(
+                    "is-block",
+                    "px-2",
+                    "has-background-danger",
+                    "has-text-white",
+                    "is-size-7",
+                    "has-text-weight-semibold",
+                    "is-uppercase",
+                    "has-text-centered",
+                )}>
+                {date.format("MMM")}
+            </span>
+            <span
+                className={classnames(
+                    "is-block",
+                    "has-text-centered",
+                    "has-text-black",
+                    "has-text-weight-bold",
+                )}
+                style={{border: "1px solid #dbdbdb", borderTop: 0}}>
+                {game.date.day}
+            </span>
+        </div>
+    );
+
+    if (!showDetails) {
+        return (
+            <div
+                className={classnames(
+                    "notification",
+                    "is-light",
+                    isBest && "is-link",
+                    "is-flex",
+                    "is-justify-content-space-between",
+                    "is-align-content-center",
+                    "px-5",
+                    "is-unselectable",
+                    "is-clickable",
+                )}
+                onClick={toggleDetails}>
+                {$date}
+
+                <GameFrames
+                    score={game.score}
+                    frames={game.frames}
+                    compact
+                />
+            </div>
+        );
+    }
+
     return (
-        <div className={classnames("notification",isBest&&"is-success")}>
-            <h4 className={classnames("is-block", "is-size-6", "mb-2")}>
-                {new Date(
-                    game.date.year,
-                    game.date.month - 1,
-                    game.date.day,
-                ).toLocaleDateString()}
-            </h4>
-            <table
-                className={classnames("table", "is-bordered", "is-fullwidth")}>
-                <thead>
-                    <tr>
-                        {Array.from(new Array(10).keys()).map(i => (
-                            <th
-                                key={i}
-                                className={classnames("has-text-centered","has-text-grey-light","py-1")}>
-                                <small>{i + 1}</small>
-                            </th>
-                        ))}
-                        <td>{""}</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        {game.frames.map((frame: GameFrame, index: number) => (
-                            <td key={index} className={classnames("p-0","pb-1")}>
-                            <div className={classnames("has-text-right","mb-2")}><table style={ballStyles} className={classnames("table","is-bordered")}>
-                            <tr>
-                            {frame.outcome.map((outcome:string,index:number)=>(
-                                <td key={index} className={classnames(
-                                    "is-family-monospace",
-                                    "is-size-7",
-                                    "p-1",
-                                    outcome==="X"&&"has-text-success",
-                                    outcome==="/"&&"has-text-info",
-                                    outcome==="F"&&"has-text-danger",
-                                    outcome==="-"&&"has-text-danger",
-                                )}>{outcome}</td>
-                            ))}
-                            </tr>
-                            </table></div>
-                                <span
-                                    className={classnames(
-                                        "has-text-centered",
-                                        "is-block",
-                                        "has-text-grey",
-                                    )}>
-                                    {frame.cumulative}
-                                </span>
-                            </td>
-                        ))}
-                        <td
-                            className={classnames(
-                                "is-vcentered",
-                                "is-size-5",
-                                "has-text-centered",
-                                "has-text-weight-medium",
-                            )}>
-                            {game.score}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div
+            className={classnames(
+                "notification",
+                "is-light",
+                isBest && "is-link",
+                "px-5",
+            )}>
+            <div
+                className={classnames(
+                    "is-flex",
+                    "mb-3",
+                    "is-justify-content-space-between",
+                )}>
+                {$date}
+                <button
+                    className={classnames(
+                        "delete",
+                    )}
+                    onClick={toggleDetails}>
+                    {showDetails ? "(hide details)" : "(show details)"}
+                </button>
+            </div>
+            <GameFrames
+                score={game.score}
+                frames={game.frames}
+            />
+            <GameStats game={game} />
         </div>
     );
 };

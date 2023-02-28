@@ -45,7 +45,7 @@
     "core": "./src/core",
     "types": "./src/types.ts"
   },
-  "targets":{
+  "targets": {
     "default": {
       "distDir": "./docs",
       "context": "browser",
@@ -74,8 +74,10 @@
   "dependencies": {
     "bulma": "~0.9.4",
     "classnames": "~2.3.2",
+    "dayjs": "~1.11.7",
     "process": "~0.11.10",
     "react": "~18.2.0",
-    "react-dom": "~18.2.0"
+    "react-dom": "~18.2.0",
+    "recharts": "~2.4.3"
   }
 }
