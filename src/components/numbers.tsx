@@ -15,8 +15,10 @@ const Numbers: FC = (): ReactElement => {
         <section className={classnames("level")}>
             {[
                 ["Games (total)", stats.total.games],
+                ["Best (total)", stats.total.best],
                 ["Avg (total)", stats.total.avg],
                 [`Games (${stats.year.year})`, stats.year.games],
+                [`Best (${stats.year.year})`, stats.year.best],
                 [`Avg (${stats.year.year})`, stats.year.avg],
             ].map(([label, value]) => (
                 <div

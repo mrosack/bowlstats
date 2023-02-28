@@ -24,6 +24,10 @@ export const useData = () => {
                 0,
             ) / results.total.games,
         );
+        results.total.best = games.reduce(
+            (acc: number, game: Game): number => Math.max(acc, game.score),
+            0,
+        );
 
         const year: number = new Date().getFullYear();
 
@@ -39,6 +43,12 @@ export const useData = () => {
                     0,
                 ) / results.year.games,
         );
+        results.year.best = games
+            .filter((game: Game): boolean => game.date.year === year)
+            .reduce(
+                (acc: number, game: Game): number => Math.max(acc, game.score),
+                0,
+            );
 
         return results;
     }, []);

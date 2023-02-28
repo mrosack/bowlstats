@@ -36,6 +36,7 @@ export type Stats = {
     game: number;
     avg: number;
     year?:number;
+    best: number;
 }
 
 export type GlobalStats = {

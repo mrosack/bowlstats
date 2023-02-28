@@ -18,11 +18,12 @@ const ballStyles:Record<string, string|number>={
 
 export interface GameProps {
     game: Game;
+    isBest: boolean;
 }
 
-const Game: FC<GameProps> = ({game}: GameProps): ReactElement => {
+const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
     return (
-        <div className={classnames("box")}>
+        <div className={classnames("notification",isBest&&"is-success")}>
             <h4 className={classnames("is-block", "is-size-6", "mb-2")}>
                 {new Date(
                     game.date.year,

@@ -12,7 +12,7 @@ import {useData} from "core/hooks/use-data";
 import GameDetails from "components/game";
 
 const Games: FC = (): ReactElement => {
-    const {games} = useData();
+    const {games, stats} = useData();
 
     const years: Array<number> = useMemo(
         () =>
@@ -32,7 +32,13 @@ const Games: FC = (): ReactElement => {
                 <div key={year}>
                     <h3 className={classnames("is-size-3")}>{year}</h3>
                     {games.filter((game:Game):boolean=>game.date.year===year).reverse().map((game)=>(
-                        <GameDetails key={Object.values(game.date).join("-")} game={game} />
+                        <GameDetails key={Object.values(game.date).join("-")} game={game} isBest={
+                            (
+                                stats.total.best===game.score
+                            )||(
+                            stats.year.year===year&&stats.year.best===game.score
+                            )
+                        } />
                     ))}
                 </div>
             ))}
