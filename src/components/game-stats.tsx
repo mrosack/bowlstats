@@ -15,6 +15,7 @@ import {
     CartesianGrid,
     Legend,
     ResponsiveContainer,
+    ReferenceLine,
 } from "recharts";
 import {getPinsCountFromOutcome} from "core/utils";
 
@@ -86,7 +87,7 @@ const GameStats: FC<GameStatsProps> = ({
                 </ul>
             </div>
             <div className={classnames("column", "is-three-quarters")}>
-                <ResponsiveContainer width={"100%"} height={150}>
+                <ResponsiveContainer width={"100%"} height={200}>
                     <LineChart
                         width={500}
                         height={500}
@@ -99,17 +100,20 @@ const GameStats: FC<GameStatsProps> = ({
                         }}>
                         <CartesianGrid strokeDasharray={"2 2"} />
                         <XAxis dataKey={"name"} />
-                        <YAxis interval={0} />
+                        <YAxis interval={0} scale={"linear"} name={"Pins"} yAxisId={"pins"} orientation={"left"} domain={[0,10]} />
+                        <YAxis interval={0} scale={"linear"} name={"Score"} yAxisId={"score"} orientation={"right"} domain={[0,30]} />
                         <Legend />
                         <Line
                             name={"Pins per frame"}
                             type={"monotone"}
+                            yAxisId={"pins"}
                             dataKey={"pins"}
                             stroke={"#209cee"}
                         />
                         <Line
                             name={"Score per frame"}
                             type={"monotone"}
+                            yAxisId={"score"}
                             dataKey={"score"}
                             stroke={"#23d160"}
                         />
