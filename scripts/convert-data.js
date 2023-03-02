@@ -6,6 +6,12 @@
 const bowling = require("bowling");
 const {readFile, writeFile} = require("fs/promises");
 
+const firstBallValue = (outcome)=>{
+    if (typeof outcome==="number"){return outcome}
+    if (outcome==="X") {return 10}
+    return 0
+}
+
 (async () => {
     const scores = await readFile(`${__dirname}/../data/scores.json`, "utf8");
     const results = [];
@@ -15,6 +21,7 @@ const {readFile, writeFile} = require("fs/promises");
 
         results.push(
             ...games.map(([ball, game]) => {
+                const splits = [];
                 const parsed = {
                     date: {
                         year,
@@ -22,20 +29,50 @@ const {readFile, writeFile} = require("fs/promises");
                         day,
                     },
                     ball,
-                    frames: bowling(game).map(frame => ({
-                        ...frame,
-                        outcome: frame.outcome
+                    frames: bowling(
+                        game.map((frame, index) => {
+                            if (frame.startsWith("S")) {
+                                splits.push(index);
+                                return frame.substring(1);
+                            }
+                            return frame;
+                        }),
+                    ).map((frame, index) => {
+                        const outcome = frame.outcome
                             .split("")
                             .map(s =>
                                 ["F", "X", "/", "-"].includes(s) ? s : +s,
-                            ),
-                    })),
+                            );
+
+                        let split = false;
+
+                        if (splits.includes(index)) {
+                            split = outcome[1]==="/" ? "converted" : "yes";
+                        }
+
+                        return {
+                            ...frame,
+                            outcome,
+                            split,
+                        };
+                    }),
                 };
 
                 parsed.score = parsed.frames[9].cumulative;
-                parsed.perfect = !!parsed.score === 300;
+                parsed.perfect = parsed.score === 300;
 
                 parsed.stats = {
+                    avgFirstBallPinfall: +(
+                        parsed.frames.reduce((acc,frame)=>(acc+firstBallValue( frame.outcome[0] )),0)/10
+                    ).toFixed(2),
+                    splits: {
+                        total: splits.length,
+                        converted: parsed.frames.reduce(
+                            (acc, frame) =>
+                                acc + (frame.split === "converted" ? 1 : 0),
+                            0,
+                        ),
+                    },
                     strikes: parsed.frames.reduce(
                         (acc, frame) =>
                             acc +
