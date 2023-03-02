@@ -16,6 +16,7 @@
     "preinstall": "npx check-engine",
     "prebuild": "node ./scripts/convert-data.js",
     "build": "npx parcel build",
+    "prework": "node ./scripts/convert-data.js",
     "work": "npx parcel"
   },
   "author": "leny <info@flatland.be>",
