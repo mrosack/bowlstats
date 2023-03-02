@@ -65,25 +65,33 @@ const GameFrames: FC<GameFramesProps> = ({
                                     frame.outcome[0] === "X"
                                         ? [NBSP, "X"]
                                         : frame.outcome
-                                    ).map((outcome: string, index: number) => (
-                                        <td
-                                            key={index}
-                                            className={classnames(
-                                                "is-family-monospace",
-                                                "is-size-7",
-                                                "p-1",
-                                                outcome === "X" &&
-                                                    "has-text-success",
-                                                outcome === "/" &&
-                                                    "has-text-info",
-                                                outcome === "F" &&
-                                                    "has-text-danger",
-                                                outcome === "-" &&
-                                                    "has-text-danger",
-                                            )}>
-                                            {outcome}
-                                        </td>
-                                    ))}
+                                    ).map(
+                                        (
+                                            outcome: string,
+                                            index: number,
+                                        ) => (
+                                            <td
+                                                key={index}
+                                                className={classnames(
+                                                    "is-family-monospace",
+                                                    "is-size-7",
+                                                    "p-1",
+                                                    outcome === "X" &&
+                                                        "has-text-success",
+                                                    outcome === "/" &&
+                                                        "has-text-info",
+                                                    outcome === "F" &&
+                                                        "has-text-danger",
+                                                    outcome === "-" &&
+                                                        "has-text-danger",
+                                                    frame.split &&
+                                                        index === 0 &&
+                                                        "has-background-warning",
+                                                )}>
+                                                {outcome}
+                                            </td>
+                                        ),
+                                    )}
                                 </tr>
                             </table>
                         </div>
@@ -106,7 +114,7 @@ const GameFrames: FC<GameFramesProps> = ({
                         "has-text-centered",
                         "has-text-weight-medium",
                         compact && "py-1",
-                        compact && "px-2"
+                        compact && "px-2",
                     )}>
                     {score}
                 </td>

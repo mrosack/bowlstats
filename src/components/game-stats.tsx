@@ -15,11 +15,14 @@ import {
     CartesianGrid,
     Legend,
     ResponsiveContainer,
-    ReferenceLine,
+    BarChart,
+    Bar,
+    Tooltip,
 } from "recharts";
 import {getPinsCountFromOutcome} from "core/utils";
 
 const NBSP: string = "\u00a0";
+const BSP: string = "\u0020";
 
 export interface GameStatsProps {
     game: Game;
@@ -28,7 +31,7 @@ export interface GameStatsProps {
 const GameStats: FC<GameStatsProps> = ({
     game,
 }: GameStatsProps): ReactElement => {
-    const data = useMemo<Array<Record<string, number>>>(
+    const scoreData = useMemo<Array<Record<string, number>>>(
         () =>
             game.frames.map(({score, outcome}: GameFrame, i: number) => ({
                 name: i + 1,
@@ -41,67 +44,75 @@ const GameStats: FC<GameStatsProps> = ({
     return (
         <div className={classnames("columns", "is-fluid")}>
             <div className={classnames("column")}>
-                <ul className={classnames("has-text-black", "is-size-6")}>
+                <ul>
                     <li>
-                        <span
-                            className={classnames(
-                                game.stats.strikes || "has-text-danger",
-                            )}>
-                            {game.stats.strikes || "no"}
-                        </span>
+                        <strong>{"Strikes:"}</strong>
                         {NBSP}
-                        {"strikes"}
+                        <span>{game.stats.strikes}</span>
                     </li>
                     <li>
-                        <span
-                            className={classnames(
-                                game.stats.spares || "has-text-danger",
-                            )}>
-                            {game.stats.spares || "no"}
-                        </span>
+                        <strong>{"Spares:"}</strong>
                         {NBSP}
-                        {"spares"}
+                        <span>{game.stats.spares}</span>
                     </li>
-                    <li>
-                        <span
-                            className={classnames(
-                                game.stats.misses && "has-text-danger",
-                            )}>
-                            {game.stats.misses || "no"}
-                        </span>
-                        {NBSP}
-                        {"misses"}
-                    </li>
-                    {!!game.stats.fouls && (
+                    {!!game.stats.splits.total && (
                         <li>
-                            <span
-                                className={classnames(
-                                    game.stats.fouls || "has-text-danger",
-                                )}>
-                                {game.stats.fouls || "no"}
-                            </span>
+                            <strong>{"Splits:"}</strong>
                             {NBSP}
-                            {"fouls"}
+                            <span>
+                                {game.stats.splits.total}
+                                {!!game.stats.splits.converted &&
+                                    `${BSP}(${game.stats.splits.converted} converted)`}
+                            </span>
                         </li>
                     )}
+                    {!!game.stats.fouls && (
+                        <li>
+                            <strong>{"Fouls:"}</strong>
+                            {NBSP}
+                            <span>{game.stats.fouls}</span>
+                        </li>
+                    )}
+                    <li>
+                        <strong>{"Misses:"}</strong>
+                        {NBSP}
+                        <span>{game.stats.misses}</span>
+                    </li>
+                    <li>
+                        <strong>{"Avg First Ball Pinfall:"}</strong>
+                        {NBSP}
+                        <span>{game.stats.avgFirstBallPinfall}</span>
+                    </li>
                 </ul>
             </div>
-            <div className={classnames("column", "is-three-quarters")}>
-                <ResponsiveContainer width={"100%"} height={200}>
+            <div className={classnames("column", "is-three-fifths")}>
+                <ResponsiveContainer height={175}>
                     <LineChart
-                        width={500}
-                        height={500}
-                        data={data}
+                        data={scoreData}
                         margin={{
                             top: 10,
-                            right: 5,
+                            right: 0,
                             left: 0,
-                            bottom: 5,
+                            bottom: 0,
                         }}>
                         <CartesianGrid strokeDasharray={"2 2"} />
                         <XAxis dataKey={"name"} />
-                        <YAxis interval={0} scale={"linear"} name={"Pins"} yAxisId={"pins"} orientation={"left"} domain={[0,10]} />
-                        <YAxis interval={0} scale={"linear"} name={"Score"} yAxisId={"score"} orientation={"right"} domain={[0,30]} />
+                        <YAxis
+                            interval={0}
+                            scale={"linear"}
+                            name={"Pins"}
+                            yAxisId={"pins"}
+                            orientation={"left"}
+                            domain={[0, 10]}
+                        />
+                        <YAxis
+                            interval={0}
+                            scale={"linear"}
+                            name={"Score"}
+                            yAxisId={"score"}
+                            orientation={"right"}
+                            domain={[0, 30]}
+                        />
                         <Legend />
                         <Line
                             name={"Pins per frame"}

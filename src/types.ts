@@ -15,13 +15,18 @@ export type GameFrame = {
     outcome: [GameFrameBall, GameFrameBall?, GameFrameBall?];
     cumulative: number;
     score: number;
+    split: false | "yes" | "converted";
 };
+
+export type GameSplitStats = {total: number; converted: number};
 
 export type GameStats = {
     fouls: number;
     misses: number;
     spares: number;
     strikes: number;
+    splits: GameSplitStats;
+    averageFirstBallPinfall: number;
 };
 
 export type Game = {
@@ -35,11 +40,11 @@ export type Game = {
 export type Stats = {
     game: number;
     avg: number;
-    year?:number;
+    year?: number;
     best: number;
-}
+};
 
 export type GlobalStats = {
     total: Stats;
     year: Stats;
-}
+};
