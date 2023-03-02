@@ -18,38 +18,35 @@ export const useData = () => {
     const stats = useMemo<GlobalStats>(() => {
         const results: Record<string, Stats> = {total: {}, year: {}};
 
+        const avgReducer = (acc: number, game: Game): number =>
+            acc + game.score;
+        const bestReducer = (acc: number, game: Game): number =>
+            Math.max(acc, game.score);
+        const strikesReducer = (acc:number, game: Game):number=>(acc+game.stats.strikes);
+        const sparesReducer = (acc:number, game: Game):number=>(acc+game.stats.spares);
+        const avgFBPReducer = (acc:number, game:Game):number=>(acc+game.stats.avgFirstBallPinfall);
+
         results.total.games = games.length;
         results.total.avg = Math.round(
-            games.reduce(
-                (acc: number, game: Game): number => acc + game.score,
-                0,
-            ) / results.total.games,
+            games.reduce(avgReducer, 0) / results.total.games,
         );
-        results.total.best = games.reduce(
-            (acc: number, game: Game): number => Math.max(acc, game.score),
-            0,
-        );
+        results.total.best = games.reduce(bestReducer, 0);
+        results.total.strikes = +(games.reduce(strikesReducer,0)/(results.total.games*12)*100).toFixed(2)
+        results.total.spares = +(games.reduce(sparesReducer,0)/(results.total.games*10)*100).toFixed(2)
+        results.total.avgFirstBallPinfall = +(games.reduce(avgFBPReducer,0)/(results.total.games)).toFixed(2)
 
         const year: number = new Date().getFullYear();
+        const yearFilter = (game: Game): boolean => game.date.year === year;
 
         results.year.year = year;
-        results.year.games = games.filter(
-            (game: Game): boolean => game.date.year === year,
-        ).length;
+        results.year.games = games.filter(yearFilter).length;
         results.year.avg = Math.round(
-            games
-                .filter((game: Game): boolean => game.date.year === year)
-                .reduce(
-                    (acc: number, game: Game): number => acc + game.score,
-                    0,
-                ) / results.year.games,
+            games.filter(yearFilter).reduce(avgReducer, 0) / results.year.games,
         );
-        results.year.best = games
-            .filter((game: Game): boolean => game.date.year === year)
-            .reduce(
-                (acc: number, game: Game): number => Math.max(acc, game.score),
-                0,
-            );
+        results.year.best = games.filter(yearFilter).reduce(bestReducer, 0);
+        results.year.strikes = +(games.filter(yearFilter).reduce(strikesReducer,0)/(results.year.games*12)*100).toFixed(2)
+        results.year.spares = +(games.filter(yearFilter).reduce(sparesReducer,0)/(results.year.games*10)*100).toFixed(2)
+        results.year.avgFirstBallPinfall = +(games.filter(yearFilter).reduce(avgFBPReducer,0)/(results.year.games)).toFixed(2)
 
         return results;
     }, []);

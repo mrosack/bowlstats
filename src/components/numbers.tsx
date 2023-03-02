@@ -14,12 +14,12 @@ const Numbers: FC = (): ReactElement => {
     return (
         <section className={classnames("level")}>
             {[
-                ["Games (total)", stats.total.games],
-                ["Best (total)", stats.total.best],
-                ["Avg (total)", stats.total.avg],
-                [`Games (${stats.year.year})`, stats.year.games],
-                [`Best (${stats.year.year})`, stats.year.best],
-                [`Avg (${stats.year.year})`, stats.year.avg],
+                ["Games", stats.total.games],
+                ["Best", stats.total.best],
+                ["Avg Score", stats.total.avg],
+                ["Strikes", `${stats.total.strikes}%`],
+                ["Spares", `${stats.total.spares}%`],
+                ["Avg First Ball Pinfall", stats.total.avgFirstBallPinfall],
             ].map(([label, value]) => (
                 <div
                     key={label}
