@@ -6,11 +6,15 @@
 const bowling = require("bowling");
 const {readFile, writeFile} = require("fs/promises");
 
-const firstBallValue = (outcome)=>{
-    if (typeof outcome==="number"){return outcome}
-    if (outcome==="X") {return 10}
-    return 0
-}
+const firstBallValue = outcome => {
+    if (typeof outcome === "number") {
+        return outcome;
+    }
+    if (outcome === "X") {
+        return 10;
+    }
+    return 0;
+};
 
 (async () => {
     const scores = await readFile(`${__dirname}/../data/scores.json`, "utf8");
@@ -20,7 +24,7 @@ const firstBallValue = (outcome)=>{
         const [year, month, day] = date.split("-").map(s => +s);
 
         results.push(
-            ...games.map(([ball, game]) => {
+            ...games.map(([ball, game, note]) => {
                 const splits = [];
                 const parsed = {
                     date: {
@@ -47,7 +51,7 @@ const firstBallValue = (outcome)=>{
                         let split = false;
 
                         if (splits.includes(index)) {
-                            split = outcome[1]==="/" ? "converted" : "yes";
+                            split = outcome[1] === "/" ? "converted" : "yes";
                         }
 
                         return {
@@ -58,12 +62,20 @@ const firstBallValue = (outcome)=>{
                     }),
                 };
 
+                if (note) {
+                    parsed.note = note;
+                }
+
                 parsed.score = parsed.frames[9].cumulative;
                 parsed.perfect = parsed.score === 300;
 
                 parsed.stats = {
                     avgFirstBallPinfall: +(
-                        parsed.frames.reduce((acc,frame)=>(acc+firstBallValue( frame.outcome[0] )),0)/10
+                        parsed.frames.reduce(
+                            (acc, frame) =>
+                                acc + firstBallValue(frame.outcome[0]),
+                            0,
+                        ) / 10
                     ).toFixed(2),
                     splits: {
                         total: splits.length,
