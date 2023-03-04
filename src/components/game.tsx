@@ -79,11 +79,7 @@ const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
                 onClick={toggleDetails}>
                 {$date}
 
-                <GameFrames
-                    score={game.score}
-                    frames={game.frames}
-                    compact
-                />
+                <GameFrames score={game.score} frames={game.frames} compact />
             </div>
         );
     }
@@ -104,31 +100,36 @@ const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
                     "is-align-content-center",
                 )}>
                 {$date}
-                <div className={classnames(
-                    "is-flex",
-                    "is-justify-content-center",
-                    "is-align-items-center",
-                    "has-text-weight-bold",
-                    "is-family-secondary",
-                    "is-size-5",
-                    "has-text-white",
-                    game.ball===10&& "has-background-warning-dark",
-                    game.ball===12&& "has-background-success",
-                )} style={{width: 36, height: 36, borderRadius: "100%"}} title={`Played with ${game.ball}lbs ball`}>
+                <div
+                    className={classnames(
+                        "is-flex",
+                        "is-justify-content-center",
+                        "is-align-items-center",
+                        "has-text-weight-bold",
+                        "is-family-secondary",
+                        "is-size-5",
+                        "has-text-white",
+                        game.ball === 10 && "has-background-warning-dark",
+                        game.ball === 12 && "has-background-success",
+                    )}
+                    style={{width: 36, height: 36, borderRadius: "100%"}}
+                    title={`Played with ${game.ball}lbs ball`}>
                     <span className={classnames("is-block")}>{game.ball}</span>
                 </div>
                 <button
-                    className={classnames(
-                        "delete",
-                    )}
+                    className={classnames("delete")}
                     onClick={toggleDetails}>
                     {showDetails ? "(hide details)" : "(show details)"}
                 </button>
             </div>
-            <GameFrames
-                score={game.score}
-                frames={game.frames}
-            />
+            <GameFrames score={game.score} frames={game.frames} />
+            {game.note && (
+                <p className={classnames("mb-3")}>
+                    <strong>{"Note:"}</strong>
+                    {NBSP}
+                    <span className={classnames("is-italic")}>{game.note}</span>
+                </p>
+            )}
             <GameStats game={game} />
         </div>
     );
