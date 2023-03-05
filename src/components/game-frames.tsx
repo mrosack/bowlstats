@@ -54,59 +54,77 @@ const GameFrames: FC<GameFramesProps> = ({
         )}
         <tbody>
             <tr>
-                {frames.map((frame: GameFrame, index: number) => (
-                    <td key={index} className={classnames("p-0", "pb-1")}>
-                        <div className={classnames("has-text-right", "mb-2")}>
-                            <table
-                                style={ballStyles}
-                                className={classnames("table", "is-bordered")}>
-                                <tr>
-                                    {(frame.outcome.length === 1 &&
-                                    frame.outcome[0] === "X"
-                                        ? [NBSP, "X"]
-                                        : frame.outcome
-                                    ).map(
-                                        (
-                                            outcome: string,
-                                            index: number,
-                                        ) => (
-                                            <td
-                                                key={index}
-                                                className={classnames(
-                                                    "is-family-monospace",
-                                                    "is-size-7",
-                                                    "p-1",
-                                                    outcome === "X" &&
-                                                        "has-text-success",
-                                                    outcome === "/" &&
-                                                        "has-text-info",
-                                                    outcome === "F" &&
-                                                        "has-text-danger",
-                                                    outcome === "-" &&
-                                                        "has-text-danger",
-                                                    frame.split &&
-                                                        index === 0 &&
-                                                        "has-background-warning",
-                                                )}>
-                                                {outcome}
-                                            </td>
-                                        ),
-                                    )}
-                                </tr>
-                            </table>
-                        </div>
-                        {compact || (
-                            <span
+                {frames.map((frame: GameFrame, index: number) => {
+                    let frameOutcome: Array<string> = frame.outcome;
+
+                    if (index === 9) {
+                        if (frameOutcome.length === 2) {
+                            frameOutcome.push(NBSP);
+                        }
+                    } else if (
+                        frameOutcome.length === 1 &&
+                        frameOutcome[0] === "X"
+                    ) {
+                        frameOutcome = [NBSP, "X"];
+                    }
+
+                    return (
+                        <td key={index} className={classnames("p-0", "pb-1")}>
+                            <div
                                 className={classnames(
-                                    "has-text-centered",
-                                    "is-block",
-                                    "has-text-grey",
+                                    "has-text-right",
+                                    "mb-2",
                                 )}>
-                                {frame.cumulative}
-                            </span>
-                        )}
-                    </td>
-                ))}
+                                <table
+                                    style={ballStyles}
+                                    className={classnames(
+                                        "table",
+                                        "is-bordered",
+                                    )}>
+                                    <tr>
+                                        {frameOutcome.map(
+                                            (
+                                                outcome: string,
+                                                index: number,
+                                            ) => (
+                                                <td
+                                                    key={index}
+                                                    className={classnames(
+                                                        "is-family-monospace",
+                                                        "is-size-7",
+                                                        "p-1",
+                                                        outcome === "X" &&
+                                                            "has-text-success",
+                                                        outcome === "/" &&
+                                                            "has-text-info",
+                                                        outcome === "F" &&
+                                                            "has-text-danger",
+                                                        outcome === "-" &&
+                                                            "has-text-danger",
+                                                        frame.split &&
+                                                            index === 0 &&
+                                                            "has-background-warning",
+                                                    )}>
+                                                    {outcome}
+                                                </td>
+                                            ),
+                                        )}
+                                    </tr>
+                                </table>
+                            </div>
+                            {compact || (
+                                <span
+                                    className={classnames(
+                                        "has-text-centered",
+                                        "is-block",
+                                        "has-text-grey",
+                                    )}>
+                                    {frame.cumulative}
+                                </span>
+                            )}
+                        </td>
+                    );
+                })}
                 <td
                     className={classnames(
                         "is-vcentered",
