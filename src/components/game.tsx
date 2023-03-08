@@ -110,7 +110,8 @@ const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
                         "is-size-5",
                         "has-text-white",
                         game.ball === 10 && "has-background-warning-dark",
-                        game.ball === 12 && "has-background-success",
+                        game.ball === 12 && "has-background-success-dark",
+                        game.ball === 14 && "has-background-success"
                     )}
                     style={{width: 36, height: 36, borderRadius: "100%"}}
                     title={`Played with ${game.ball}lbs ball`}>
