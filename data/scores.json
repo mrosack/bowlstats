@@ -34,5 +34,10 @@
     [14, ["9-", "-7", "--", "-5", "5-", "3/", "8-", "6-", "S81", "8-"], "First training, perfect ball weight, layout too large"],
     [14, ["9/", "S8-", "4/", "S71", "7-", "S81", "72", "8-", "54", "1-"], "First training, perfect ball weight, layout too large"],
     [14, ["9-", "X", "3/", "7-", "62", "S71", "44", "9-", "34", "35"], "First training, perfect ball weight, layout too large"]
+  ],
+  "2023-03-12": [
+    [14, ["-/", "-9", "X", "41", "9-", "8/", "7-", "45", "31", "7-"], "Perfect ball weight (house ball), layout too large"],
+    [14, ["9-", "-6", "8-", "7/", "4-", "1-", "33", "3-", "9-", "8/9"], "Perfect ball weight (house ball), layout too large"],
+    [14, ["63", "9-", "X", "9-", "9/", "-7", "72", "52", "7-", "3/6"], "Perfect ball weight (house ball), layout too large"]
   ]
 }
