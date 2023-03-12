@@ -22,18 +22,53 @@ export const useData = () => {
             acc + game.score;
         const bestReducer = (acc: number, game: Game): number =>
             Math.max(acc, game.score);
-        const strikesReducer = (acc:number, game: Game):number=>(acc+game.stats.strikes);
-        const sparesReducer = (acc:number, game: Game):number=>(acc+game.stats.spares);
-        const avgFBPReducer = (acc:number, game:Game):number=>(acc+game.stats.avgFirstBallPinfall);
+        const strikesReducer = (acc: number, game: Game): number =>
+            acc + game.stats.strikes;
+        const sparesReducer = (acc: number, game: Game): number =>
+            acc + game.stats.spares;
+        const avgFBPReducer = (acc: number, game: Game): number =>
+            acc + game.stats.avgFirstBallPinfall;
 
         results.total.games = games.length;
-        results.total.avg = Math.round(
-            games.reduce(avgReducer, 0) / results.total.games,
-        );
-        results.total.best = games.reduce(bestReducer, 0);
-        results.total.strikes = +(games.reduce(strikesReducer,0)/(results.total.games*12)*100).toFixed(2)
-        results.total.spares = +(games.reduce(sparesReducer,0)/(results.total.games*10)*100).toFixed(2)
-        results.total.avgFirstBallPinfall = +(games.reduce(avgFBPReducer,0)/(results.total.games)).toFixed(2)
+        results.total.avg = {
+            value: Math.round(
+                games.reduce(avgReducer, 0) / results.total.games,
+            ),
+            best: games.reduce(bestReducer, 0),
+        };
+        results.total.strikes = {
+            value: +(
+                (games.reduce(strikesReducer, 0) / (results.total.games * 12)) *
+                100
+            ).toFixed(2),
+            best: (
+                (Math.max(
+                    ...games.map((game: Game): number => game.stats.strikes),
+                ) /
+                    12) *
+                100
+            ).toFixed(2),
+        };
+        results.total.spares = {
+            value: +(
+                (games.reduce(sparesReducer, 0) / (results.total.games * 10)) *
+                100
+            ).toFixed(2),
+            best: (
+                (Math.max(
+                    ...games.map((game: Game): number => game.stats.spares),
+                ) /
+                    10) *
+                100
+            ).toFixed(2),
+        };
+        results.total.avgFirstBallPinfall = {value: +(
+            games.reduce(avgFBPReducer, 0) / results.total.games
+        ).toFixed(2),
+            best: (
+                (Math.max(...games.map((game:Game):number=>game.stats.avgFirstBallPinfall)))
+            ).toFixed(2)
+        };
 
         const year: number = new Date().getFullYear();
         const yearFilter = (game: Game): boolean => game.date.year === year;
@@ -44,9 +79,20 @@ export const useData = () => {
             games.filter(yearFilter).reduce(avgReducer, 0) / results.year.games,
         );
         results.year.best = games.filter(yearFilter).reduce(bestReducer, 0);
-        results.year.strikes = +(games.filter(yearFilter).reduce(strikesReducer,0)/(results.year.games*12)*100).toFixed(2)
-        results.year.spares = +(games.filter(yearFilter).reduce(sparesReducer,0)/(results.year.games*10)*100).toFixed(2)
-        results.year.avgFirstBallPinfall = +(games.filter(yearFilter).reduce(avgFBPReducer,0)/(results.year.games)).toFixed(2)
+        results.year.strikes = +(
+            (games.filter(yearFilter).reduce(strikesReducer, 0) /
+                (results.year.games * 12)) *
+            100
+        ).toFixed(2);
+        results.year.spares = +(
+            (games.filter(yearFilter).reduce(sparesReducer, 0) /
+                (results.year.games * 10)) *
+            100
+        ).toFixed(2);
+        results.year.avgFirstBallPinfall = +(
+            games.filter(yearFilter).reduce(avgFBPReducer, 0) /
+            results.year.games
+        ).toFixed(2);
 
         return results;
     }, []);
