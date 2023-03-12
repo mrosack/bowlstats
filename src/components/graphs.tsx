@@ -10,14 +10,15 @@ import {useData} from "core/hooks/use-data";
 import classnames from "classnames";
 import {useMemo, useState} from "react";
 import {
-    LineChart,
+    ComposedChart,
     Line,
-    ReferenceLine,
     XAxis,
     YAxis,
     CartesianGrid,
     Legend,
     ResponsiveContainer,
+    Bar,
+    LabelList,
 } from "recharts";
 
 const Graphs: FC = (): ReactElement => {
@@ -28,34 +29,26 @@ const Graphs: FC = (): ReactElement => {
     );
     const [scope, setScope] = useState<string | number>("Total");
 
-    const avg = useMemo<number>(
-        () =>
-            scope === "Total"
-                ? stats.total.avg
-                : games
-                      .filter((game: Game): boolean => game.date.year === scope)
-                      .reduce(
-                          (acc: number, game: Game): number => acc + game.score,
-                          0,
-                      ) /
-                  games.filter(
-                      (game: Game): boolean => game.date.year === scope,
-                  ).length,
-        [games, scope, stats],
-    );
-
     const data = useMemo<Array<Record<string, number>>>(
         () =>
             games
                 .filter((game: Game): boolean =>
                     scope === "Total" ? true : game.date.year === scope,
                 )
-                .map((game: Game) => ({
+                .map((game: Game, idx: number, arr: Array<Game>) => ({
                     name: `${game.date.day}/${String(game.date.month).padStart(
                         2,
                         "0",
                     )}`,
                     score: game.score,
+                    ball: game.ball,
+                    avg:
+                        arr.reduce(
+                            (acc: number, gm: Game, i: number): number =>
+                                acc + (i <= idx ? gm.score : 0),
+                            0,
+                        ) /
+                        (idx + 1),
                 })),
         [games, scope],
     );
@@ -80,7 +73,7 @@ const Graphs: FC = (): ReactElement => {
                 </ul>
             </div>
             <ResponsiveContainer width={"100%"} height={350}>
-                <LineChart
+                <ComposedChart
                     width={500}
                     height={500}
                     data={data}
@@ -91,17 +84,44 @@ const Graphs: FC = (): ReactElement => {
                         bottom: 5,
                     }}>
                     <CartesianGrid strokeDasharray={"2 2"} />
-                    <XAxis dataKey={"name"} />
-                    <YAxis domain={[0, 300]} />
+                    <XAxis dataKey={"name"} padding={{left: 20, right: 20}} />
+                    <YAxis
+                        yAxisId={"score"}
+                        domain={[0, 300]}
+                        orientation={"left"}
+                    />
+                    <YAxis
+                        yAxisId={"ball"}
+                        domain={[6, 16]}
+                        orientation={"right"}
+                        tickCount={6}
+                    />
                     <Legend />
-                    <ReferenceLine y={avg} stroke={"#ff3860"} />
+                    <Bar
+                        name={"Ball Weight"}
+                        dataKey={"ball"}
+                        yAxisId={"ball"}
+                        barSize={20}
+                        fill={"#33993366"}
+                    >
+                        <LabelList dataKey={"ball"} position={"insideBottom"} />
+                    </Bar>
+                    <Line
+                        name={"Average"}
+                        type={"monotone"}
+                        dataKey={"avg"}
+                        yAxisId={"score"}
+                        stroke={"#ff3860"}
+                        dot={false}
+                    />
                     <Line
                         name={"Score per game"}
                         type={"monotone"}
                         dataKey={"score"}
+                        yAxisId={"score"}
                         stroke={"#209cee"}
                     />
-                </LineChart>
+                </ComposedChart>
             </ResponsiveContainer>
         </>
     );

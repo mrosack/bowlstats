@@ -96,7 +96,7 @@ const GameStats: FC<GameStatsProps> = ({
                             bottom: 0,
                         }}>
                         <CartesianGrid strokeDasharray={"2 2"} />
-                        <XAxis dataKey={"name"} />
+                        <XAxis dataKey={"name"} padding={{left: 10, right: 10}} />
                         <YAxis
                             interval={0}
                             scale={"linear"}
