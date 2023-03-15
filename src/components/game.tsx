@@ -103,19 +103,36 @@ const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
                 <div
                     className={classnames(
                         "is-flex",
+                        "is-relative",
                         "is-justify-content-center",
                         "is-align-items-center",
                         "has-text-weight-bold",
                         "is-family-secondary",
                         "is-size-5",
                         "has-text-white",
-                        game.ball === 10 && "has-background-warning-dark",
-                        game.ball === 12 && "has-background-success-dark",
-                        game.ball === 14 && "has-background-success"
+                        game.ball === "H10" && "has-background-warning-dark",
+                        game.ball === "H12" && "has-background-success-dark",
+                        game.ball === "H13" && "has-background-info-dark",
+                        game.ball === "H14" && "has-background-success",
                     )}
-                    style={{width: 36, height: 36, borderRadius: "100%"}}
-                    title={`Played with ${game.ball}lbs ball`}>
-                    <span className={classnames("is-block")}>{game.ball}</span>
+                    style={{width: 40, height: 40, borderRadius: "100%"}}
+                    title={`Played with ${game.ball.slice(1)}lbs ball ${game.ball.startsWith("H")? "(house ball)":""}`}>
+                    <span className={classnames("is-block")}>
+                        {game.ball.slice(1)}
+                    </span>
+                    {game.ball.startsWith("H") && (
+                        <span
+                            className={classnames("has-text-light")}
+                            style={{
+                                position: "absolute",
+                                bottom: -1,
+                                left: "50%",
+                                transform: "translateX(-50%)",
+                                fontSize: 9,
+                            }}>
+                            {"H"}
+                        </span>
+                    )}
                 </div>
                 <button
                     className={classnames("delete")}

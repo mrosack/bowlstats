@@ -41,7 +41,7 @@ const Graphs: FC = (): ReactElement => {
                         "0",
                     )}`,
                     score: game.score,
-                    ball: game.ball,
+                    ball: game.ball.slice(1),
                     avg:
                         arr.reduce(
                             (acc: number, gm: Game, i: number): number =>
