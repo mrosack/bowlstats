@@ -3,6 +3,8 @@
  * /src/types.ts
  */
 
+export type Nullable<T> = T | null;
+
 export type GameDate = {
     year: number;
     month: number;
@@ -32,8 +34,8 @@ export type GameStats = {
 export type Game = {
     date: GameDate;
     frames: Array<GameFrame>;
-    ball:string;
-    note?:string;
+    ball: string;
+    note?: string;
     score: number;
     perfect: boolean;
     stats: GameStats;
