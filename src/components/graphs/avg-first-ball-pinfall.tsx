@@ -46,8 +46,6 @@ const AvgFirstBallPinfallGraph: FC<AvgFirstBallPinfallGraphProps> = ({
         [games],
     );
 
-    console.log("data:", data);
-
     return (
         <ResponsiveContainer width={"100%"} height={350}>
             <ComposedChart

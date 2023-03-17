@@ -14,13 +14,6 @@ import {useData} from "core/hooks/use-data";
 import classnames from "classnames";
 import {useMemo, useState} from "react";
 
-const GraphStatType = {
-    SCORE: "Score",
-    STRIKES: "Strikes",
-    SPARES: "Spares",
-    AVG_FIRST_BALL_PINFALL: "Avg First Ball Pinfall",
-};
-
 const Graphs: FC = (): ReactElement => {
     const {games: rawGames, years} = useData();
     const choices = useMemo<Array<string | number>>(
@@ -28,7 +21,6 @@ const Graphs: FC = (): ReactElement => {
         [years],
     );
     const [scope, setScope] = useState<string | number>("Total");
-    const [type, setType] = useState<string>(GraphStatType.SCORE);
 
     const games = useMemo<Array<Game>>(
         () =>
@@ -39,23 +31,9 @@ const Graphs: FC = (): ReactElement => {
         [rawGames, scope],
     );
 
-    const $graph=useMemo<Nullable<ReactElement>>( ()=>{
-        switch(type) {
-            case GraphStatType.SCORE:
-                return ( <ScoreGraph games={games} />);
-            case GraphStatType.STRIKES:
-                return ( <StrikesGraph games={games} /> )
-            case GraphStatType.SPARES:
-                return ( <SparesGraph games={games} /> )
-            case GraphStatType.AVG_FIRST_BALL_PINFALL:
-                return ( <AvgFirstBallPinfallGraph games={games} /> )
-            // no default
-        }
-    },[games, type] )
-
     return (
         <>
-            <div className={classnames("tabs", "is-centered")}>
+            <div className={classnames("tabs", "is-large", "is-centered")}>
                 <ul>
                     {choices.map((choice: string | number) => (
                         <li
@@ -72,26 +50,14 @@ const Graphs: FC = (): ReactElement => {
                     ))}
                 </ul>
             </div>
-            <div className={classnames("tabs", "is-centered", "is-small")}>
-                <ul>
-                    {Object.values(GraphStatType).map(
-                        (graphStatType: string) => (
-                            <li
-                                key={graphStatType}
-                                className={classnames(
-                                    type === graphStatType && "is-active",
-                                )}>
-                                <a
-                                    href={"javascript:void(0)"}
-                                    onClick={() => setType(graphStatType)}>
-                                    {graphStatType}
-                                </a>
-                            </li>
-                        ),
-                    )}
-                </ul>
-            </div>
-            {$graph}
+            <h3 className={classnames("subtitle")}>{"Score"}</h3>
+            <ScoreGraph games={games} />
+            <h3 className={classnames("subtitle", "mt-5")}>{"Strikes"}</h3>
+            <StrikesGraph games={games} />
+            <h3 className={classnames("subtitle", "mt-5")}>{"Spares"}</h3>
+            <SparesGraph games={games} />
+            <h3 className={classnames("subtitle", "mt-5")}>{"Average First Ball Pinfall"}</h3>
+            <AvgFirstBallPinfallGraph games={games} />
         </>
     );
 };
