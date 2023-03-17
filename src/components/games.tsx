@@ -83,6 +83,7 @@ const Games: FC = (): ReactElement => {
                             key={i}
                             className={classnames(i === month && "is-active")}>
                             <a
+                                className={classnames("px-3")}
                                 href={"javascript:void(0)"}
                                 onClick={() => {
                                     setMonth(i);
@@ -101,6 +102,7 @@ const Games: FC = (): ReactElement => {
                             key={i}
                             className={classnames(i === day && "is-active")}>
                             <a
+                                className={classnames("px-2")}
                                 href={"javascript:void(0)"}
                                 onClick={() => setDay(i)}>
                                 {i === 0 ? "All" : `${i}`.padStart(2, "0")}
