@@ -14,7 +14,7 @@ const Footer: FC = (): ReactElement => (
         <div className={classnames("content", "has-text-centered")}>
             <p>
                 <a href={"https://github.com/leny/bowlstats"} target={"_new"}>
-                    <strong>{"@leny/bowlstats"}</strong>
+                    <strong>{"bowlstats"}</strong>
                 </a>
                 {BSP}
                 {"by"}
@@ -22,13 +22,6 @@ const Footer: FC = (): ReactElement => (
                 <a href={"https://leny.me"} target={"_new"}>
                     {"leny"}
                 </a>
-            </p>
-            <p className={classnames("is-size-7")}>
-                <small>
-                    {"Started in"}
-                    {BSP}
-                    <em>{"january 2023"}</em>
-                </small>
             </p>
         </div>
     </footer>
