@@ -57,6 +57,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
         
+      - name: Parse & convert data
+        run: pnpm run prebuild
+        
       - name: Build website
         run: pnpm run build
       
