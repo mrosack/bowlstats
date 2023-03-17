@@ -10,7 +10,7 @@ import classnames from "classnames";
 const BSP: string = "\u0020";
 
 const Footer: FC = (): ReactElement => (
-    <footer className={classnames("footer")}>
+    <footer className={classnames("footer", "mt-6")}>
         <div className={classnames("content", "has-text-centered")}>
             <p>
                 <a href={"https://github.com/leny/bowlstats"} target={"_new"}>
