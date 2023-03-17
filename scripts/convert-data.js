@@ -5,6 +5,7 @@
 
 const bowling = require("bowling");
 const {readFile, writeFile} = require("fs/promises");
+const {parseAllDocuments} = require("yaml");
 
 const firstBallValue = outcome => {
     if (typeof outcome === "number") {
@@ -17,14 +18,15 @@ const firstBallValue = outcome => {
 };
 
 (async () => {
-    const scores = await readFile(`${__dirname}/../data/scores.json`, "utf8");
+    const scores = await readFile(`${__dirname}/../data/scores.yaml`, "utf8");
     const results = [];
 
-    Object.entries(JSON.parse(scores)).forEach(([date, games]) => {
+    parseAllDocuments(scores).forEach(doc => {
+        const {date, games} = doc.toJS();
         const [year, month, day] = date.split("-").map(s => +s);
 
         results.push(
-            ...games.map(([ball, game, note]) => {
+            ...games.map(({ball, frames, note}) => {
                 const splits = [];
                 const parsed = {
                     date: {
@@ -34,13 +36,16 @@ const firstBallValue = outcome => {
                     },
                     ball,
                     frames: bowling(
-                        game.map((frame, index) => {
-                            if (frame.startsWith("S")) {
-                                splits.push(index);
-                                return frame.substring(1);
-                            }
-                            return frame;
-                        }),
+                        frames
+                            .split(",")
+                            .map(frame => frame.trim())
+                            .map((frame, index) => {
+                                if (frame.startsWith("S")) {
+                                    splits.push(index);
+                                    return frame.substring(1);
+                                }
+                                return frame;
+                            }),
                     ).map((frame, index) => {
                         const outcome = frame.outcome
                             .split("")

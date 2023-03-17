@@ -24,6 +24,7 @@ specifiers:
   react: ~18.2.0
   react-dom: ~18.2.0
   recharts: ~2.4.3
+  yaml: ~2.2.1
 
 dependencies:
   bulma: 0.9.4
@@ -33,6 +34,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   recharts: 2.4.3_v2m5e27vhdewzwhryxwfaorcca
+  yaml: 2.2.1
 
 devDependencies:
   '@leny/eslint-config': 0.2.0
@@ -4107,7 +4109,6 @@ packages:
   /yaml/2.2.1:
     resolution: {integrity: sha512-e0WHiYql7+9wr4cWMx3TVQrNwejKaEe7/rHNmQmqRjazfOP5W8PB6Jpebb5o6fIapbz9o9+2ipcaTM2ZwDI6lw==}
     engines: {node: '>= 14'}
-    dev: true
 
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
