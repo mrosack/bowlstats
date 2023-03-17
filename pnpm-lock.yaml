@@ -23,6 +23,7 @@ specifiers:
   process: ~0.11.10
   react: ~18.2.0
   react-dom: ~18.2.0
+  react-helmet: ~6.1.0
   recharts: ~2.4.3
   yaml: ~2.2.1
 
@@ -33,6 +34,7 @@ dependencies:
   process: 0.11.10
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-helmet: 6.1.0_react@18.2.0
   recharts: 2.4.3_v2m5e27vhdewzwhryxwfaorcca
   yaml: 2.2.1
 
@@ -3384,6 +3386,22 @@ packages:
     resolution: {integrity: sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==}
     dev: true
 
+  /react-fast-compare/3.2.1:
+    resolution: {integrity: sha512-xTYf9zFim2pEif/Fw16dBiXpe0hoy5PxcD8+OwBnTtNLfIm3g6WxhKNurY+6OmdH1u6Ta/W/Vl6vjbYP1MFnDg==}
+    dev: false
+
+  /react-helmet/6.1.0_react@18.2.0:
+    resolution: {integrity: sha512-4uMzEY9nlDlgxr61NL3XbKRy1hEkXmKNXhjbAIOVw5vcFrsdYbH2FEwcNyWvWinl103nXgzYNlns9ca+8kFiWw==}
+    peerDependencies:
+      react: '>=16.3.0'
+    dependencies:
+      object-assign: 4.1.1
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-fast-compare: 3.2.1
+      react-side-effect: 2.1.2_react@18.2.0
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -3405,6 +3423,14 @@ packages:
       lodash: 4.17.21
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /react-side-effect/2.1.2_react@18.2.0:
+    resolution: {integrity: sha512-PVjOcvVOyIILrYoyGEpDN3vmYNLdy1CajSFNt4TDsVQC5KpTijDvWVoR+/7Rz2xT978D8/ZtFceXxzsPwZEDvw==}
+    peerDependencies:
+      react: ^16.3.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-smooth/2.0.2_v2m5e27vhdewzwhryxwfaorcca:
