@@ -7,12 +7,11 @@ import type {FC, ReactElement} from "react";
 import type {Game} from "types";
 
 import {useMemo} from "react";
-import {Line, YAxis} from "recharts";
 import BaseGraph from "./base";
 
 export type ScoreGraphProps = {
     games: Array<Game>;
-    goal?: number;
+    goal: number | false;
     hideBall?: boolean;
 };
 

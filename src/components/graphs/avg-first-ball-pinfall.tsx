@@ -11,7 +11,7 @@ import BaseGraph from "./base";
 
 export type AvgFirstBallPinfallGraphProps = {
     games: Array<Game>;
-    goal?: number;
+    goal: number | false;
     hideBall?: boolean;
 };
 

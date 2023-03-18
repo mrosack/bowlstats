@@ -6,5 +6,10 @@
 /* eslint-disable */
 
 module.exports = {
-    extends: "@leny"
+    root: true,
+    extends: "@leny",
+    rules: {
+        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/no-magic-numbers": "off",
+    }
 };

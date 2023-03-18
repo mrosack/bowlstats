@@ -4,7 +4,7 @@
  */
 
 import type {FC, ReactElement} from "react";
-import type {Game} from "types";
+import {Game} from "types";
 import type {Dayjs} from "dayjs";
 
 import {useCallback, useState} from "react";
@@ -15,6 +15,35 @@ import {useMemo} from "react";
 import dayjs from "dayjs";
 
 const NBSP: string = "\u00a0";
+
+const getBallColor = (ball: string): string => {
+    switch (ball.slice(ball.startsWith("H") ? 1 : 0)) {
+        case "6":
+            return "#f8362f";
+        case "7":
+            return "#c6c20d";
+        case "8":
+            return "#c81108";
+        case "9":
+            return "#46435a";
+        case "10":
+            return "#9b2527";
+        case "11":
+            return "#1b417d";
+        case "12":
+            return "#1b6626";
+        case "13":
+            return "#1f3c7c";
+        case "14":
+            return "#0aa025";
+        case "15":
+            return "#262b4b";
+        case "16":
+            return "#983d28";
+        default:
+            return "black";
+    }
+};
 
 export interface GameProps {
     game: Game;
@@ -110,13 +139,16 @@ const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
                         "is-family-secondary",
                         "is-size-5",
                         "has-text-white",
-                        game.ball === "H10" && "has-background-warning-dark",
-                        game.ball === "H12" && "has-background-success-dark",
-                        game.ball === "H13" && "has-background-info-dark",
-                        game.ball === "H14" && "has-background-success",
                     )}
-                    style={{width: 40, height: 40, borderRadius: "100%"}}
-                    title={`Played with ${game.ball.slice(1)}lbs ball ${game.ball.startsWith("H")? "(house ball)":""}`}>
+                    style={{
+                        width: 40,
+                        height: 40,
+                        borderRadius: "100%",
+                        backgroundColor: getBallColor(game.ball),
+                    }}
+                    title={`Played with ${game.ball.slice(1)}lbs ball ${
+                        game.ball.startsWith("H") ? "(house ball)" : ""
+                    }`}>
                     <span className={classnames("is-block")}>
                         {game.ball.slice(1)}
                     </span>
@@ -135,9 +167,10 @@ const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
                     )}
                 </div>
                 <button
+                    type={"button"}
                     className={classnames("delete")}
                     onClick={toggleDetails}>
-                    {showDetails ? "(hide details)" : "(show details)"}
+                    {"(hide details)"}
                 </button>
             </div>
             <GameFrames score={game.score} frames={game.frames} />

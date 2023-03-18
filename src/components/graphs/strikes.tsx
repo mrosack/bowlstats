@@ -7,17 +7,6 @@ import type {FC, ReactElement} from "react";
 import type {Game} from "types";
 
 import {useMemo} from "react";
-import {
-    ComposedChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Legend,
-    ResponsiveContainer,
-    Bar,
-    LabelList,
-} from "recharts";
 import BaseGraph from "./base";
 
 export type StrikesGraphProps = {

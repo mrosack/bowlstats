@@ -1,6 +1,6 @@
 {
   "name": "@leny/bowlstats",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "description": "A small bowling stats tracker",
   "engines": {
@@ -13,10 +13,12 @@
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
+    "lint": "npx eslint --fix --cache src",
+    "convert:data": "node ./scripts/convert-data.js",
     "preinstall": "npx check-engine",
-    "prebuild": "node ./scripts/convert-data.js",
+    "prebuild": "npm run convert:data",
     "build": "npx parcel build",
-    "prework": "node ./scripts/convert-data.js",
+    "prework": "npm run convert:data",
     "work": "npx parcel"
   },
   "author": "leny <info@flatland.be>",

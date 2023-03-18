@@ -3,10 +3,22 @@
  * /src/core/hooks/use-data.js
  */
 
-import type {Game, Stats, GlobalStats} from "types";
+import type {Game, GlobalStats, Stat} from "types";
 
-import games from "core/data.json";
+import rawGames from "core/data.json";
 import {useMemo} from "react";
+
+const games = rawGames as Array<Game>;
+
+const avgReducer = (acc: number, game: Game): number => acc + game.score;
+const bestReducer = (acc: number, game: Game): number =>
+    Math.max(acc, game.score);
+const strikesReducer = (acc: number, game: Game): number =>
+    acc + game.stats.strikes;
+const sparesReducer = (acc: number, game: Game): number =>
+    acc + game.stats.spares;
+const avgFBPReducer = (acc: number, game: Game): number =>
+    acc + game.stats.avgFirstBallPinfall;
 
 export type DataHookResults = {
     games: Array<Game>;
@@ -14,20 +26,12 @@ export type DataHookResults = {
     years: Array<number>;
 };
 
-export const useData = () => {
+export const useData = (): DataHookResults => {
     const stats = useMemo<GlobalStats>(() => {
-        const results: Record<string, Stats> = {total: {}, year: {}};
-
-        const avgReducer = (acc: number, game: Game): number =>
-            acc + game.score;
-        const bestReducer = (acc: number, game: Game): number =>
-            Math.max(acc, game.score);
-        const strikesReducer = (acc: number, game: Game): number =>
-            acc + game.stats.strikes;
-        const sparesReducer = (acc: number, game: Game): number =>
-            acc + game.stats.spares;
-        const avgFBPReducer = (acc: number, game: Game): number =>
-            acc + game.stats.avgFirstBallPinfall;
+        const results: Record<string, Record<string, number | Stat>> = {
+            total: {},
+            year: {},
+        };
 
         results.total.games = games.length;
         results.total.avg = {
@@ -41,7 +45,7 @@ export const useData = () => {
                 (games.reduce(strikesReducer, 0) / (results.total.games * 12)) *
                 100
             ).toFixed(2),
-            best: (
+            best: +(
                 (Math.max(
                     ...games.map((game: Game): number => game.stats.strikes),
                 ) /
@@ -54,7 +58,7 @@ export const useData = () => {
                 (games.reduce(sparesReducer, 0) / (results.total.games * 10)) *
                 100
             ).toFixed(2),
-            best: (
+            best: +(
                 (Math.max(
                     ...games.map((game: Game): number => game.stats.spares),
                 ) /
@@ -62,12 +66,15 @@ export const useData = () => {
                 100
             ).toFixed(2),
         };
-        results.total.avgFirstBallPinfall = {value: +(
-            games.reduce(avgFBPReducer, 0) / results.total.games
-        ).toFixed(2),
-            best: (
-                (Math.max(...games.map((game:Game):number=>game.stats.avgFirstBallPinfall)))
-            ).toFixed(2)
+        results.total.avgFirstBallPinfall = {
+            value: +(
+                games.reduce(avgFBPReducer, 0) / results.total.games
+            ).toFixed(2),
+            best: +Math.max(
+                ...games.map(
+                    (game: Game): number => game.stats.avgFirstBallPinfall,
+                ),
+            ).toFixed(2),
         };
 
         const year: number = new Date().getFullYear();
@@ -94,7 +101,7 @@ export const useData = () => {
             results.year.games
         ).toFixed(2);
 
-        return results;
+        return results as GlobalStats;
     }, []);
 
     const years: Array<number> = useMemo(
@@ -102,7 +109,7 @@ export const useData = () => {
             games.reduce((acc: Array<number>, game: Game) => {
                 const set: Set<number> = new Set<number>(acc);
 
-                set.add(game.date.year as number);
+                set.add(game.date.year);
 
                 return Array.from(set);
             }, []),

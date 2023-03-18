@@ -3,7 +3,10 @@
  * /src/components/games.tsx
  */
 
-import {FC, ReactElement, useMemo} from "react";
+/* eslint-disable react/no-array-index-key */ // consistency is guaranteed here.
+
+import type {FC, ReactElement} from "react";
+import {useMemo} from "react";
 import type {Game} from "types";
 
 import classnames from "classnames";
@@ -11,6 +14,7 @@ import {useData} from "core/hooks/use-data";
 import GameDetails from "components/game";
 import dayjs from "dayjs";
 import {useState} from "react";
+import {preventDefault} from "core/utils";
 
 const currentYear: number = new Date().getFullYear();
 const currentMonth: number = new Date().getMonth();
@@ -27,7 +31,7 @@ const Games: FC = (): ReactElement => {
             Array.from(
                 new Array(year < currentYear ? 12 : currentMonth + 1).keys(),
             ),
-        [year, currentYear, currentMonth],
+        [year],
     );
 
     const days = useMemo<Array<number>>(
@@ -68,8 +72,10 @@ const Games: FC = (): ReactElement => {
                             key={yr}
                             className={classnames(year === yr && "is-active")}>
                             <a
-                                href={"javascript:void(0)"}
-                                onClick={() => setYear(yr)}>
+                                href={"#"}
+                                onClick={preventDefault(() => {
+                                    setYear(yr);
+                                })}>
                                 {yr}
                             </a>
                         </li>
@@ -84,11 +90,11 @@ const Games: FC = (): ReactElement => {
                             className={classnames(i === month && "is-active")}>
                             <a
                                 className={classnames("px-3")}
-                                href={"javascript:void(0)"}
-                                onClick={() => {
+                                href={"#"}
+                                onClick={preventDefault(() => {
                                     setMonth(i);
                                     setDay(0);
-                                }}>
+                                })}>
                                 {dayjs().set("month", i).format("MMM")}
                             </a>
                         </li>
@@ -103,8 +109,10 @@ const Games: FC = (): ReactElement => {
                             className={classnames(i === day && "is-active")}>
                             <a
                                 className={classnames("px-2")}
-                                href={"javascript:void(0)"}
-                                onClick={() => setDay(i)}>
+                                href={"#"}
+                                onClick={preventDefault(() => {
+                                    setDay(i);
+                                })}>
                                 {i === 0 ? "All" : `${i}`.padStart(2, "0")}
                             </a>
                         </li>

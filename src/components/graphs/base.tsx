@@ -3,7 +3,7 @@
  * /src/components/graphs/base.tsx
  */
 
-import type {FC, ReactElement, ReactNode} from "react";
+import type {FC, ReactElement} from "react";
 
 import {
     ComposedChart,
@@ -24,7 +24,7 @@ export type BaseGraphProps = {
     axisLabel: string;
     domain: [number, number];
     padding?: Record<string, number>;
-    referenceLine?: number;
+    referenceLine?: number | false;
     hideBall?: boolean;
 };
 

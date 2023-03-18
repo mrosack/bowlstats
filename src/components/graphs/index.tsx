@@ -4,7 +4,7 @@
  */
 
 import type {FC, ReactElement} from "react";
-import type {Game, Nullable} from "types";
+import type {Game} from "types";
 
 import ScoreGraph from "./score";
 import StrikesGraph from "./strikes";
@@ -14,6 +14,7 @@ import {useData} from "core/hooks/use-data";
 import classnames from "classnames";
 import {useMemo, useState} from "react";
 import params from "../../../data/params.json";
+import {preventDefault} from "core/utils";
 
 const NBSP: string = "\u00a0";
 
@@ -46,8 +47,10 @@ const Graphs: FC = (): ReactElement => {
                                 choice === scope && "is-active",
                             )}>
                             <a
-                                href={"javascript:void(0)"}
-                                onClick={() => setScope(choice)}>
+                                href={"#"}
+                                onClick={preventDefault(() => {
+                                    setScope(choice);
+                                })}>
                                 {choice}
                             </a>
                         </li>
@@ -56,35 +59,49 @@ const Graphs: FC = (): ReactElement => {
             </div>
             <div className={classnames("has-text-right", "mt-5")}>
                 <button
+                    type={"button"}
                     className={classnames(
                         "button",
                         "is-small",
                         "is-ghost",
                         "is-shadowless",
                     )}
-                    onClick={() => setHideGoal(!hideGoal)}>{`(${
-                    hideGoal ? "show" : "hide"
-                } goals)`}</button>
+                    onClick={preventDefault(() => {
+                        setHideGoal(!hideGoal);
+                    })}>
+                    {`(${hideGoal ? "show" : "hide"} goals)`}
+                </button>
                 {NBSP}
                 <button
+                    type={"button"}
                     className={classnames(
                         "button",
                         "is-small",
                         "is-ghost",
                         "is-shadowless",
                     )}
-                    onClick={() => setHideBall(!hideBall)}>{`(${
-                    hideBall ? "show" : "hide"
-                } ball weight)`}</button>
+                    onClick={preventDefault(() => {
+                        setHideBall(!hideBall);
+                    })}>
+                    {`(${hideBall ? "show" : "hide"} ball weight)`}
+                </button>
             </div>
             <h3 className={classnames("subtitle")}>{"Score"}</h3>
-            <ScoreGraph games={games} hideBall={hideBall} goal={!hideGoal&&params?.goals?.avgScorePerGame} />
+            <ScoreGraph
+                games={games}
+                hideBall={hideBall}
+                goal={!hideGoal && params.goals.avgScorePerGame}
+            />
             <h3 className={classnames("subtitle", "mt-5")}>
                 {"Average First Ball Pinfall"}
             </h3>
-            <AvgFirstBallPinfallGraph games={games} hideBall={hideBall} goal={!hideGoal&&params?.goals?.avgFirstBallPinfall} />
+            <AvgFirstBallPinfallGraph
+                games={games}
+                hideBall={hideBall}
+                goal={!hideGoal && params.goals.avgFirstBallPinfall}
+            />
             <h3 className={classnames("subtitle", "mt-5")}>{"Strikes"}</h3>
-                <StrikesGraph games={games} hideBall={hideBall} />
+            <StrikesGraph games={games} hideBall={hideBall} />
             <h3 className={classnames("subtitle", "mt-5")}>{"Spares"}</h3>
             <SparesGraph games={games} hideBall={hideBall} />
         </>

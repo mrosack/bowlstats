@@ -3,7 +3,9 @@
  * /src/components/game-frames.tsx
  */
 
-import {FC, ReactElement} from "react";
+/* eslint-disable react/no-array-index-key */ // consistency is guaranteed here.
+
+import type {FC, ReactElement} from "react";
 import type {GameFrame} from "types";
 
 import classnames from "classnames";
@@ -19,7 +21,7 @@ const ballStyles: Record<string, string | number> = {
 export interface GameFramesProps {
     frames: Array<GameFrame>;
     score: number;
-    compact: boolean;
+    compact?: boolean;
 }
 
 const GameFrames: FC<GameFramesProps> = ({
@@ -55,7 +57,8 @@ const GameFrames: FC<GameFramesProps> = ({
         <tbody>
             <tr>
                 {frames.map((frame: GameFrame, index: number) => {
-                    let frameOutcome: Array<string> = frame.outcome;
+                    // convert the outcome tuple to an array of strings
+                    let frameOutcome = frame.outcome as Array<string>;
 
                     if (index === 9) {
                         if (frameOutcome.length === 2) {
@@ -83,12 +86,9 @@ const GameFrames: FC<GameFramesProps> = ({
                                     )}>
                                     <tr>
                                         {frameOutcome.map(
-                                            (
-                                                outcome: string,
-                                                index: number,
-                                            ) => (
+                                            (outcome: string, idx: number) => (
                                                 <td
-                                                    key={index}
+                                                    key={idx}
                                                     className={classnames(
                                                         "is-family-monospace",
                                                         "is-size-7",

@@ -28,7 +28,7 @@ export type GameStats = {
     spares: number;
     strikes: number;
     splits: GameSplitStats;
-    averageFirstBallPinfall: number;
+    avgFirstBallPinfall: number;
 };
 
 export type Game = {
@@ -41,11 +41,19 @@ export type Game = {
     stats: GameStats;
 };
 
-export type Stats = {
-    game: number;
-    avg: number;
-    year?: number;
+export type Stat = {
+    value: number;
     best: number;
+};
+
+export type Stats = {
+    games: number;
+    avg: Stat;
+    strikes: Stat;
+    spares: Stat;
+    avgFirstBallPinfall: Stat;
+    year?: number;
+    best?: number;
 };
 
 export type GlobalStats = {

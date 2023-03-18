@@ -7,17 +7,6 @@ import type {FC, ReactElement} from "react";
 import type {Game} from "types";
 
 import {useMemo} from "react";
-import {
-    ComposedChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Legend,
-    ResponsiveContainer,
-    Bar,
-    LabelList,
-} from "recharts";
 import BaseGraph from "./base";
 
 export type SparesGraphProps = {
@@ -29,7 +18,7 @@ const SparesGraph: FC<SparesGraphProps> = ({
     games,
     hideBall = false,
 }: SparesGraphProps): ReactElement => {
-    const data = useMemo<Array<Record<string, number|string>>>(
+    const data = useMemo<Array<Record<string, number | string>>>(
         () =>
             games.map((game: Game, idx: number, arr: Array<Game>) => ({
                 name: `${game.date.day}/${String(game.date.month).padStart(
@@ -50,11 +39,13 @@ const SparesGraph: FC<SparesGraphProps> = ({
     );
 
     return (
-        <BaseGraph data={data} hideBall={hideBall}
-        axisLabel={"Spares per game"}
-        axisId={"spares"}
-        domain={[0, 10]}
-        padding={{top: 30, bottom: 30}}
+        <BaseGraph
+            data={data}
+            hideBall={hideBall}
+            axisLabel={"Spares per game"}
+            axisId={"spares"}
+            domain={[0, 10]}
+            padding={{top: 30, bottom: 30}}
         />
     );
 };

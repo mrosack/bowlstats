@@ -3,9 +3,10 @@
  * /src/components/game-stats.tsx
  */
 
-import {FC, ReactElement, useCallback, useMemo, useState} from "react";
+import type {FC, ReactElement} from "react";
 import type {Game, GameFrame} from "types";
 
+import {useMemo} from "react";
 import classnames from "classnames";
 import {
     LineChart,
@@ -15,14 +16,10 @@ import {
     CartesianGrid,
     Legend,
     ResponsiveContainer,
-    BarChart,
-    Bar,
-    Tooltip,
 } from "recharts";
 import {getPinsCountFromOutcome} from "core/utils";
 
 const NBSP: string = "\u00a0";
-const BSP: string = "\u0020";
 
 export interface GameStatsProps {
     game: Game;
@@ -41,48 +38,41 @@ const GameStats: FC<GameStatsProps> = ({
         [game],
     );
 
+    const stats = useMemo<Record<string, string | number>>(() => {
+        const results: Record<string, string | number> = {
+            Strikes: game.stats.strikes,
+            Spares: game.stats.spares,
+        };
+
+        if (game.stats.splits.total) {
+            results.Splits = `${game.stats.splits.total} ${
+                game.stats.splits.converted
+                    ? `(${game.stats.splits.converted} converted)`
+                    : ""
+            }`;
+        }
+
+        if (game.stats.fouls) {
+            results.Fouls = game.stats.fouls;
+        }
+
+        results.Misses = game.stats.misses;
+        results["Avg First Ball Pinfall"] = game.stats.avgFirstBallPinfall;
+
+        return results;
+    }, [game]);
+
     return (
         <div className={classnames("columns", "is-fluid")}>
             <div className={classnames("column")}>
                 <ul>
-                    <li>
-                        <strong>{"Strikes:"}</strong>
-                        {NBSP}
-                        <span>{game.stats.strikes}</span>
-                    </li>
-                    <li>
-                        <strong>{"Spares:"}</strong>
-                        {NBSP}
-                        <span>{game.stats.spares}</span>
-                    </li>
-                    {!!game.stats.splits.total && (
-                        <li>
-                            <strong>{"Splits:"}</strong>
+                    {Object.entries(stats).map(([key, value]) => (
+                        <li key={key}>
+                            <strong>{`${key}:`}</strong>
                             {NBSP}
-                            <span>
-                                {game.stats.splits.total}
-                                {!!game.stats.splits.converted &&
-                                    `${BSP}(${game.stats.splits.converted} converted)`}
-                            </span>
+                            <span>{value}</span>
                         </li>
-                    )}
-                    {!!game.stats.fouls && (
-                        <li>
-                            <strong>{"Fouls:"}</strong>
-                            {NBSP}
-                            <span>{game.stats.fouls}</span>
-                        </li>
-                    )}
-                    <li>
-                        <strong>{"Misses:"}</strong>
-                        {NBSP}
-                        <span>{game.stats.misses}</span>
-                    </li>
-                    <li>
-                        <strong>{"Avg First Ball Pinfall:"}</strong>
-                        {NBSP}
-                        <span>{game.stats.avgFirstBallPinfall}</span>
-                    </li>
+                    ))}
                 </ul>
             </div>
             <div className={classnames("column", "is-three-fifths")}>
@@ -96,7 +86,10 @@ const GameStats: FC<GameStatsProps> = ({
                             bottom: 0,
                         }}>
                         <CartesianGrid strokeDasharray={"2 2"} />
-                        <XAxis dataKey={"name"} padding={{left: 10, right: 10}} />
+                        <XAxis
+                            dataKey={"name"}
+                            padding={{left: 10, right: 10}}
+                        />
                         <YAxis
                             interval={0}
                             scale={"linear"}
@@ -134,4 +127,5 @@ const GameStats: FC<GameStatsProps> = ({
         </div>
     );
 };
+
 export default GameStats;

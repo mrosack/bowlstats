@@ -3,6 +3,8 @@
  * /src/core/utils.ts
  */
 
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+
 import type {GameFrameBall} from "types";
 
 export const getPinsCountFromOutcome = (
@@ -13,7 +15,7 @@ export const getPinsCountFromOutcome = (
         if (outcome.includes("X") || outcome.includes("/")) {
             return 10;
         }
-        return outcome.reduce(
+        return (outcome as Array<GameFrameBall>).reduce(
             (acc: number, ball: GameFrameBall) =>
                 acc + (typeof ball === "number" ? ball : 0),
             0,
@@ -44,3 +46,19 @@ export const getPinsCountFromOutcome = (
 
     return pinsCount;
 };
+
+interface GenericEvent {
+    preventDefault(): void;
+    stopPropagation(): void;
+}
+
+export const preventDefault =
+    (
+        handler: (e: GenericEvent) => any,
+        stopPropagation: boolean = false,
+    ): ((e: GenericEvent) => void) =>
+    (e: GenericEvent): void => {
+        e.preventDefault();
+        stopPropagation && e.stopPropagation();
+        handler(e);
+    };
