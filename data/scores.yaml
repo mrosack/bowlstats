@@ -106,3 +106,15 @@ games:
   - ball: H13
     frames: 43, -3, 63, -5, X, 9-, 72, 5-, X, 9-
     note: Ball slightly light (house ball), good layout
+
+---
+date: 2023-03-18
+games:
+  - ball: H13
+    frames: -6, 31, 61, 34, 71, 54, 7-, 72, -6, -8
+  - ball: H13
+    frames: X, 9/, 5/, X, 3-, 7-, 1/, S7-, 9-, 72
+  - ball: H13
+    frames: 9-, 4-, X, 61, 6-, 7/, 6-, X, 4-, -/6
+  - ball: H13
+    frames: 5-, S81, 3/, S81, 7/, 62, 8/, 7-, 72, 52
