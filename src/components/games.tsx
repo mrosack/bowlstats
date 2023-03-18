@@ -20,18 +20,25 @@ const currentYear: number = new Date().getFullYear();
 const currentMonth: number = new Date().getMonth();
 
 const Games: FC = (): ReactElement => {
-    const {games: rawGames, stats, years} = useData();
+    const {games: rawGames, stats, years: rawYears} = useData();
 
     const [year, setYear] = useState<number>(currentYear);
     const [month, setMonth] = useState<number>(currentMonth);
     const [day, setDay] = useState<number>(0);
 
+    const years = useMemo<Array<number>>(() => rawYears.reverse(), [rawYears]);
+
     const months = useMemo<Array<number>>(
         () =>
             Array.from(
                 new Array(year < currentYear ? 12 : currentMonth + 1).keys(),
+            ).filter((mnth: number): boolean =>
+                rawGames.find(
+                    (game: Game): boolean =>
+                        game.date.year === year && game.date.month === mnth + 1,
+                ),
             ),
-        [year],
+        [year, rawGames],
     );
 
     const days = useMemo<Array<number>>(
@@ -108,7 +115,7 @@ const Games: FC = (): ReactElement => {
                             key={i}
                             className={classnames(i === day && "is-active")}>
                             <a
-                                className={classnames("px-2")}
+                                className={classnames("px-1")}
                                 href={"#"}
                                 onClick={preventDefault(() => {
                                     setDay(i);
@@ -123,11 +130,7 @@ const Games: FC = (): ReactElement => {
                 <GameDetails
                     key={`${Object.values(game.date).join("-")}-${i}`}
                     game={game}
-                    isBest={
-                        stats.total.best === game.score ||
-                        (stats.year.year === year &&
-                            stats.year.best === game.score)
-                    }
+                    isBest={stats.avg.best === game.score}
                 />
             ))}
         </>

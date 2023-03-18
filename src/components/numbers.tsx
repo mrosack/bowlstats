@@ -17,29 +17,25 @@ const Numbers: FC = (): ReactElement => {
     return (
         <section className={classnames("level", "is-align-items-start")}>
             {[
-                ["Games", stats.total.games],
+                ["Games", stats.games],
                 [
                     "Avg Score",
-                    stats.total.avg.value,
-                    stats.total.avg.best,
+                    stats.avg.value,
+                    stats.avg.best,
                     params.goals.avgScorePerGame,
                 ],
                 [
                     "Avg First Ball Pinfall",
-                    stats.total.avgFirstBallPinfall.value,
-                    stats.total.avgFirstBallPinfall.best,
+                    stats.avgFirstBallPinfall.value,
+                    stats.avgFirstBallPinfall.best,
                     params.goals.avgFirstBallPinfall,
                 ],
                 [
                     "Strikes",
-                    `${stats.total.strikes.value}%`,
-                    `${stats.total.strikes.best}%`,
+                    `${stats.strikes.value}%`,
+                    `${stats.strikes.best!}%`,
                 ],
-                [
-                    "Spares",
-                    `${stats.total.spares.value}%`,
-                    `${stats.total.spares.best}%`,
-                ],
+                ["Spares", `${stats.spares.value}%`, `${stats.spares.best!}%`],
             ].map(([label, value, best, goal]) => (
                 <div
                     key={label}
@@ -47,7 +43,7 @@ const Numbers: FC = (): ReactElement => {
                     <div>
                         <p className={"heading"}>{label}</p>
                         <p className={"title"}>{value}</p>
-                        {!!goal && (
+                        {!!(goal && value) && (
                             <p className={classnames("is-size-6")}>
                                 <small
                                     className={"has-text-grey-light"}
@@ -61,8 +57,7 @@ const Numbers: FC = (): ReactElement => {
                                             ? "has-text-success"
                                             : "has-text-danger"
                                     }>
-                                    {" "}
-                                    {goal}{" "}
+                                    {goal}
                                 </strong>
                             </p>
                         )}

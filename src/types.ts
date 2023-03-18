@@ -5,6 +5,8 @@
 
 export type Nullable<T> = T | null;
 
+export type GenericObject<T = any> = Record<string | number | symbol, T>;
+
 export type GameDate = {
     year: number;
     month: number;
@@ -43,7 +45,7 @@ export type Game = {
 
 export type Stat = {
     value: number;
-    best: number;
+    best?: number;
 };
 
 export type Stats = {
@@ -52,11 +54,4 @@ export type Stats = {
     strikes: Stat;
     spares: Stat;
     avgFirstBallPinfall: Stat;
-    year?: number;
-    best?: number;
-};
-
-export type GlobalStats = {
-    total: Stats;
-    year: Stats;
 };

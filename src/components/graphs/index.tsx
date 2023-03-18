@@ -21,7 +21,7 @@ const NBSP: string = "\u00a0";
 const Graphs: FC = (): ReactElement => {
     const {games: rawGames, years} = useData();
     const choices = useMemo<Array<string | number>>(
-        () => ["Total", ...years],
+        () => [...years, "Total"].reverse(),
         [years],
     );
     const [scope, setScope] = useState<string | number>("Total");
