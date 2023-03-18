@@ -13,6 +13,9 @@ import AvgFirstBallPinfallGraph from "./avg-first-ball-pinfall";
 import {useData} from "core/hooks/use-data";
 import classnames from "classnames";
 import {useMemo, useState} from "react";
+import params from "../../../data/params.json";
+
+const NBSP: string = "\u00a0";
 
 const Graphs: FC = (): ReactElement => {
     const {games: rawGames, years} = useData();
@@ -22,6 +25,7 @@ const Graphs: FC = (): ReactElement => {
     );
     const [scope, setScope] = useState<string | number>("Total");
     const [hideBall, setHideBall] = useState<boolean>(true);
+    const [hideGoal, setHideGoal] = useState<boolean>(true);
 
     const games = useMemo<Array<Game>>(
         () =>
@@ -58,16 +62,27 @@ const Graphs: FC = (): ReactElement => {
                         "is-ghost",
                         "is-shadowless",
                     )}
+                    onClick={() => setHideGoal(!hideGoal)}>{`(${
+                    hideGoal ? "show" : "hide"
+                } goals)`}</button>
+                {NBSP}
+                <button
+                    className={classnames(
+                        "button",
+                        "is-small",
+                        "is-ghost",
+                        "is-shadowless",
+                    )}
                     onClick={() => setHideBall(!hideBall)}>{`(${
                     hideBall ? "show" : "hide"
                 } ball weight)`}</button>
             </div>
             <h3 className={classnames("subtitle")}>{"Score"}</h3>
-            <ScoreGraph games={games} hideBall={hideBall} />
+            <ScoreGraph games={games} hideBall={hideBall} goal={!hideGoal&&params?.goals?.avgScorePerGame} />
             <h3 className={classnames("subtitle", "mt-5")}>
                 {"Average First Ball Pinfall"}
             </h3>
-            <AvgFirstBallPinfallGraph games={games} hideBall={hideBall} />
+            <AvgFirstBallPinfallGraph games={games} hideBall={hideBall} goal={!hideGoal&&params?.goals?.avgFirstBallPinfall} />
             <h3 className={classnames("subtitle", "mt-5")}>{"Strikes"}</h3>
                 <StrikesGraph games={games} hideBall={hideBall} />
             <h3 className={classnames("subtitle", "mt-5")}>{"Spares"}</h3>

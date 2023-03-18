@@ -7,6 +7,7 @@ import type {FC, ReactElement} from "react";
 
 import classnames from "classnames";
 import {useData} from "../core/hooks/use-data";
+import params from "../../data/params.json";
 
 const BSP: string = "\u0020";
 
@@ -17,17 +18,24 @@ const Numbers: FC = (): ReactElement => {
         <section className={classnames("level","is-align-items-start")}>
             {[
                 ["Games", stats.total.games],
-                ["Avg Score", stats.total.avg.value, stats.total.avg.best],
-                ["Avg First Ball Pinfall", stats.total.avgFirstBallPinfall.value, stats.total.avgFirstBallPinfall.best],
+                ["Avg Score", stats.total.avg.value, stats.total.avg.best, params?.goals?.avgScorePerGame],
+                ["Avg First Ball Pinfall", stats.total.avgFirstBallPinfall.value, stats.total.avgFirstBallPinfall.best, params?.goals?.avgFirstBallPinfall],
                 ["Strikes", `${stats.total.strikes.value}%`, `${stats.total.strikes.best}%`],
                 ["Spares", `${stats.total.spares.value}%`, `${stats.total.spares.best}%`],
-            ].map(([label, value, best]) => (
+            ].map(([label, value, best, goal]) => (
                 <div
                     key={label}
                     className={classnames("level-item", "has-text-centered")}>
                     <div>
                         <p className={"heading"}>{label}</p>
                         <p className={"title"}>{value}</p>
+                        {!!goal && (
+                            <p className={classnames("is-size-6")}>
+                                <small className={"has-text-grey-light"} style={{verticalAlign: 1}}>{"goal:"}</small>
+                                {BSP}
+                                <strong className={value>=goal?"has-text-success":"has-text-danger"}> {goal} </strong>
+                            </p>
+                        )}
                         {!!best && (
                             <p className={classnames("is-size-7")}>
                                 <small className={"has-text-grey-light"} style={{verticalAlign: 1}}>{"best:"}</small>

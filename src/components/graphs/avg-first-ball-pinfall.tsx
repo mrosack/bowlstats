@@ -7,26 +7,17 @@ import type {FC, ReactElement} from "react";
 import type {Game} from "types";
 
 import {useMemo} from "react";
-import {
-    ComposedChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Legend,
-    ResponsiveContainer,
-    Bar,
-    LabelList,
-} from "recharts";
 import BaseGraph from "./base";
 
 export type AvgFirstBallPinfallGraphProps = {
     games: Array<Game>;
+    goal?: number;
     hideBall?: boolean;
 };
 
 const AvgFirstBallPinfallGraph: FC<AvgFirstBallPinfallGraphProps> = ({
     games,
+    goal,
     hideBall = false,
 }: AvgFirstBallPinfallGraphProps): ReactElement => {
     const data = useMemo<Array<Record<string, number | string>>>(
@@ -50,11 +41,14 @@ const AvgFirstBallPinfallGraph: FC<AvgFirstBallPinfallGraphProps> = ({
     );
 
     return (
-        <BaseGraph data={data} hideBall={hideBall}
-        axisLabel={"Avg First Ball Pinfall"}
-        axisId={"afbp"}
-        domain={[0, 10]}
-        padding={{top: 30, bottom: 30}}
+        <BaseGraph
+            data={data}
+            hideBall={hideBall}
+            axisLabel={"Avg First Ball Pinfall"}
+            axisId={"afbp"}
+            domain={[0, 10]}
+            padding={{top: 30, bottom: 30}}
+            referenceLine={goal}
         />
     );
 };

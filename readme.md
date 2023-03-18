@@ -10,13 +10,13 @@ A *pet-project* with **parcel** & **react** to track my _bowling_ scores & stats
 
 ## I like it! I want one too!
 
-It's pretty easy, even if you're not a _skilled web developper_!  
+It's pretty easy, even if you're not a _skilled web developper_!
 Just **fork** the repository (search for the **fork** button around the top right of this page), and modify the two following files:
 
-- `data/params.json` to change the **title** & **subtitle** of the page
+- `data/params.json` to change the **title** & **subtitle** of the page (and add goals if you want to)
 - `data/scores.yaml` to encode _your_ scores (won't really be yours with _my scores_) - refer to the **Usage** section for more information about the scores format
 
-Then, everything should be okay. 
+Then, everything should be okay.
 Go to the **settings/pages** section of the repository if you want to *fine tune* the configuration of the page.
 
 ## Local install
@@ -48,7 +48,7 @@ games:
 
 The `ball` entry specifies the weight of the ball. Prefix it with an `H` to indicate an _house ball_.
 
-The `frames` entry specifies the frames of a game, separated by a comma (`,`).  
+The `frames` entry specifies the frames of a game, separated by a comma (`,`).
 Use `X` for a *strike*, `/` for a *spare*, `S` for a *split*, `-` for a *miss* or `F` for a *foul*.
 
 You can add a `note` entry to comment a game.

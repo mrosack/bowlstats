@@ -12,11 +12,13 @@ import BaseGraph from "./base";
 
 export type ScoreGraphProps = {
     games: Array<Game>;
+    goal?: number;
     hideBall?: boolean;
 };
 
 const ScoreGraph: FC<ScoreGraphProps> = ({
     games,
+    goal,
     hideBall = false,
 }: ScoreGraphProps): ReactElement => {
     const data = useMemo<Array<Record<string, number | string>>>(
@@ -40,10 +42,13 @@ const ScoreGraph: FC<ScoreGraphProps> = ({
     );
 
     return (
-        <BaseGraph data={data} hideBall={hideBall}
-        axisLabel={"Score per game"}
-        axisId={"score"}
-        domain={[0, 300]}
+        <BaseGraph
+            data={data}
+            hideBall={hideBall}
+            axisLabel={"Score per game"}
+            axisId={"score"}
+            domain={[0, 300]}
+            referenceLine={goal}
         />
     );
 };

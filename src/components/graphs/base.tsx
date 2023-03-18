@@ -4,9 +4,7 @@
  */
 
 import type {FC, ReactElement, ReactNode} from "react";
-import type {Game} from "types";
 
-import {useMemo} from "react";
 import {
     ComposedChart,
     Line,
@@ -17,6 +15,7 @@ import {
     ResponsiveContainer,
     Bar,
     LabelList,
+    ReferenceLine,
 } from "recharts";
 
 export type BaseGraphProps = {
@@ -25,6 +24,7 @@ export type BaseGraphProps = {
     axisLabel: string;
     domain: [number, number];
     padding?: Record<string, number>;
+    referenceLine?: number;
     hideBall?: boolean;
 };
 
@@ -32,7 +32,9 @@ const BaseGraph: FC<BaseGraphProps> = ({
     data,
     axisId,
     axisLabel,
-    domain, padding,
+    domain,
+    padding,
+    referenceLine,
     hideBall = false,
 }: BaseGraphProps): ReactElement => (
     <ResponsiveContainer width={"100%"} height={350}>
@@ -55,6 +57,13 @@ const BaseGraph: FC<BaseGraphProps> = ({
                 orientation={"left"}
                 padding={padding}
             />
+            {referenceLine && (
+                <ReferenceLine
+                    yAxisId={axisId}
+                    y={referenceLine}
+                    stroke={"#257942"}
+                />
+            )}
             {!hideBall && (
                 <>
                     <YAxis
