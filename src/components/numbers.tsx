@@ -18,9 +18,9 @@ const Numbers: FC = (): ReactElement => {
             {[
                 ["Games", stats.total.games],
                 ["Avg Score", stats.total.avg.value, stats.total.avg.best],
+                ["Avg First Ball Pinfall", stats.total.avgFirstBallPinfall.value, stats.total.avgFirstBallPinfall.best],
                 ["Strikes", `${stats.total.strikes.value}%`, `${stats.total.strikes.best}%`],
                 ["Spares", `${stats.total.spares.value}%`, `${stats.total.spares.best}%`],
-                ["Avg First Ball Pinfall", stats.total.avgFirstBallPinfall.value, stats.total.avgFirstBallPinfall.best],
             ].map(([label, value, best]) => (
                 <div
                     key={label}
