@@ -86,23 +86,17 @@ const Graphs: FC = (): ReactElement => {
                     {`(${hideBall ? "show" : "hide"} ball weight)`}
                 </button>
             </div>
-            <h3 className={classnames("subtitle")}>{"Score"}</h3>
             <ScoreGraph
                 games={games}
                 hideBall={hideBall}
                 goal={!hideGoal && params.goals.avgScorePerGame}
             />
-            <h3 className={classnames("subtitle", "mt-5")}>
-                {"Average First Ball Pinfall"}
-            </h3>
             <AvgFirstBallPinfallGraph
                 games={games}
                 hideBall={hideBall}
                 goal={!hideGoal && params.goals.avgFirstBallPinfall}
             />
-            <h3 className={classnames("subtitle", "mt-5")}>{"Strikes"}</h3>
             <StrikesGraph games={games} hideBall={hideBall} />
-            <h3 className={classnames("subtitle", "mt-5")}>{"Spares"}</h3>
             <SparesGraph games={games} hideBall={hideBall} />
         </>
     );

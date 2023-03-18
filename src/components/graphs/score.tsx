@@ -6,6 +6,7 @@
 import type {FC, ReactElement} from "react";
 import type {Game} from "types";
 
+import classnames from "classnames";
 import {useMemo} from "react";
 import BaseGraph from "./base";
 
@@ -41,14 +42,17 @@ const ScoreGraph: FC<ScoreGraphProps> = ({
     );
 
     return (
-        <BaseGraph
-            data={data}
-            hideBall={hideBall}
-            axisLabel={"Score per game"}
-            axisId={"score"}
-            domain={[0, 300]}
-            referenceLine={goal}
-        />
+        <>
+            <h3 className={classnames("subtitle")}>{"Score"}</h3>
+            <BaseGraph
+                data={data}
+                hideBall={hideBall}
+                axisLabel={"Score per game"}
+                axisId={"score"}
+                domain={[0, 300]}
+                referenceLine={goal}
+            />
+        </>
     );
 };
 

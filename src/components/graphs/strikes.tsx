@@ -8,6 +8,7 @@ import type {Game} from "types";
 
 import {useMemo} from "react";
 import BaseGraph from "./base";
+import classnames from "classnames";
 
 export type StrikesGraphProps = {
     games: Array<Game>;
@@ -39,14 +40,17 @@ const StrikesGraph: FC<StrikesGraphProps> = ({
     );
 
     return (
-        <BaseGraph
-            data={data}
-            hideBall={hideBall}
-            axisLabel={"Strikes per game"}
-            axisId={"strikes"}
-            domain={[0, 12]}
-            padding={{top: 30, bottom: 30}}
-        />
+        <>
+            <h3 className={classnames("subtitle", "mt-5")}>{"Strikes"}</h3>
+            <BaseGraph
+                data={data}
+                hideBall={hideBall}
+                axisLabel={"Strikes per game"}
+                axisId={"strikes"}
+                domain={[0, 12]}
+                padding={{top: 30, bottom: 30}}
+            />
+        </>
     );
 };
 

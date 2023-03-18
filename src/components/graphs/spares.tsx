@@ -8,6 +8,7 @@ import type {Game} from "types";
 
 import {useMemo} from "react";
 import BaseGraph from "./base";
+import classnames from "classnames";
 
 export type SparesGraphProps = {
     games: Array<Game>;
@@ -39,14 +40,17 @@ const SparesGraph: FC<SparesGraphProps> = ({
     );
 
     return (
-        <BaseGraph
-            data={data}
-            hideBall={hideBall}
-            axisLabel={"Spares per game"}
-            axisId={"spares"}
-            domain={[0, 10]}
-            padding={{top: 30, bottom: 30}}
-        />
+        <>
+            <h3 className={classnames("subtitle", "mt-5")}>{"Spares"}</h3>
+            <BaseGraph
+                data={data}
+                hideBall={hideBall}
+                axisLabel={"Spares per game"}
+                axisId={"spares"}
+                domain={[0, 10]}
+                padding={{top: 30, bottom: 30}}
+            />
+        </>
     );
 };
 

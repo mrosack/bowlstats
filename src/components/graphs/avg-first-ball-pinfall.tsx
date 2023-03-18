@@ -8,6 +8,7 @@ import type {Game} from "types";
 
 import {useMemo} from "react";
 import BaseGraph from "./base";
+import classnames from "classnames";
 
 export type AvgFirstBallPinfallGraphProps = {
     games: Array<Game>;
@@ -41,15 +42,20 @@ const AvgFirstBallPinfallGraph: FC<AvgFirstBallPinfallGraphProps> = ({
     );
 
     return (
-        <BaseGraph
-            data={data}
-            hideBall={hideBall}
-            axisLabel={"Avg First Ball Pinfall"}
-            axisId={"afbp"}
-            domain={[0, 10]}
-            padding={{top: 30, bottom: 30}}
-            referenceLine={goal}
-        />
+        <>
+            <h3 className={classnames("subtitle", "mt-5")}>
+                {"Average First Ball Pinfall"}
+            </h3>
+            <BaseGraph
+                data={data}
+                hideBall={hideBall}
+                axisLabel={"Avg First Ball Pinfall"}
+                axisId={"afbp"}
+                domain={[0, 10]}
+                padding={{top: 30, bottom: 30}}
+                referenceLine={goal}
+            />
+        </>
     );
 };
 
