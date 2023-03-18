@@ -18,15 +18,18 @@ import {
     Bar,
     LabelList,
 } from "recharts";
+import BaseGraph from "./base";
 
 export type AvgFirstBallPinfallGraphProps = {
     games: Array<Game>;
+    hideBall?: boolean;
 };
 
 const AvgFirstBallPinfallGraph: FC<AvgFirstBallPinfallGraphProps> = ({
     games,
+    hideBall = false,
 }: AvgFirstBallPinfallGraphProps): ReactElement => {
-    const data = useMemo<Array<Record<string, number|string>>>(
+    const data = useMemo<Array<Record<string, number | string>>>(
         () =>
             games.map((game: Game, idx: number, arr: Array<Game>) => ({
                 name: `${game.date.day}/${String(game.date.month).padStart(
@@ -47,57 +50,12 @@ const AvgFirstBallPinfallGraph: FC<AvgFirstBallPinfallGraphProps> = ({
     );
 
     return (
-        <ResponsiveContainer width={"100%"} height={350}>
-            <ComposedChart
-                width={500}
-                height={500}
-                data={data}
-                margin={{
-                    top: 10,
-                    right: 5,
-                    left: 0,
-                    bottom: 5,
-                }}>
-                <CartesianGrid strokeDasharray={"2 2"} />
-                <XAxis dataKey={"name"} padding={{left: 20, right: 20}} />
-                <YAxis
-                    yAxisId={"afbp"}
-                    domain={[0, 10]}
-                    orientation={"left"}
-                    padding={{top:30, bottom: 30}}
-                />
-                <YAxis
-                    yAxisId={"ball"}
-                    domain={[6, 16]}
-                    orientation={"right"}
-                    tickCount={6}
-                />
-                <Legend />
-                <Bar
-                    name={"Ball Weight"}
-                    dataKey={"ball"}
-                    yAxisId={"ball"}
-                    barSize={20}
-                    fill={"#33993366"}>
-                    <LabelList dataKey={"ball"} position={"insideBottom"} />
-                </Bar>
-                <Line
-                    name={"Average"}
-                    type={"monotone"}
-                    dataKey={"avg"}
-                    yAxisId={"afbp"}
-                    stroke={"#ff3860"}
-                    dot={false}
-                />
-                <Line
-                    name={"Avg First Ball Pinfall"}
-                    type={"monotone"}
-                    dataKey={"afbp"}
-                    yAxisId={"afbp"}
-                    stroke={"#209cee"}
-                />
-            </ComposedChart>
-        </ResponsiveContainer>
+        <BaseGraph data={data} hideBall={hideBall}
+        axisLabel={"Avg First Ball Pinfall"}
+        axisId={"afbp"}
+        domain={[0, 10]}
+        padding={{top: 30, bottom: 30}}
+        />
     );
 };
 

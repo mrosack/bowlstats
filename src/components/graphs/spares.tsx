@@ -18,13 +18,16 @@ import {
     Bar,
     LabelList,
 } from "recharts";
+import BaseGraph from "./base";
 
 export type SparesGraphProps = {
     games: Array<Game>;
+    hideBall?: boolean;
 };
 
 const SparesGraph: FC<SparesGraphProps> = ({
     games,
+    hideBall = false,
 }: SparesGraphProps): ReactElement => {
     const data = useMemo<Array<Record<string, number|string>>>(
         () =>
@@ -47,57 +50,12 @@ const SparesGraph: FC<SparesGraphProps> = ({
     );
 
     return (
-        <ResponsiveContainer width={"100%"} height={350}>
-            <ComposedChart
-                width={500}
-                height={500}
-                data={data}
-                margin={{
-                    top: 10,
-                    right: 5,
-                    left: 0,
-                    bottom: 5,
-                }}>
-                <CartesianGrid strokeDasharray={"2 2"} />
-                <XAxis dataKey={"name"} padding={{left: 20, right: 20}} />
-                <YAxis
-                    yAxisId={"spares"}
-                    domain={[0, 10]}
-                    orientation={"left"}
-                    padding={{top:30, bottom: 30}}
-                />
-                <YAxis
-                    yAxisId={"ball"}
-                    domain={[6, 16]}
-                    orientation={"right"}
-                    tickCount={6}
-                />
-                <Legend />
-                <Bar
-                    name={"Ball Weight"}
-                    dataKey={"ball"}
-                    yAxisId={"ball"}
-                    barSize={20}
-                    fill={"#33993366"}>
-                    <LabelList dataKey={"ball"} position={"insideBottom"} />
-                </Bar>
-                <Line
-                    name={"Average"}
-                    type={"monotone"}
-                    dataKey={"avg"}
-                    yAxisId={"spares"}
-                    stroke={"#ff3860"}
-                    dot={false}
-                />
-                <Line
-                    name={"Spares per game"}
-                    type={"monotone"}
-                    dataKey={"spares"}
-                    yAxisId={"spares"}
-                    stroke={"#209cee"}
-                />
-            </ComposedChart>
-        </ResponsiveContainer>
+        <BaseGraph data={data} hideBall={hideBall}
+        axisLabel={"Spares per game"}
+        axisId={"spares"}
+        domain={[0, 10]}
+        padding={{top: 30, bottom: 30}}
+        />
     );
 };
 
