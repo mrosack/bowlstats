@@ -140,3 +140,16 @@ games:
     frames: 9-, 3/, 34, 71, 9/, X, 6-, X, 9/, 63
   - ball: H13
     frames: 7-, 33, 7/, 6-, 43, 9-, -3, -1, X, 1-
+
+---
+date: 2023-03-24
+games:
+  - ball: H13
+    frames: X, -9, 9/, -9, 72, 9/, 9-, 7/, 9-, S81
+  - ball: H13
+    frames: 81, 45, 9/, 6-, S81, 9-, 17, 6/, 8/, S72
+  - ball: H13
+    frames: 7-, 7-, 72, 7-, -9, 6-, 43, S7-, 3-, -7
+    notes: Out of focus, loudy players on next lane (need to focus on my focus)
+  - ball: H13
+    frames: 8-, 1-, 9/, 9-, S8-, X, 8/, 7-, 8-, 62 
