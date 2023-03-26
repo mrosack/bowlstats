@@ -16,9 +16,11 @@ export type GameDate = {
 export type GameFrameBall = number | "-" | "X" | "/" | "F";
 
 export type GameFrame = {
-    outcome: [GameFrameBall, GameFrameBall?, GameFrameBall?];
     cumulative: number;
+    open: boolean;
+    outcome: [GameFrameBall, GameFrameBall?, GameFrameBall?];
     score: number;
+    spare: false | "single" | "multiple";
     split: false | "yes" | "converted";
 };
 

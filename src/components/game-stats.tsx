@@ -40,8 +40,13 @@ const GameStats: FC<GameStatsProps> = ({
 
     const stats = useMemo<Record<string, string | number>>(() => {
         const results: Record<string, string | number> = {
+            Pins: game.pins,
             Strikes: game.stats.strikes,
-            Spares: game.stats.spares,
+            Spares: {
+                total: game.stats.spares.total,
+                "single pin": game.stats.spares.single,
+                "multiple pins": game.stats.spares.multiple,
+            },
         };
 
         if (game.stats.splits.total) {
@@ -70,7 +75,21 @@ const GameStats: FC<GameStatsProps> = ({
                         <li key={key}>
                             <strong>{`${key}:`}</strong>
                             {NBSP}
-                            <span>{value}</span>
+                            {["number","string"].includes( typeof value ) ? (
+                                <span>{value}</span>
+                            ) : (
+                            [
+                                <span>{value.total}</span>
+                            ,<ul className={classnames("ml-3", "is-size-7")}>
+                                {Object.entries(value).filter(([k])=>k!=="total").map(([k, v]) => (
+                                    <li key={k}>
+                                    <strong className={classnames("has-text-grey")}>{`${k}:`}</strong>
+                                    {NBSP}
+                                    <span>{v}</span>
+                                    </li>
+                                ))}
+                                </ul>
+                            ]                            )}
                         </li>
                     ))}
                 </ul>

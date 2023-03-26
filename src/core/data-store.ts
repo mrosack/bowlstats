@@ -23,7 +23,7 @@ const bestReducer = (acc: number, game: Game): number =>
 const strikesReducer = (acc: number, game: Game): number =>
     acc + game.stats.strikes;
 const sparesReducer = (acc: number, game: Game): number =>
-    acc + game.stats.spares;
+    acc + game.stats.spares.total;
 const avgFBPReducer = (acc: number, game: Game): number =>
     acc + game.stats.avgFirstBallPinfall;
 
@@ -73,7 +73,7 @@ export const dataStore = {
             ).toFixed(2),
             best: +(
                 (Math.max(
-                    ...games.map((game: Game): number => game.stats.spares),
+                    ...games.map((game: Game): number => game.stats.spares.total),
                 ) /
                     10) *
                 100
