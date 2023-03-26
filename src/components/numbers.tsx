@@ -38,6 +38,7 @@ const Numbers: FC = (): ReactElement => {
                     `${stats.strikes.best!}%`,
                 ],
                 ["Spares", `${stats.spares.value}%`, `${stats.spares.best!}%`],
+                ["Pins", stats.pins],
             ].map(([label, value, best, absDeviation, goal]) => (
                 <div
                     key={label}

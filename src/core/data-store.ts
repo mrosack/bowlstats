@@ -13,6 +13,7 @@ import rawGames from "core/data.json";
 const games = rawGames as Array<Game>;
 
 const avgReducer = (acc: number, game: Game): number => acc + game.score;
+const pinsReducer = (acc:number, game: Game):number=>acc+game.pins;
 const absDeviationReducer =
     (avg: number) =>
     (acc: number, game: Game): number =>
@@ -44,6 +45,7 @@ export const dataStore = {
     games,
     stats: {
         games: games.length,
+        pins: games.reduce(pinsReducer, 0),
         avg: {
             value: Math.round(games.reduce(avgReducer, 0) / games.length),
             best: games.reduce(bestReducer, 0),

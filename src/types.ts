@@ -39,6 +39,7 @@ export type Game = {
     ball: string;
     note?: string;
     score: number;
+    pins: number;
     perfect: boolean;
     stats: GameStats;
 };
@@ -50,6 +51,7 @@ export type Stat = {
 
 export type Stats = {
     games: number;
+    pins: number;
     avg: Stat;
     strikes: Stat;
     spares: Stat;

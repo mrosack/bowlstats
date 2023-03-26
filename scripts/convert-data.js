@@ -53,7 +53,18 @@ const firstBallValue = outcome => {
                                 ["F", "X", "/", "-"].includes(s) ? s : +s,
                             );
 
-                        let split = false;
+                        let split = false, pins=outcome.reduce((acc,oc)=>{
+                            if(typeof oc === "number") {
+                                return acc+oc;
+                            }
+                            if(oc === "X") {
+                                return acc+10;
+                            }
+                            if(oc === "/") {
+                                return acc+10-acc;
+                            }
+                            return acc;
+                        },0);
 
                         if (splits.includes(index)) {
                             split = outcome[1] === "/" ? "converted" : "yes";
@@ -62,6 +73,7 @@ const firstBallValue = outcome => {
                         return {
                             ...frame,
                             outcome,
+                            pins,
                             split,
                         };
                     }),
@@ -72,6 +84,9 @@ const firstBallValue = outcome => {
                 }
 
                 parsed.score = parsed.frames[9].cumulative;
+                parsed.pins = parsed.frames.reduce(
+                    (acc, frame) => acc + frame.pins,0,
+                );
                 parsed.perfect = parsed.score === 300;
 
                 parsed.stats = {
