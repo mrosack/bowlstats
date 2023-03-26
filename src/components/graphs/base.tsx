@@ -54,6 +54,7 @@ const BaseGraph: FC<BaseGraphProps> = ({
             <YAxis
                 yAxisId={axisId}
                 domain={domain}
+                interval={"equidistantPreserveStart"}
                 orientation={"left"}
                 padding={padding}
             />

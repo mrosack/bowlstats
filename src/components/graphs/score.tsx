@@ -9,6 +9,7 @@ import type {Game} from "types";
 import classnames from "classnames";
 import {useMemo} from "react";
 import BaseGraph from "./base";
+import {useData} from "core/hooks/use-data";
 
 export type ScoreGraphProps = {
     games: Array<Game>;
@@ -21,6 +22,7 @@ const ScoreGraph: FC<ScoreGraphProps> = ({
     goal,
     hideBall = false,
 }: ScoreGraphProps): ReactElement => {
+    const {stats:{avg:{best,worst}}}=useData();
     const data = useMemo<Array<Record<string, number | string>>>(
         () =>
             games.map((game: Game, idx: number, arr: Array<Game>) => ({
@@ -49,7 +51,8 @@ const ScoreGraph: FC<ScoreGraphProps> = ({
                 hideBall={hideBall}
                 axisLabel={"Score per game"}
                 axisId={"score"}
-                domain={[0, 300]}
+                domain={[Math.max(0, worst), Math.min(300, best)]}
+                padding={{top: 30, bottom: 30}}
                 referenceLine={goal}
             />
         </>
