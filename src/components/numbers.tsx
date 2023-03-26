@@ -22,7 +22,7 @@ const Numbers: FC = (): ReactElement => {
                     "Avg Score",
                     stats.avg.value,
                     stats.avg.best,
-                    stats.avg.absDeviation,
+                    stats.avg.stdDeviation,
                     params.goals.avgScorePerGame,
                 ],
                 [
@@ -39,7 +39,7 @@ const Numbers: FC = (): ReactElement => {
                 ],
                 ["Spares", `${stats.spares.value}%`, `${stats.spares.best!}%`],
                 ["Pins", stats.pins],
-            ].map(([label, value, best, absDeviation, goal]) => (
+            ].map(([label, value, best, stdDeviation, goal]) => (
                 <div
                     key={label}
                     className={classnames("level-item", "has-text-centered")}>
@@ -64,20 +64,20 @@ const Numbers: FC = (): ReactElement => {
                                 </strong>
                             </p>
                         )}
-                        {!!absDeviation && (
+                        {!!stdDeviation && (
                             <p className={classnames("is-size-7")}>
                                 <small
                                     className={"has-text-grey-light"}
                                     style={{verticalAlign: 1}}>
-                                    {"abs. deviation:"}
+                                    {"std. deviation:"}
                                 </small>
                                 {BSP}
                                 <strong className={"has-text-info"}>
-                                    {" "}
-                                    {absDeviation}{" "}
+                                    {stdDeviation}
                                 </strong>
                             </p>
-                        )}{!!best && (
+                        )}
+                        {!!best && (
                             <p className={classnames("is-size-7")}>
                                 <small
                                     className={"has-text-grey-light"}

@@ -18,6 +18,9 @@ const absDeviationReducer =
     (avg: number) =>
     (acc: number, game: Game): number =>
         acc + Math.abs(game.score - avg);
+const stdDeviationReducer = (avg:number) => (acc:number, game: Game)=>acc+(
+    Math.abs( game.score-avg )
+)**2;
 const bestReducer = (acc: number, game: Game): number => Math.max(acc, game.score);
 const worstReducer = (acc: number, game: Game): number => Math.min(acc, game.score);
 const strikesReducer = (acc: number, game: Game): number =>
@@ -41,18 +44,23 @@ export type DataStore = {
     years: Array<number>;
 };
 
+const avg: number = Math.round(games.reduce(avgReducer, 0) / games.length);
+
 export const dataStore = {
     games,
     stats: {
         games: games.length,
         pins: games.reduce(pinsReducer, 0),
         avg: {
-            value: Math.round(games.reduce(avgReducer, 0) / games.length),
+            value: avg,
             best: games.reduce(bestReducer, 0),
             worst: games.reduce(worstReducer, 300),
-            absDeviation: +((avg: number): number => {
-                return games.reduce(absDeviationReducer(avg), 0) / avg;
-            })(Math.round(games.reduce(avgReducer, 0) / games.length)).toFixed(2),
+            stdDeviation: +(
+                Math.sqrt(
+                    games.reduce(stdDeviationReducer(avg),0) / games.length
+                )
+            ).toFixed(2),
+            absDeviation: +(games.reduce(absDeviationReducer(avg), 0) / avg).toFixed(2),
         },
         strikes: {
             value: +(

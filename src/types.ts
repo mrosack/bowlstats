@@ -51,10 +51,18 @@ export type Stat = {
     best?: number;
 };
 
+export type ScoreAvg = {
+    value: number;
+    best: number;
+    worst: number;
+    stdDeviation: number;
+    absDeviation: number;
+}
+
 export type Stats = {
     games: number;
     pins: number;
-    avg: Stat;
+    avg: ScoreAvg;
     strikes: Stat;
     spares: Stat;
     avgFirstBallPinfall: Stat;
