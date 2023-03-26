@@ -1,0 +1,19 @@
+/* @leny/bowlstats
+ *
+ * /src/styles.scss
+ */
+
+.is-split-frame {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+        border: 2px solid hsl(348, 100%, 61%);
+        border-radius: 100%;
+    }
+}

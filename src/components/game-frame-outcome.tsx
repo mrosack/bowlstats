@@ -1,6 +1,6 @@
 /* @leny/bowlstats
  *
- * /src/components/game-frames.tsx
+ * /src/components/game-frame-outcome.tsx
  */
 
 /* eslint-disable react/no-array-index-key */ // consistency is guaranteed here.
@@ -61,7 +61,7 @@ const GameFrameOutcome: FC<GameFrameOutcomeProps> = ({
                                 outcome === "-" && "has-text-danger",
                                 frame.split &&
                                     index === 0 &&
-                                    "has-background-warning",
+                                    "is-split-frame",
                             )}>
                             {outcome}
                         </td>

@@ -4,6 +4,7 @@
  */
 
 import "bulma";
+import "./styles.scss";
 
 import {createRoot} from "react-dom/client";
 import Root from "containers/root";
