@@ -22,12 +22,14 @@ const Numbers: FC = (): ReactElement => {
                     "Avg Score",
                     stats.avg.value,
                     stats.avg.best,
+                    stats.avg.absDeviation,
                     params.goals.avgScorePerGame,
                 ],
                 [
                     "Avg First Ball Pinfall",
                     stats.avgFirstBallPinfall.value,
                     stats.avgFirstBallPinfall.best,
+                    null,
                     params.goals.avgFirstBallPinfall,
                 ],
                 [
@@ -36,7 +38,7 @@ const Numbers: FC = (): ReactElement => {
                     `${stats.strikes.best!}%`,
                 ],
                 ["Spares", `${stats.spares.value}%`, `${stats.spares.best!}%`],
-            ].map(([label, value, best, goal]) => (
+            ].map(([label, value, best, absDeviation, goal]) => (
                 <div
                     key={label}
                     className={classnames("level-item", "has-text-centered")}>
@@ -61,7 +63,20 @@ const Numbers: FC = (): ReactElement => {
                                 </strong>
                             </p>
                         )}
-                        {!!best && (
+                        {!!absDeviation && (
+                            <p className={classnames("is-size-7")}>
+                                <small
+                                    className={"has-text-grey-light"}
+                                    style={{verticalAlign: 1}}>
+                                    {"abs. deviation:"}
+                                </small>
+                                {BSP}
+                                <strong className={"has-text-info"}>
+                                    {" "}
+                                    {absDeviation}{" "}
+                                </strong>
+                            </p>
+                        )}{!!best && (
                             <p className={classnames("is-size-7")}>
                                 <small
                                     className={"has-text-grey-light"}
