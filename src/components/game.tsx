@@ -146,11 +146,13 @@ const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
                         borderRadius: "100%",
                         backgroundColor: getBallColor(game.ball),
                     }}
-                    title={`Played with ${game.ball.slice(1)}lbs ball ${
+                    title={`Played with ${game.ball.slice(
+                        game.ball.startsWith("H") ? 1 : 0,
+                    )}lbs ball ${
                         game.ball.startsWith("H") ? "(house ball)" : ""
                     }`}>
                     <span className={classnames("is-block")}>
-                        {game.ball.slice(1)}
+                        {game.ball.slice(game.ball.startsWith("H") ? 1 : 0)}
                     </span>
                     {game.ball.startsWith("H") && (
                         <span
