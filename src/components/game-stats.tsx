@@ -75,21 +75,31 @@ const GameStats: FC<GameStatsProps> = ({
                         <li key={key}>
                             <strong>{`${key}:`}</strong>
                             {NBSP}
-                            {["number","string"].includes( typeof value ) ? (
+                            {["number", "string"].includes(typeof value) ? (
                                 <span>{value}</span>
                             ) : (
-                            [
-                                <span>{value.total}</span>
-                            ,<ul className={classnames("ml-3", "is-size-7")}>
-                                {Object.entries(value).filter(([k])=>k!=="total").map(([k, v]) => (
-                                    <li key={k}>
-                                    <strong className={classnames("has-text-grey")}>{`${k}:`}</strong>
-                                    {NBSP}
-                                    <span>{v}</span>
-                                    </li>
-                                ))}
-                                </ul>
-                            ]                            )}
+                                <>
+                                    <span>{value.total}</span>
+                                    <ul
+                                        className={classnames(
+                                            "ml-3",
+                                            "is-size-7",
+                                        )}>
+                                        {Object.entries(value)
+                                            .filter(([k]) => k !== "total")
+                                            .map(([k, v]) => (
+                                                <li key={k}>
+                                                    <strong
+                                                        className={classnames(
+                                                            "has-text-grey",
+                                                        )}>{`${k}:`}</strong>
+                                                    {NBSP}
+                                                    <span>{v}</span>
+                                                </li>
+                                            ))}
+                                    </ul>
+                                </>
+                            )}
                         </li>
                     ))}
                 </ul>
