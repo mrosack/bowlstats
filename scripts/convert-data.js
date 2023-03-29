@@ -34,7 +34,7 @@ const firstBallValue = outcome => {
                         month,
                         day,
                     },
-                    ball,
+                    ball: String(ball),
                     frames: bowling(
                         frames
                             .split(",")
