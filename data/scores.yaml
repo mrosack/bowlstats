@@ -153,3 +153,26 @@ games:
     notes: Out of focus, loudy players on next lane (need to focus on my focus)
   - ball: H13
     frames: 8-, 1-, 9/, 9-, S8-, X, 8/, 7-, 8-, 62 
+
+---
+date: 2023-03-29
+games:
+  - ball: 14
+    note: First games with new balls
+    frames: 8-, 7-, 1-, 72, 16, 7-, 6/, -9, 6-, 8/X
+  - ball: 14
+    note: First games with new balls
+    frames: 7/, 9-, 8/, -7, 8/, 71, 9-, 9-, 3-, 9/X
+  - ball: 14
+    note: First games with new balls
+    frames: 35, 9/, 33, 81, 7-, X, 9-, -/, 7/, 81
+  - ball: 14
+    note: First games with new balls
+    frames: S7-, 7-, -4, 9-, 4-, 72, X, 72, 8-, 7-
+  - ball: 14
+    note: First games with new balls
+    frames: 71, 33, 18, 5/, 9-, 9/, 61, 71, 8-, 9-
+  - ball: 14
+    note: First games with new balls
+    frames: 4/, 9-, 8-, S8-, 9-, 9-, 9-, X, 7-, 9-
+    
