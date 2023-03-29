@@ -29,7 +29,7 @@ const AvgFirstBallPinfallGraph: FC<AvgFirstBallPinfallGraphProps> = ({
                     "0",
                 )}`,
                 afbp: game.stats.avgFirstBallPinfall,
-                ball: +game.ball.slice(1),
+                ball: +(game.ball.startsWith("H")?game.ball.slice(1):game.ball),
                 avg:
                     arr.reduce(
                         (acc: number, gm: Game, i: number): number =>

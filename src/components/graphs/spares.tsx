@@ -26,12 +26,14 @@ const SparesGraph: FC<SparesGraphProps> = ({
                     2,
                     "0",
                 )}`,
-                spares: game.stats.spares,
-                ball: +game.ball.slice(1),
+                spares: game.stats.spares.total,
+                ball: +(game.ball.startsWith("H")
+                    ? game.ball.slice(1)
+                    : game.ball),
                 avg:
                     arr.reduce(
                         (acc: number, gm: Game, i: number): number =>
-                            acc + (i <= idx ? gm.stats.spares : 0),
+                            acc + (i <= idx ? gm.stats.spares.total : 0),
                         0,
                     ) /
                     (idx + 1),

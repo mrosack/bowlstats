@@ -31,7 +31,7 @@ const ScoreGraph: FC<ScoreGraphProps> = ({
                     "0",
                 )}`,
                 score: game.score,
-                ball: +game.ball.slice(1),
+                ball: +(game.ball.startsWith("H")?game.ball.slice(1):game.ball),
                 avg:
                     arr.reduce(
                         (acc: number, gm: Game, i: number): number =>

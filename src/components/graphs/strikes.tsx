@@ -27,7 +27,7 @@ const StrikesGraph: FC<StrikesGraphProps> = ({
                     "0",
                 )}`,
                 strikes: game.stats.strikes,
-                ball: +game.ball.slice(1),
+                ball: +(game.ball.startsWith("H")?game.ball.slice(1):game.ball),
                 avg:
                     arr.reduce(
                         (acc: number, gm: Game, i: number): number =>
