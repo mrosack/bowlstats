@@ -9,7 +9,15 @@ import classnames from "classnames";
 import params from "../../data/params.json";
 import {Helmet} from "react-helmet";
 
-const Header: FC = (): ReactElement => (
+export type HeaderProps = {
+    withHouseBallGames: boolean;
+    toggleHouseBallGames(): void;
+};
+
+const Header: FC<HeaderProps> = ({
+    withHouseBallGames,
+    toggleHouseBallGames,
+}: HeaderProps): ReactElement => (
     <>
         <Helmet>
             <meta charSet={"utf-8"} />
@@ -18,9 +26,26 @@ const Header: FC = (): ReactElement => (
         </Helmet>
         <header
             className={classnames("hero", "is-small", "is-primary", "mb-6")}>
-            <div className={classnames("hero-body")}>
-                <h1 className={classnames("title")}>{params.title}</h1>
-                <h2 className={classnames("subtitle")}>{params.subtitle}</h2>
+            <div className={classnames("hero-body", "is-flex", "is-justify-content-space-between","is-align-items-center")}>
+                <div>
+                    <h1 className={classnames("title")}>{params.title}</h1>
+                    <h2 className={classnames("subtitle")}>
+                        {params.subtitle}
+                    </h2>
+                </div>
+                <div>
+                    <button
+                        type={"button"}
+                        className={classnames(
+                            "button",
+                            "is-small",
+                            "is-primary",
+                        )} onClick={()=>toggleHouseBallGames()}>
+                        {`${
+                            withHouseBallGames ? "Exclude" : "Include"
+                        } house ball games`}
+                    </button>
+                </div>
             </div>
         </header>
     </>

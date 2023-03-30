@@ -10,7 +10,7 @@ import type {Game, Stats} from "types";
 import {createContext} from "react";
 import rawGames from "core/data.json";
 
-const games = rawGames as Array<Game>;
+const allGames = rawGames as Array<Game>;
 
 const avgReducer = (acc: number, game: Game): number => acc + game.score;
 const pinsReducer = (acc:number, game: Game):number=>acc+game.pins;
@@ -30,6 +30,17 @@ const sparesReducer = (acc: number, game: Game): number =>
 const avgFBPReducer = (acc: number, game: Game): number =>
     acc + game.stats.avgFirstBallPinfall;
 
+export type DataStore = {
+    games: Array<Game>;
+    stats: Stats;
+    years: Array<number>;
+};
+
+export const getDataStore = (withHouseBallGames:boolean=true): DataStore=>{
+    const games = allGames.filter((game:Game):boolean=>(
+        withHouseBallGames?true:!game.ball.startsWith("H")
+    ))
+
 const years: Array<number> = games.reduce((acc: Array<number>, game: Game) => {
     const set: Set<number> = new Set<number>(acc);
 
@@ -38,15 +49,9 @@ const years: Array<number> = games.reduce((acc: Array<number>, game: Game) => {
     return Array.from(set);
 }, []);
 
-export type DataStore = {
-    games: Array<Game>;
-    stats: Stats;
-    years: Array<number>;
-};
-
 const avg: number = Math.round(games.reduce(avgReducer, 0) / games.length);
 
-export const dataStore = {
+return {
     games,
     stats: {
         games: games.length,
@@ -98,8 +103,9 @@ export const dataStore = {
         },
     },
     years,
+}
 };
 
-export const DataStoreContext = createContext<DataStore>(dataStore);
+export const DataStoreContext = createContext<DataStore>(getDataStore(true));
 
 export const DataStoreContextProvider = DataStoreContext.Provider;
