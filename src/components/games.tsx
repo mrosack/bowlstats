@@ -131,6 +131,7 @@ const Games: FC = (): ReactElement => {
                     key={`${Object.values(game.date).join("-")}-${i}`}
                     game={game}
                     isBest={stats.avg.best === game.score}
+                    isWorst={stats.avg.worst === game.score}
                 />
             ))}
         </>

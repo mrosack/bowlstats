@@ -48,9 +48,10 @@ const getBallColor = (ball: string): string => {
 export interface GameProps {
     game: Game;
     isBest: boolean;
+    isWorst: boolean;
 }
 
-const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
+const Game: FC<GameProps> = ({game, isBest, isWorst}: GameProps): ReactElement => {
     const [showDetails, setShowDetails] = useState<boolean>(false);
 
     const date = useMemo<Dayjs>(
@@ -97,7 +98,8 @@ const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
                 className={classnames(
                     "notification",
                     "is-light",
-                    isBest && "is-link",
+                    isBest && "is-primary",
+                    isWorst && "is-danger",
                     "is-flex",
                     "is-justify-content-space-between",
                     "is-align-content-center",
@@ -118,7 +120,8 @@ const Game: FC<GameProps> = ({game, isBest}: GameProps): ReactElement => {
             className={classnames(
                 "notification",
                 "is-light",
-                isBest && "is-link",
+                    isBest && "is-primary",
+                    isWorst && "is-danger",
                 "px-5",
             )}>
             <div
