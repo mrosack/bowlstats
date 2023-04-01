@@ -176,3 +176,30 @@ games:
     note: First games with new balls
     frames: 4/, 9-, 8-, S8-, 9-, 9-, 9-, X, 7-, 9-
     
+---
+date: 2023-04-01
+games:
+  - ball: 14
+    notes: Long series of games in crowded lines
+    frames: 62, 52, 1/, 35, 5/, -3, 9-, 34, -7, 72
+  - ball: 14
+    notes: Long series of games in crowded lines
+    frames: 53, -/, 72, X, X, 51, -5, 7-, X, 71
+  - ball: 14
+    notes: Long series of games in crowded lines
+    frames: 3/, 9-, 8-, X, X, 7-, X, 7-, 72, X7/
+  - ball: 14
+    notes: Long series of games in crowded lines
+    frames: 11, 9/, 6-, -9, S7-, 51, -7, X, 9/, 18
+  - ball: 14
+    notes: Long series of games in crowded lines
+    frames: S81, 9/, 8-, 9-, 8/, 9/, 9-, -4, 53, 71
+  - ball: 14
+    notes: Long series of games in crowded lines
+    frames: X, S71, -/, 8/, 81, 9/, 8/, 71, S81, 9/9
+  - ball: 14
+    notes: Long series of games in crowded lines
+    frames: 51, 7-, 71, 4/, 9-, 8/, -6, 9/, 71, 8-
+  - ball: 14
+    notes: Long series of games in crowded lines
+    frames: X, -7, 9/, X, 44, 9-, S81, 9-, 8-, 6/4
