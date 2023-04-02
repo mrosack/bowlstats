@@ -22,7 +22,11 @@ const ScoreGraph: FC<ScoreGraphProps> = ({
     goal,
     hideBall = false,
 }: ScoreGraphProps): ReactElement => {
-    const {stats:{avg:{best,worst}}}=useData();
+    const {
+        stats: {
+            avg: {best, worst},
+        },
+    } = useData();
     const data = useMemo<Array<Record<string, number | string>>>(
         () =>
             games.map((game: Game, idx: number, arr: Array<Game>) => ({
@@ -31,7 +35,9 @@ const ScoreGraph: FC<ScoreGraphProps> = ({
                     "0",
                 )}`,
                 score: game.score,
-                ball: +(game.ball.startsWith("H")?game.ball.slice(1):game.ball),
+                ball: +(game.ball.startsWith("H")
+                    ? game.ball.slice(1)
+                    : game.ball),
                 avg:
                     arr.reduce(
                         (acc: number, gm: Game, i: number): number =>

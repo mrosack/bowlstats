@@ -29,7 +29,9 @@ const AvgFirstBallPinfallGraph: FC<AvgFirstBallPinfallGraphProps> = ({
                     "0",
                 )}`,
                 afbp: game.stats.avgFirstBallPinfall,
-                ball: +(game.ball.startsWith("H")?game.ball.slice(1):game.ball),
+                ball: +(game.ball.startsWith("H")
+                    ? game.ball.slice(1)
+                    : game.ball),
                 avg:
                     arr.reduce(
                         (acc: number, gm: Game, i: number): number =>
@@ -51,7 +53,7 @@ const AvgFirstBallPinfallGraph: FC<AvgFirstBallPinfallGraphProps> = ({
                 hideBall={hideBall}
                 axisLabel={"Avg First Ball Pinfall"}
                 axisId={"afbp"}
-                domain={[0, 10]}
+                domain={[3, 10]}
                 padding={{top: 30, bottom: 30}}
                 referenceLine={goal}
             />
