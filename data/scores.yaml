@@ -203,3 +203,19 @@ games:
   - ball: 14
     notes: Long series of games in crowded lines
     frames: X, -7, 9/, X, 44, 9-, S81, 9-, 8-, 6/4
+
+---
+date: 2023-04-05
+games:
+  - ball: 14
+    frames: 9-, 9-, 72, 9-, 33, 7-, 62, 9-, 9/, 24
+  - ball: 14
+    frames: 9/, 7-, -3, 71, 9-, 5/, 7-, 62, X, 3/6
+  - ball: 14
+    frames: 9-, 72, 4/, 6-, 8-, S72, X, 1/, -7, 62
+  - ball: 14
+    frames: 7-, 45, -3, -6, 6/, 6-, 7/, 72, S8-, 5-
+  - ball: 14
+    frames: X, 72, 9/, X, -8, 8-, 6-, 7/, 9-, 9/8
+  - ball: 14
+    frames: 3-, 8-, X, 3-, --, X, 3/, 71, 4-, 3-
