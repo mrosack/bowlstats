@@ -235,3 +235,21 @@ games:
     frames: 8/, 7/, 52, 7-, -7, 7-, X, 9-, 53, 8/3
   - ball: 14
     frames: 72, X, X, 34, 7/, X, 9-, 8/, 9-, -8
+
+---
+date: 2023-04-15
+games:
+  - ball: 14
+    frames: 1/, 53, 6-, 61, 35, 7/, X, 15, 9-, 71
+  - ball: 14
+    frames: X, S8/, 6-, 9-, S7-, X, 8-, 51, S81, 14
+    note: First converted split!
+  - ball: 14
+    frames: 16, 9/, S81, 8/, 9-, 52, 9/, 33, 8-, X81
+  - ball: 14
+    frames: -9, X, 7/, X, X, 6-, 8-, 7-, 42, 1-
+    note: It started so well… then I panicked.
+  - ball: 14
+    frames: 9/, S8-, X, 9-, 9/, 5/, X, 9/, 8/, 7-
+  - ball: 14
+    frames: 5-, 9-, X, 8/, 71, 9/, 9-, 8-, 9-, 8/4
