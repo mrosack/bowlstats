@@ -289,3 +289,19 @@ games:
   - ball: 14
     frames: 72, X, -3, 35, 9-, 9-, 15, 7-, 7-, 16
     note: The "I should have stopped before". I need to listen to my body.
+
+---
+date: 2023-04-26
+games:
+  - ball: 14
+    frames: -6, X, 9-, S6-, S8-, S72, X, 5/, X, 9/7
+  - ball: 14
+    frames: X, 9/, 9-, -7, 1/, 81, 71, 35, S7-, 3/9
+  - ball: 14
+    frames: 8/, 9-, 41, 53, 9/, 8-, 62, 9-, X, 8/5
+  - ball: 14
+    frames: 9/, 9/, 81, X, S81, 7/, 9-, 9/, 62, 71
+  - ball: 14
+    frames: 71, 9-, 9-, 72, 63, X, S81, 62, 8-, 71
+  - ball: 14
+    frames: 9-, X, 53, X, 8/, S81, 71, 61, 8/, 6/8
