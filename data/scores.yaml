@@ -305,3 +305,25 @@ games:
     frames: 71, 9-, 9-, 72, 63, X, S81, 62, 8-, 71
   - ball: 14
     frames: 9-, X, 53, X, 8/, S81, 71, 61, 8/, 6/8
+
+---
+date: 2023-05-01
+games:
+  - ball: 14
+    frames: -/, 8-, 31, 8-, S7-, X, 36, 9-, -6, -/1      
+    note: Bad oil (nearly dry lane) condition. Time to train position and form.
+  - ball: 14
+    frames: 8/, 8/, S81, 53, 33, 9/, 9-, X, 8-, 5/7
+    note: Bad oil (nearly dry lane) condition. Time to train position and form.
+  - ball: 14
+    frames: 8-, X, 3-, X, 16, 72, X, 9-, 9-, 62
+    note: Played only straight, with spare ball.
+  - ball: 14
+    frames: 8-, 8-, 9-, 7-, 63, 9-, 8-, 62, 9/, 9-
+    note: Played only straight, with spare ball.
+  - ball: 14
+    frames: -7, -9, 8/, 8/, 3/, 9/, 9/, 7/, 7/, 3/5
+    note: Very proud of my closing, here. :)
+  - ball: 14
+    frames: 4/, 7/, 3-, -8, -7, -7, 9-, 44, 3/, 7/6
+    note: Slight pain at the end.
