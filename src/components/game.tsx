@@ -51,7 +51,11 @@ export interface GameProps {
     isWorst: boolean;
 }
 
-const Game: FC<GameProps> = ({game, isBest, isWorst}: GameProps): ReactElement => {
+const Game: FC<GameProps> = ({
+    game,
+    isBest,
+    isWorst,
+}: GameProps): ReactElement => {
     const [showDetails, setShowDetails] = useState<boolean>(false);
 
     const date = useMemo<Dayjs>(
@@ -120,8 +124,8 @@ const Game: FC<GameProps> = ({game, isBest, isWorst}: GameProps): ReactElement =
             className={classnames(
                 "notification",
                 "is-light",
-                    isBest && "is-primary",
-                    isWorst && "is-danger",
+                isBest && "is-primary",
+                isWorst && "is-danger",
                 "px-5",
             )}>
             <div
@@ -179,6 +183,13 @@ const Game: FC<GameProps> = ({game, isBest, isWorst}: GameProps): ReactElement =
                 </button>
             </div>
             <GameFrames score={game.score} frames={game.frames} />
+            <p className={classnames(game.note ? "mb-1" : "mb-3")}>
+                <strong>{"Lane Oil Pattern:"}</strong>
+                {NBSP}
+                <span className={classnames("is-italic")}>
+                    {game.oilPattern || "none/dry"}
+                </span>
+            </p>
             {game.note && (
                 <p className={classnames("mb-3")}>
                     <strong>{"Note:"}</strong>
