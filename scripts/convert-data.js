@@ -26,7 +26,7 @@ const firstBallValue = outcome => {
         const [year, month, day] = date.split("-").map(s => +s);
 
         results.push(
-            ...games.map(({ball, frames, note}) => {
+            ...games.map(({ball, oilPattern, frames, note}) => {
                 const splits = [];
                 const parsed = {
                     date: {
@@ -35,6 +35,7 @@ const firstBallValue = outcome => {
                         day,
                     },
                     ball: String(ball),
+                    oilPattern: oilPattern || false,
                     frames: bowling(
                         frames
                             .split(",")
