@@ -44,6 +44,7 @@ export type Game = {
     pins: number;
     perfect: boolean;
     stats: GameStats;
+    oilPattern?: string;
 };
 
 export type Stat = {
