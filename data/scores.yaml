@@ -159,21 +159,27 @@ date: 2023-03-29
 games:
   - ball: 14
     note: First games with new balls
+    oilPattern: Typical House Shot
     frames: 8-, 7-, 1-, 72, 16, 7-, 6/, -9, 6-, 8/X
   - ball: 14
     note: First games with new balls
+    oilPattern: Typical House Shot
     frames: 7/, 9-, 8/, -7, 8/, 71, 9-, 9-, 3-, 9/X
   - ball: 14
     note: First games with new balls
+    oilPattern: Typical House Shot
     frames: 35, 9/, 33, 81, 7-, X, 9-, -/, 7/, 81
   - ball: 14
     note: First games with new balls
+    oilPattern: Typical House Shot
     frames: S7-, 7-, -4, 9-, 4-, 72, X, 72, 8-, 7-
   - ball: 14
     note: First games with new balls
+    oilPattern: Typical House Shot
     frames: 71, 33, 18, 5/, 9-, 9/, 61, 71, 8-, 9-
   - ball: 14
     note: First games with new balls
+    oilPattern: Typical House Shot
     frames: 4/, 9-, 8-, S8-, 9-, 9-, 9-, X, 7-, 9-
     
 ---
@@ -209,32 +215,44 @@ date: 2023-04-05
 games:
   - ball: 14
     frames: 9-, 9-, 72, 9-, 33, 7-, 62, 9-, 9/, 24
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 9/, 7-, -3, 71, 9-, 5/, 7-, 62, X, 3/6
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 9-, 72, 4/, 6-, 8-, S72, X, 1/, -7, 62
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 7-, 45, -3, -6, 6/, 6-, 7/, 72, S8-, 5-
+    oilPattern: Typical House Shot
   - ball: 14
     frames: X, 72, 9/, X, -8, 8-, 6-, 7/, 9-, 9/8
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 3-, 8-, X, 3-, --, X, 3/, 71, 4-, 3-
+    oilPattern: Typical House Shot
 
 ---
 date: 2023-04-12
 games:
   - ball: 14
     frames: 5-, 6/, 9/, 9/, 42, 6-, 8/, 8/, -9, S7-
+    oilPattern: Typical House Shot
   - ball: 14
     frames: S71, 5/, 16, S81, 72, X, 9/, 1/, 4-, 9/9
+    oilPattern: Typical House Shot
   - ball: 14
     frames: S81, 63, 9-, 14, 9/, 36, 8/, 9-, 9-, 4-
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 1/, 81, 6/, 17, 72, 9/, X, 35, 81, 9-
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 8/, 7/, 52, 7-, -7, 7-, X, 9-, 53, 8/3
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 72, X, X, 34, 7/, X, 9-, 8/, 9-, -8
+    oilPattern: Typical House Shot
 
 ---
 date: 2023-04-15
@@ -259,16 +277,22 @@ date: 2023-04-19
 games:
   - ball: 14
     frames: 5-, 81, S81, 72, 72, -7, 6/, X, 9-, 71
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 3/, 7-, 5-, 62, 9-, 9-, 7/, 7/, 1-, X32
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 52, 9-, 81, 62, X, 6-, 6/, X, 9-, -3
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 9-, X, 3/, 12, 8-, 9/, 6/, 71, 81, X9/
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 34, 7/, X, X, 9/, X, 72, S71, -7, 13
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 72, 7-, X, 6/, 35, 9-, 62, 33, 8/, 7/-
+    oilPattern: Typical House Shot
 
 ---
 date: 2023-04-22
@@ -295,16 +319,22 @@ date: 2023-04-26
 games:
   - ball: 14
     frames: -6, X, 9-, S6-, S8-, S72, X, 5/, X, 9/7
+    oilPattern: Typical House Shot
   - ball: 14
     frames: X, 9/, 9-, -7, 1/, 81, 71, 35, S7-, 3/9
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 8/, 9-, 41, 53, 9/, 8-, 62, 9-, X, 8/5
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 9/, 9/, 81, X, S81, 7/, 9-, 9/, 62, 71
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 71, 9-, 9-, 72, 63, X, S81, 62, 8-, 71
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 9-, X, 53, X, 8/, S81, 71, 61, 8/, 6/8
+    oilPattern: Typical House Shot
 
 ---
 date: 2023-05-01
@@ -333,20 +363,43 @@ date: 2023-05-03
 games:
   - ball: 14
     frames: --, 81, X, 9-, 18, 9/, 8-, 36, 44, 9/4
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 6-, 9-, 4-, 9-, 5/, 8-, -6, -7, S7-, 54
     note: Big family with kids running everywhere and on the lines. Hard to focus while watching to not kill people running in my legs.
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 32, 35, 8-, 71, 72, 54, 62, S72, 8/, 6/7
     note: Big family with kids running everywhere and on the lines. Hard to focus while watching to not kill people running in my legs.
+    oilPattern: Typical House Shot
   - ball: 14
     frames: X, X, 33, 8/, 9-, 5-, 9/, X, 6/, 7/-
     note: Big family with kids running everywhere and on the lines. Hard to focus while watching to not kill people running in my legs.
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 61, 61, 9/, S81, 3-, -3, 53, 35, 71, 52
     note: Big family with kids running everywhere and on the lines. Hard to focus while watching to not kill people running in my legs.
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 18, 61, 8-, 3/, 9/, 8-, 61, -3, 6-, 9-
     note: Big family with kids running everywhere and on the lines. Hard to focus while watching to not kill people running in my legs.
+    oilPattern: Typical House Shot
   - ball: 14
     frames: 9-, 54, S81, 8/, S81, 54, X, 8/, 9-, 8/9
+    oilPattern: Typical House Shot
+
+---
+date: 2023-05-07
+games:
+  - ball: 14
+    frames: S72, -/, 54, 7-, 7-, --, -3, 9-, 9-, 7-
+  - ball: 14
+    frames: 63, 9-, 45, 15, 8-, -9, 72, 16, 6-, 9-
+  - ball: 14
+    frames: 9-, 17, 54, 1/, X, 71, 7-, 7-, 9-, 7/3
+  - ball: 14
+    frames: 54, X, 8-, X, 6-, 3-, X, 9-, -1, 7-
+  - ball: 14
+    frames: 36, 8/, 5/, 72, -/, 72, --, S7-, 8/, 6/7
+  - ball: 14
+    frames: 54, 71, X, X, 7/, 71, -7, 9-, X, 7/3
