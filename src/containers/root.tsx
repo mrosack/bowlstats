@@ -15,15 +15,21 @@ import Footer from "components/footer";
 import {getDataStore, DataStoreContextProvider} from "core/data-store";
 
 const Root: FC = (): ReactElement => {
-    const [withHouseBallGames, setWithHouseBallGames] = useState<boolean>(false);
+    const [withHouseBallGames, setWithHouseBallGames] =
+        useState<boolean>(false);
+    const [withDryLaneGames, setWithDryLangGames] = useState<boolean>(false);
 
     return (
-        <DataStoreContextProvider value={getDataStore(withHouseBallGames)}>
+        <DataStoreContextProvider value={getDataStore(withHouseBallGames, withDryLaneGames)}>
             <div className={classnames("container", "is-fluid", "px-0")}>
                 <Header
                     withHouseBallGames={withHouseBallGames}
                     toggleHouseBallGames={() =>
                         setWithHouseBallGames(!withHouseBallGames)
+                    }
+                    withDryLaneGames={withDryLaneGames}
+                    toggleDryLaneGames={() =>
+                        setWithDryLangGames(!withDryLaneGames)
                     }
                 />
                 <div className={classnames("container", "mx-auto")}>

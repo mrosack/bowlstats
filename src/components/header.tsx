@@ -12,11 +12,15 @@ import {Helmet} from "react-helmet";
 export type HeaderProps = {
     withHouseBallGames: boolean;
     toggleHouseBallGames(): void;
+    withDryLaneGames: boolean;
+    toggleDryLaneGames(): void;
 };
 
 const Header: FC<HeaderProps> = ({
     withHouseBallGames,
     toggleHouseBallGames,
+    withDryLaneGames,
+    toggleDryLaneGames,
 }: HeaderProps): ReactElement => (
     <>
         <Helmet>
@@ -26,7 +30,13 @@ const Header: FC<HeaderProps> = ({
         </Helmet>
         <header
             className={classnames("hero", "is-small", "is-primary", "mb-6")}>
-            <div className={classnames("hero-body", "is-flex", "is-justify-content-space-between","is-align-items-center")}>
+            <div
+                className={classnames(
+                    "hero-body",
+                    "is-flex",
+                    "is-justify-content-space-between",
+                    "is-align-items-center",
+                )}>
                 <div>
                     <h1 className={classnames("title")}>{params.title}</h1>
                     <h2 className={classnames("subtitle")}>
@@ -40,10 +50,23 @@ const Header: FC<HeaderProps> = ({
                             "button",
                             "is-small",
                             "is-primary",
-                        )} onClick={()=>toggleHouseBallGames()}>
+                        )}
+                        onClick={() => toggleHouseBallGames()}>
                         {`${
                             withHouseBallGames ? "Exclude" : "Include"
                         } house ball games`}
+                    </button>
+                    <button
+                        type={"button"}
+                        className={classnames(
+                            "button",
+                            "is-small",
+                            "is-primary",
+                        )}
+                        onClick={() => toggleDryLaneGames()}>
+                        {`${
+                            withDryLaneGames ? "Exclude" : "Include"
+                        } dry lane games`}
                     </button>
                 </div>
             </div>
