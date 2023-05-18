@@ -403,3 +403,49 @@ games:
     frames: 36, 8/, 5/, 72, -/, 72, --, S7-, 8/, 6/7
   - ball: 14
     frames: 54, 71, X, X, 7/, 71, -7, 9-, X, 7/3
+
+---
+date: 2023-05-10
+games:
+  - ball: 14
+    note: Really casual games, on kids' day, with the son. Not really focused.
+    frames: 6-, -4, 61, --, 3-, 45, S81, 12, -8, XX9
+  - ball: 14
+    note: Really casual games, on kids' day, with the son. Not really focused.
+    frames: 9/, 8-, 8-, -7, 8-, 8/, 8-, 54, S81, 9-
+  - ball: 14
+    note: Really casual games, on kids' day, with the son. Not really focused.
+    frames: -6, S8/, 5-, 63, 8-, 63, 72, X, 62, 4-
+  - ball: 14
+    note: Really casual games, on kids' day, with the son. Not really focused.
+    frames: 9/, 63, 6-, X, 8-, X, 36, 9-, 7/, 71
+  - ball: 14
+    note: Really casual games, on kids' day, with the son. Not really focused.
+    frames: 71, 7-, 9/, 8-, 36, 7/, X, 3-, 26, 18
+
+---
+date: 2023-05-17
+games:
+  - ball: 14
+    frames: -5, 7-, 6-, S81, 35, 61, 72, 53, 9/, 9-
+    oilPattern: Typical House Shot
+  - ball: 14
+    frames: X, 31, X, 9-, X, 7/, 5/, 3/, S81, S8-
+    notes: First usage of a "grip glove" I bought
+    oilPattern: Typical House Shot
+  - ball: 14
+    frames: S8-, 8-, 9/, S6/, 18, X, 9-, 9-, -5, S8-
+    notes: First usage of a "grip glove" I bought
+    oilPattern: Typical House Shot
+  - ball: 14
+    frames: 72, 7-, X, S81, 9-, 4/, 9-, X, 9-, 7/8
+    notes: First usage of a "grip glove" I bought
+    oilPattern: Typical House Shot
+  - ball: 14
+    frames: X, 72, 9-, 9-, 9/, 72, X, 9-, 9-, 9-
+    notes: First usage of a "grip glove" I bought
+    oilPattern: Typical House Shot
+  - ball: 14
+    frames: X, 53, 9/, -4, X, 8-, --, X, 9-, 53
+    notes: First usage of a "grip glove" I bought
+    oilPattern: Typical House Shot
