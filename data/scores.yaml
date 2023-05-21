@@ -449,3 +449,17 @@ games:
     frames: X, 53, 9/, -4, X, 8-, --, X, 9-, 53
     notes: First usage of a "grip glove" I bought
     oilPattern: Typical House Shot
+
+---
+date: 2023-05-21
+games:
+  - ball: 14
+    frames: 44, 6-, 1-, S81, -9, X, 8-, 9/, -8, S62
+  - ball: 14
+    frames: 72, X, -9, 7/, 43, 8-, 8/, 8/, 6-, 45
+  - ball: 14
+    frames: 72, 6-, 1/, S71, 9-, 32, 7/, 3-, 7/, 9/X
+  - ball: 14
+    frames: 9-, 63, 61, 71, 9-, 9/, X, 9/, 9-, S8-
+  - ball: 14
+    frames: 7/, 9/, 7-, 7/, X, X, 35, 9/, X, X9/
