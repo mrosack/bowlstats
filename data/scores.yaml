@@ -521,3 +521,28 @@ games:
   - ball: 14
     frames: 54, -9, 7/, 61, 81, 8-, 4/, S8/, 7/, 61
     oilPattern: Typical House Shot
+
+---
+date: 2023-06-14
+games:
+  - ball: 14
+    frames: 35, S81, --, 5-, 7-, 52, 8-, 9/, S81, 9/-
+    oilPattern: Typical House Shot
+  - ball: 14
+    frames: -5, 33, -7, 5-, -3, 7-, 9-, 7/, 6/, 9-
+    oilPattern: Typical House Shot
+  - ball: 14
+    frames: 33, 9-, 6-, -6, 9/, 62, 7-, -7, X, 9-
+    oilPattern: Typical House Shot
+  - ball: 14
+    frames: 6/, X, X, X, X, 81, 1-, 7-, 9-, --
+    oilPattern: Typical House Shot
+  - ball: 14
+    frames: X, -6, -7, 44, 9-, X, 7-, S6-, 8/, 52
+    oilPattern: Typical House Shot
+  - ball: 14
+    frames: 9/, X, 9-, 1-, 4/, 9/, 9/, 81, 8-, 8-
+    oilPattern: Typical House Shot
+  - ball: 14
+    frames: 1/, 81, 9-, -3, X, 9-, X, S8-, -6, 8/8
+    oilPattern: Typical House Shot
