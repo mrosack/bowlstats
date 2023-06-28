@@ -523,7 +523,7 @@ games:
     oilPattern: Typical House Shot
 
 ---
-date: 2023-06-14
+date: 2023-06-21
 games:
   - ball: 14
     frames: 35, S81, --, 5-, 7-, 52, 8-, 9/, S81, 9/-
