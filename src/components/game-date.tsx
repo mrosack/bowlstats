@@ -50,7 +50,7 @@ const GameDate: FC<GameDateProps> = ({date, showYear=false}: GameDateProps): Rea
                 "has-text-weight-bold",
             )}
             style={{border: "1px solid #dbdbdb", borderTop: 0}}>
-            {date.day()}
+            {date.date()}
         </span>
     </div>
 );
