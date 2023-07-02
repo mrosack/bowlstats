@@ -15,7 +15,7 @@ import GameDetails from "components/game";
 const NBSP: string = "\u00a0";
 
 const Games: FC = (): ReactElement => {
-    const {games, stats} = useData();
+    const {games, filters, stats} = useData();
 
     return (
         <>
@@ -37,6 +37,7 @@ const Games: FC = (): ReactElement => {
                     game={game}
                     isBest={stats.avg.best === game.score}
                     isWorst={stats.avg.worst === game.score}
+                    showYear={filters.year === null}
                 />
             ))}
         </>

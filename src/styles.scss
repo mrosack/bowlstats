@@ -21,3 +21,18 @@
 .is-va-middle {
     vertical-align: middle;
 }
+
+.is-size-8 {
+    font-size: .5em !important;
+}
+
+.is-relative {
+    position: relative;
+}
+
+.is-calendar-year {
+    position: absolute;
+    transform: rotate(-90deg);
+    top: .1rem;
+    left: 0;
+}

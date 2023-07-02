@@ -11,6 +11,7 @@ import {useCallback, useState} from "react";
 import classnames from "classnames";
 import GameFrames from "components/game-frames";
 import GameStats from "components/game-stats";
+import GameDate from "components/game-date";
 import {useMemo} from "react";
 import dayjs from "dayjs";
 
@@ -49,12 +50,14 @@ export interface GameProps {
     game: Game;
     isBest: boolean;
     isWorst: boolean;
+    showYear?: boolean;
 }
 
 const Game: FC<GameProps> = ({
     game,
     isBest,
     isWorst,
+    showYear = false,
 }: GameProps): ReactElement => {
     const [showDetails, setShowDetails] = useState<boolean>(false);
 
@@ -68,33 +71,7 @@ const Game: FC<GameProps> = ({
         setShowDetails(!showDetails);
     }, [showDetails]);
 
-    const $date = (
-        <div className={classnames("mr-2", "has-background-white")}>
-            <span
-                className={classnames(
-                    "is-block",
-                    "px-2",
-                    "has-background-danger",
-                    "has-text-white",
-                    "is-size-7",
-                    "has-text-weight-semibold",
-                    "is-uppercase",
-                    "has-text-centered",
-                )}>
-                {date.format("MMM")}
-            </span>
-            <span
-                className={classnames(
-                    "is-block",
-                    "has-text-centered",
-                    "has-text-black",
-                    "has-text-weight-bold",
-                )}
-                style={{border: "1px solid #dbdbdb", borderTop: 0}}>
-                {game.date.day}
-            </span>
-        </div>
-    );
+    const $date = <GameDate date={date} showYear={showYear} />;
 
     if (!showDetails) {
         return (
