@@ -5,7 +5,7 @@
 
 // NOTE: this is a "static" store, as the data will not change during the app lifecycle.
 
-import type {Game, Stats} from "types";
+import type {Game, Stats, Nullable} from "types";
 
 import {createContext} from "react";
 import rawGames from "core/data.json";
@@ -33,35 +33,88 @@ const avgFBPReducer = (acc: number, game: Game): number =>
 
 export type DataStore = {
     games: Array<Game>;
+    filters: {
+        year: Nullable<number>;
+        month: Nullable<number>;
+        day: Nullable<number>;
+        lists: {
+            years: Array<number>;
+            months: Array<number>;
+            days: Array<number>;
+        };
+        withHouseBallGames: boolean;
+        withDryLaneGames: boolean;
+    };
     stats: Stats;
-    years: Array<number>;
 };
 
 export const getDataStore = (
+    year: Nullable<number> = null,
+    month: Nullable<number> = null,
+    day: Nullable<number> = null,
     withHouseBallGames: boolean = true,
     withDryLaneGames: boolean = true,
 ): DataStore => {
-    const games = allGames.filter(
-        (game: Game): boolean =>
-            (withHouseBallGames ? true : !game.ball.startsWith("H")) &&
-            (withDryLaneGames ? true : !!game.oilPattern),
-    );
+    const filteredGames: Array<Game> = allGames
+        .filter((game: Game): boolean =>
+            withHouseBallGames ? true : !game.ball.startsWith("H"),
+        )
+        .filter((game: Game): boolean =>
+            withDryLaneGames ? true : !!game.oilPattern,
+        );
 
-    const years: Array<number> = games.reduce(
-        (acc: Array<number>, game: Game) => {
-            const set: Set<number> = new Set<number>(acc);
-
-            set.add(game.date.year);
-
-            return Array.from(set);
-        },
-        [],
+    const games = filteredGames.filter((game: Game): boolean =>
+        year === null
+            ? true
+            : game.date.year === year &&
+              (month === null
+                  ? true
+                  : game.date.month === month &&
+                    (day === null ? true : game.date.day === day)),
     );
 
     const avg: number = Math.round(games.reduce(avgReducer, 0) / games.length);
 
     return {
         games,
+        filters: {
+            year,
+            month,
+            day,
+            lists: {
+                years: filteredGames.reduce(
+                    (acc: Array<number>, game: Game) => {
+                        const set: Set<number> = new Set<number>(acc);
+
+                        set.add(game.date.year);
+
+                        return Array.from(set);
+                    },
+                    [],
+                ),
+                months: Array.from(new Array(12).keys()).filter(
+                    (mnth: number): boolean =>
+                        !!filteredGames.find(
+                            (game: Game): boolean =>
+                                game.date.year === year &&
+                                game.date.month === mnth + 1,
+                        ),
+                ),
+                days: filteredGames
+                    .filter(
+                        (game: Game): boolean =>
+                            game.date.year === year &&
+                            game.date.month === month,
+                    )
+                    .reduce(
+                        (acc: Array<number>, game: Game) =>
+                            Array.from(new Set(acc).add(game.date.day)),
+                        [],
+                    ),
+            },
+            withHouseBallGames,
+            withDryLaneGames,
+        },
         stats: {
             games: games.length,
             pins: games.reduce(pinsReducer, 0),
@@ -117,7 +170,6 @@ export const getDataStore = (
                 ).toFixed(2),
             },
         },
-        years,
     };
 };
 
