@@ -2,7 +2,7 @@
   "title": "@leny/bowlstats",
   "subtitle": "A small bowling stats tracker",
   "goals": {
-    "avgScorePerGame": 100,
+    "avgScorePerGame": 120,
     "avgFirstBallPinfall": 6,
   }
 }
