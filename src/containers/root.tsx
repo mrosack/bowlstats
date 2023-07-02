@@ -4,35 +4,62 @@
  */
 
 import type {FC, ReactElement} from "react";
+import type {Nullable} from "types";
 
 import {useState} from "react";
 import classnames from "classnames";
 import Header from "components/header";
 import Numbers from "components/numbers";
+import Filters from "components/filters";
 import Games from "components/games";
 import Graphs from "components/graphs";
 import Footer from "components/footer";
 import {getDataStore, DataStoreContextProvider} from "core/data-store";
 
 const Root: FC = (): ReactElement => {
+    const [year, setYear] = useState<Nullable<number>>(null);
+    const [month, setMonth] = useState<Nullable<number>>(null);
+    const [day, setDay] = useState<Nullable<number>>(null);
     const [withHouseBallGames, setWithHouseBallGames] =
         useState<boolean>(false);
-    const [withDryLaneGames, setWithDryLangGames] = useState<boolean>(false);
+    const [withDryLaneGames, setWithDryLaneGames] = useState<boolean>(false);
 
     return (
-        <DataStoreContextProvider value={getDataStore(withHouseBallGames, withDryLaneGames)}>
+        <DataStoreContextProvider
+            value={getDataStore(
+                year,
+                month,
+                day,
+                withHouseBallGames,
+                withDryLaneGames,
+            )}>
             <div className={classnames("container", "is-fluid", "px-0")}>
-                <Header
-                    withHouseBallGames={withHouseBallGames}
-                    toggleHouseBallGames={() =>
-                        setWithHouseBallGames(!withHouseBallGames)
-                    }
-                    withDryLaneGames={withDryLaneGames}
-                    toggleDryLaneGames={() =>
-                        setWithDryLangGames(!withDryLaneGames)
-                    }
-                />
+                <Header />
                 <div className={classnames("container", "mx-auto")}>
+                    <section className={classnames("section")}>
+                        <Filters
+                            year={year}
+                            month={month}
+                            day={day}
+                            withHouseBallGames={withHouseBallGames}
+                            withDryLaneGames={withDryLaneGames}
+                            onYearChange={(y: Nullable<number>): void => {
+                                setYear(y);
+                            }}
+                            onMonthChange={(m: Nullable<number>): void => {
+                                setMonth(m);
+                            }}
+                            onDayChange={(d: Nullable<number>): void => {
+                                setDay(d);
+                            }}
+                            toggleHouseBallGames={(b: boolean): void => {
+                                setWithHouseBallGames(b);
+                            }}
+                            toggleDryLaneGames={(b: boolean): void => {
+                                setWithDryLaneGames(b);
+                            }}
+                        />
+                    </section>
                     <section className={classnames("section")}>
                         <Numbers />
                     </section>

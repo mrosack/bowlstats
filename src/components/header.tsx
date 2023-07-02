@@ -9,19 +9,7 @@ import classnames from "classnames";
 import params from "../../data/params.json";
 import {Helmet} from "react-helmet";
 
-export type HeaderProps = {
-    withHouseBallGames: boolean;
-    toggleHouseBallGames(): void;
-    withDryLaneGames: boolean;
-    toggleDryLaneGames(): void;
-};
-
-const Header: FC<HeaderProps> = ({
-    withHouseBallGames,
-    toggleHouseBallGames,
-    withDryLaneGames,
-    toggleDryLaneGames,
-}: HeaderProps): ReactElement => (
+const Header: FC= (): ReactElement => (
     <>
         <Helmet>
             <meta charSet={"utf-8"} />
@@ -29,7 +17,7 @@ const Header: FC<HeaderProps> = ({
             <meta name={"description"} content={params.subtitle} />
         </Helmet>
         <header
-            className={classnames("hero", "is-small", "is-primary", "mb-6")}>
+            className={classnames("hero", "is-small", "is-primary")}>
             <div
                 className={classnames(
                     "hero-body",
@@ -42,32 +30,6 @@ const Header: FC<HeaderProps> = ({
                     <h2 className={classnames("subtitle")}>
                         {params.subtitle}
                     </h2>
-                </div>
-                <div>
-                    <button
-                        type={"button"}
-                        className={classnames(
-                            "button",
-                            "is-small",
-                            "is-primary",
-                        )}
-                        onClick={() => toggleHouseBallGames()}>
-                        {`${
-                            withHouseBallGames ? "Exclude" : "Include"
-                        } house ball games`}
-                    </button>
-                    <button
-                        type={"button"}
-                        className={classnames(
-                            "button",
-                            "is-small",
-                            "is-primary",
-                        )}
-                        onClick={() => toggleDryLaneGames()}>
-                        {`${
-                            withDryLaneGames ? "Exclude" : "Include"
-                        } dry lane games`}
-                    </button>
                 </div>
             </div>
         </header>
