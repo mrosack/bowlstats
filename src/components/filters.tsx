@@ -79,8 +79,6 @@ const Filters: FC<FiltersProps> = ({
         ];
     }, [year, filters]);
 
-    console.log("months:", months)
-
     return (
         <div className={classnames("columns")}>
             <div className={classnames("column", "is-four-fifths")}>
