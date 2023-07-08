@@ -17,6 +17,7 @@
     "convert:data": "node ./scripts/convert-data.js",
     "preinstall": "npx check-engine",
     "prebuild": "npm run convert:data",
+    "prepare": "husky install",
     "build": "npx parcel build",
     "prework": "npm run convert:data",
     "work": "npx parcel"
@@ -36,11 +37,6 @@
     "*.js": [
       "npx eslint --fix --cache"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npx lint-staged"
-    }
   },
   "alias": {
     "containers": "./src/containers",
