@@ -130,7 +130,7 @@ const Game: FC<GameProps> = ({
                         borderRadius: "100%",
                         backgroundColor: getBallColor(game.ball),
                     }}
-                    title={`Played with ${game.ball.slice(
+                    data-tooltip={`Played with ${game.ball.slice(
                         game.ball.startsWith("H") ? 1 : 0,
                     )}lbs ball ${
                         game.ball.startsWith("H") ? "(house ball)" : ""

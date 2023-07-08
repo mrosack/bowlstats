@@ -4,6 +4,8 @@
  */
 
 import "bulma";
+import "bulma-switch";
+import "bulma-tooltip";
 import "./styles.scss";
 
 import {createRoot} from "react-dom/client";

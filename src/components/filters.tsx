@@ -170,30 +170,39 @@ const Filters: FC<FiltersProps> = ({
                 )}
             </div>
             <form>
-                <div className={classnames("pt-5")}>
-                    <label className={classnames("checkbox")}>
+                <div className={classnames("pt-4")}>
+                    <div className={classnames("field", "mb-0", "is-flex", "is-flex-direction-row", "is-justify-content-flex-start", "is-align-items-center")}>
                         <input
                             type={"checkbox"}
+                            id={"withHouseBallGames"}
                             name={"withHouseBallGames"}
+                            className={classnames("switch", "is-small", "is-rounded")}
                             checked={withHouseBallGames}
                             onChange={() =>
                                 toggleHouseBallGames(!withHouseBallGames)
                             }
                         />
                         {NBSP}
-                        {"Include House Ball Games"}
-                    </label><label className={classnames("checkbox")}>
+                        <label htmlFor={"withHouseBallGames"}>
+                            {"Include House Ball Games"}
+                        </label>
+                    </div>
+                    <div className={classnames("field", "mb-0", "is-flex", "is-flex-direction-row", "is-justify-content-flex-start", "is-align-items-center")}>
                         <input
                             type={"checkbox"}
-                            name={"withDryLanesGames"}
+                            id={"withDryLaneGames"}
+                            name={"withDryLaneGames"}
+                            className={classnames("switch", "is-small", "is-rounded")}
                             checked={withDryLaneGames}
                             onChange={() =>
                                 toggleDryLaneGames(!withDryLaneGames)
                             }
                         />
                         {NBSP}
+                        <label htmlFor={"withDryLaneGames"}>
                         {"Include Dry Lanes Games"}
-                    </label>
+                        </label>
+                    </div>
                 </div>
             </form>
         </div>
