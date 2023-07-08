@@ -26,12 +26,13 @@ export type GameFrame = {
     split: false | "yes" | "converted";
 };
 
+export type GameSparesStats = {total: number; single: number; multiple: number};
 export type GameSplitStats = {total: number; converted: number};
 
 export type GameStats = {
     fouls: number;
     misses: number;
-    spares: number;
+    spares: GameSparesStats;
     strikes: number;
     splits: GameSplitStats;
     avgFirstBallPinfall: number;

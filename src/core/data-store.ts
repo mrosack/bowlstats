@@ -29,7 +29,7 @@ const worstReducer = (acc: number, game: Game): number =>
 const strikesReducer = (acc: number, game: Game): number =>
     acc + game.stats.strikes;
 const sparesReducer = (acc: number, game: Game): number =>
-    acc + game.stats.spares;
+    acc + game.stats.spares.total;
 const avgFBPReducer = (acc: number, game: Game): number =>
     acc + game.stats.avgFirstBallPinfall;
 
