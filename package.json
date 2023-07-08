@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@leny/eslint-config": "~0.2.0",
-    "@parcel/transformer-sass": "~2.9.3",
+    "@parcel/transformer-sass": "~2.8.3",
     "@types/react": "~18.2.14",
     "@types/react-dom": "~18.2.6",
     "@typescript-eslint/eslint-plugin": "~5.61.0",
@@ -67,7 +67,7 @@
     "eslint-plugin-unicorn": "~47.0.0",
     "husky": "^8.0.3",
     "lint-staged": "~13.2.3",
-    "parcel": "~2.9.3",
+    "parcel": "~2.8.3",
     "prettier": "~3.0.0"
   },
   "dependencies": {
