@@ -13,6 +13,8 @@ export type GameDate = {
     day: number;
 };
 
+export type LeagueDate = GameDate;
+
 export type GameFrameBall = number | "-" | "X" | "/" | "F";
 
 export type GameFrame = {
@@ -36,6 +38,7 @@ export type GameStats = {
 };
 
 export type Game = {
+    id: string;
     date: GameDate;
     frames: Array<GameFrame>;
     ball: string;
@@ -58,7 +61,7 @@ export type ScoreAvg = {
     worst: number;
     stdDeviation: number;
     absDeviation: number;
-}
+};
 
 export type Stats = {
     games: number;
@@ -67,4 +70,16 @@ export type Stats = {
     strikes: Stat;
     spares: Stat;
     avgFirstBallPinfall: Stat;
+};
+
+export type LeagueDay = {
+    date: LeagueDate;
+    bye: boolean;
+    handicap: number;
+    games: Array<Game>;
+};
+
+export type League = {
+    name: string;
+    days: Array<LeagueDay>;
 };

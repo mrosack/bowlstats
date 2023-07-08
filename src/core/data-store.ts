@@ -5,12 +5,12 @@
 
 // NOTE: this is a "static" store, as the data will not change during the app lifecycle.
 
-import type {Game, Stats, Nullable} from "types";
+import type {Game, League, Stats, Nullable} from "types";
 
 import {createContext} from "react";
 import rawGames from "core/data.json";
 
-const allGames = rawGames as Array<Game>;
+const allGames = rawGames.games as Array<Game>;
 
 const avgReducer = (acc: number, game: Game): number => acc + game.score;
 const pinsReducer = (acc: number, game: Game): number => acc + game.pins;
@@ -18,8 +18,10 @@ const absDeviationReducer =
     (avg: number) =>
     (acc: number, game: Game): number =>
         acc + Math.abs(game.score - avg);
-const stdDeviationReducer = (avg: number) => (acc: number, game: Game) =>
-    acc + Math.abs(game.score - avg) ** 2;
+const stdDeviationReducer =
+    (avg: number): ((acc: number, game: Game) => number) =>
+    (acc: number, game: Game): number =>
+        acc + Math.abs(game.score - avg) ** 2;
 const bestReducer = (acc: number, game: Game): number =>
     Math.max(acc, game.score);
 const worstReducer = (acc: number, game: Game): number =>
@@ -27,12 +29,13 @@ const worstReducer = (acc: number, game: Game): number =>
 const strikesReducer = (acc: number, game: Game): number =>
     acc + game.stats.strikes;
 const sparesReducer = (acc: number, game: Game): number =>
-    acc + game.stats.spares.total;
+    acc + game.stats.spares;
 const avgFBPReducer = (acc: number, game: Game): number =>
     acc + game.stats.avgFirstBallPinfall;
 
 export type DataStore = {
     games: Array<Game>;
+    leagues: Array<League>;
     filters: {
         year: Nullable<number>;
         month: Nullable<number>;
@@ -77,6 +80,7 @@ export const getDataStore = (
 
     return {
         games,
+        leagues: rawGames.leagues as Array<League>,
         filters: {
             year,
             month,
