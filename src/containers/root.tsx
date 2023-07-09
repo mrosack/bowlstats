@@ -9,15 +9,15 @@ import {useState} from "react";
 import classnames from "classnames";
 import Header from "components/header";
 import Games from "containers/games";
+import Leagues from "containers/leagues";
 import Footer from "components/footer";
-import {preventDefault} from "core/utils";
 
 type Mode = "games" | "leagues";
 
 const RootContainer: FC = (): ReactElement => {
     const [mode, setMode] = useState<Mode>("games");
 
-    const $content = mode === "games" ? <Games /> : <div>{"Leagues"}</div>;
+    const $content = mode === "games" ? <Games /> : <Leagues />;
 
     return (
         <div className={classnames("container", "is-fluid", "px-0")}>
