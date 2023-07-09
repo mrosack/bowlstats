@@ -21,26 +21,23 @@ export interface GameDateProps {
     showYear?: boolean;
 }
 
-const GameDate: FC<GameDateProps> = ({date, showYear=false}: GameDateProps): ReactElement => (
+const GameDate: FC<GameDateProps> = ({
+    date,
+    showYear = false,
+}: GameDateProps): ReactElement => (
     <div className={classnames("mr-2", "has-background-white")}>
         <span
             className={classnames(
                 "is-block",
-                "is-relative",
-                showYear && "pl-4",
-                showYear&& "pr-1",
-                !showYear&&"px-2",
-                !showYear&&"has-text-centered",
                 "has-background-danger",
                 "has-text-white",
                 "is-size-7",
+                "px-2",
+                "has-text-centered",
                 "has-text-weight-semibold",
                 "is-uppercase",
             )}>
             {date.format("MMM")}
-            {showYear && (
-                <small className={classnames("is-calendar-year")}>{date.format("YY")}</small>
-            )}
         </span>
         <span
             className={classnames(
@@ -49,9 +46,31 @@ const GameDate: FC<GameDateProps> = ({date, showYear=false}: GameDateProps): Rea
                 "has-text-black",
                 "has-text-weight-bold",
             )}
-            style={{border: "1px solid #dbdbdb", borderTop: 0}}>
+            style={{
+                border: "1px solid #dbdbdb",
+                borderTop: 0,
+                borderBottom: "1px solid #dbdbdb",
+            }}>
             {date.date()}
         </span>
+        {showYear && (
+            <span
+                className={classnames(
+                    "is-block",
+                    "has-text-black",
+                    "is-size-8",
+                    "px-2",
+                    "has-text-weight-semibold",
+                    "is-uppercase",
+                )}
+                style={{
+                    border: "1px solid #dbdbdb",
+                    borderTop: 0,
+                    borderBottom: "1px solid #dbdbdb",
+                }}>
+                {date.format("YYYY")}
+            </span>
+        )}
     </div>
 );
 export default GameDate;
