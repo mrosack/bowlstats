@@ -63,7 +63,7 @@ const Leagues: FC = (): ReactElement => {
                 <h4 className={classnames("is-size-4", "mb-4")}>{selectedLeague.name}</h4>
                 <div>
                     {selectedLeague.days.map((day,index) => (
-                        <LeagueDay day={day} />
+                        <LeagueDay key={`league-${selectedLeague.name}-day-${day}-idx-${index}`} day={day} />
                     ))}
                 </div>
             </div>

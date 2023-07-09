@@ -21,11 +21,13 @@ const ballStyles: Record<string, string | number> = {
 export interface GameFrameOutcomeProps {
     frame: GameFrame;
     lastFrame: boolean;
+    compact?: boolean;
 }
 
 const GameFrameOutcome: FC<GameFrameOutcomeProps> = ({
     frame,
     lastFrame,
+    compact=false,
 }: GameFrameOutcomeProps): ReactElement => {
     // convert the outcome tuple to an array of strings
     const frameOutcome = useMemo<Array<string>>(() => {
@@ -54,7 +56,8 @@ const GameFrameOutcome: FC<GameFrameOutcomeProps> = ({
                             className={classnames(
                                 "is-family-monospace",
                                 "is-size-7",
-                                "p-1",
+                                "py-1",
+                                "px-1",
                                 outcome === "X" && "has-text-success",
                                 outcome === "/" && "has-text-info",
                                 outcome === "F" && "has-text-danger",

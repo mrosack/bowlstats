@@ -44,6 +44,8 @@ export type Game = {
     frames: Array<GameFrame>;
     ball: string;
     note?: string;
+    scratch?: number;
+    handicap?: number;
     score: number;
     pins: number;
     perfect: boolean;

@@ -25,7 +25,7 @@ const GameDate: FC<GameDateProps> = ({
     date,
     showYear = false,
 }: GameDateProps): ReactElement => (
-    <div className={classnames("mr-2", "has-background-white")}>
+    <div className={classnames("mr-2",)}>
         <span
             className={classnames(
                 "is-block",
@@ -45,6 +45,7 @@ const GameDate: FC<GameDateProps> = ({
                 "has-text-centered",
                 "has-text-black",
                 "has-text-weight-bold",
+                "has-background-white",
             )}
             style={{
                 border: "1px solid #dbdbdb",
@@ -62,6 +63,7 @@ const GameDate: FC<GameDateProps> = ({
                     "px-2",
                     "has-text-weight-semibold",
                     "is-uppercase",
+                "has-background-white",
                 )}
                 style={{
                     border: "1px solid #dbdbdb",
