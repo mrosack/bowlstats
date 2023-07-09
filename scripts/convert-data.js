@@ -192,6 +192,11 @@ const firstBallValue = outcome => {
 
                 league.days.push({
                     day,
+                    date: {
+                        year,
+                        month,
+                        day,
+                    },
                     bye,
                     games: bye
                         ? []
@@ -211,7 +216,7 @@ const firstBallValue = outcome => {
         );
     });
 
-    results.leagues = Object.values(leaguesHash);
+    results.leagues = Object.values(leaguesHash).reverse();
 
     await writeFile(
         `${__dirname}/../src/core/data.json`,
