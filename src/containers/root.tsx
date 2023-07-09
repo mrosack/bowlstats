@@ -21,26 +21,12 @@ const RootContainer: FC = (): ReactElement => {
 
     return (
         <div className={classnames("container", "is-fluid", "px-0")}>
-            <Header />
-            {/* }
-            <div className={classnames("tabs", "is-centered", "is-small", "is-toggle", "mt-neg-6")}>
-                <ul>
-                    <li className={classnames(mode === "games" && "is-active")}>
-                        <a onClick={preventDefault(()=>setMode("games"))}>
-                            <span>{"Games"}</span>
-                        </a>
-                    </li>
-                    <li
-                        className={classnames(
-                            mode === "leagues" && "is-active",
-                        )}>
-                        <a onClick={preventDefault(()=>setMode("leagues"))}>
-                            <span>{"Leagues"}</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            { */}
+            <Header
+                mode={mode}
+                onChangeMode={(v:Mode): void => {
+                    setMode(v);
+                }}
+            />
             {$content}
             <Footer />
         </div>
