@@ -129,7 +129,7 @@ games:
   - frames: X, -9, 9/, -9, 72, 9/, 9-, 7/, 9-, S81
   - frames: 81, 45, 9/, 6-, S81, 9-, 17, 6/, 8/, S72
   - frames: 7-, 7-, 72, 7-, -9, 6-, 43, S7-, 3-, -7
-    notes: Out of focus, loudy players on next lane (need to focus on my focus)
+    note: Out of focus, loudy players on next lane (need to focus on my focus)
   - frames: 8-, 1-, 9/, 9-, S8-, X, 8/, 7-, 8-, 62 
 
 ---
@@ -154,21 +154,21 @@ games:
 date: 2023-04-01
 ball: 14
 games:
-  - notes: Long series of games in crowded lines
+  - note: Long series of games in crowded lines
     frames: 62, 52, 1/, 35, 5/, -3, 9-, 34, -7, 72
-  - notes: Long series of games in crowded lines
+  - note: Long series of games in crowded lines
     frames: 53, -/, 72, X, X, 51, -5, 7-, X, 71
-  - notes: Long series of games in crowded lines
+  - note: Long series of games in crowded lines
     frames: 3/, 9-, 8-, X, X, 7-, X, 7-, 72, X7/
-  - notes: Long series of games in crowded lines
+  - note: Long series of games in crowded lines
     frames: 11, 9/, 6-, -9, S7-, 51, -7, X, 9/, 18
-  - notes: Long series of games in crowded lines
+  - note: Long series of games in crowded lines
     frames: S81, 9/, 8-, 9-, 8/, 9/, 9-, -4, 53, 71
-  - notes: Long series of games in crowded lines
+  - note: Long series of games in crowded lines
     frames: X, S71, -/, 8/, 81, 9/, 8/, 71, S81, 9/9
-  - notes: Long series of games in crowded lines
+  - note: Long series of games in crowded lines
     frames: 51, 7-, 71, 4/, 9-, 8/, -6, 9/, 71, 8-
-  - notes: Long series of games in crowded lines
+  - note: Long series of games in crowded lines
     frames: X, -7, 9/, X, 44, 9-, S81, 9-, 8-, 6/4
 
 ---
@@ -314,15 +314,15 @@ oilPattern: Typical House Shot
 games:
   - frames: -5, 7-, 6-, S81, 35, 61, 72, 53, 9/, 9-
   - frames: X, 31, X, 9-, X, 7/, 5/, 3/, S81, S8-
-    notes: First usage of a "grip glove" I bought
+    note: First usage of a "grip glove" I bought
   - frames: S8-, 8-, 9/, S6/, 18, X, 9-, 9-, -5, S8-
-    notes: First usage of a "grip glove" I bought
+    note: First usage of a "grip glove" I bought
   - frames: 72, 7-, X, S81, 9-, 4/, 9-, X, 9-, 7/8
-    notes: First usage of a "grip glove" I bought
+    note: First usage of a "grip glove" I bought
   - frames: X, 72, 9-, 9-, 9/, 72, X, 9-, 9-, 9-
-    notes: First usage of a "grip glove" I bought
+    note: First usage of a "grip glove" I bought
   - frames: X, 53, 9/, -4, X, 8-, --, X, 9-, 53
-    notes: First usage of a "grip glove" I bought
+    note: First usage of a "grip glove" I bought
 
 ---
 date: 2023-05-21
@@ -417,4 +417,14 @@ games:
   - frames: 8/, 8/, 81, 1/, S8-, 3/, 9/, 8/, 8-, 7/8    
   - frames: X, 9-, X, 36, 9-, S71, --, 9-, 9/, 41    
   - frames: 8-, 9-, S81, X, 9/, 9-, S62, 9/, 8/, 9/3
-  - frames: S7-, S8/, 35, S71, X, 7-, 61, 8-, X, 1/X    
+  - frames: S7-, S8/, 35, S71, X, 7-, 61, 8-, X, 1/X      
+
+---
+date: 2023-07-11
+ball: 14
+oilPattern: Typical House Shot
+games:
+  - frames: 6-, 7/, -7, 8/, 8/, 9/, -3, 3/, 8-, -5
+    note: New main ball. Very hard to tame.
+  - frames: X, 9-, 35, -8, 8/, 6/, 8-, 7-, 5-, 7-
+    note: New main ball. Very hard to tame.
