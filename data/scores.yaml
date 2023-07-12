@@ -45,11 +45,10 @@ games:
 ---
 date: 2023-03-04
 ball: H12
+note: Slight leg pain
 games:
   - frames: -6, 3-, 61, 71, 62, X, 7-, 1/, 81, 7-
-    note: Slight leg pain
   - frames: 44, -5,8-,-8, 8-, 61, 16, 54, 71, 7/4
-    note: Slight leg pain
 
 ---
 date: 2023-03-06
@@ -64,37 +63,30 @@ games:
 ---
 date: 2023-03-08
 ball: H14
+note: First training, perfect ball weight, layout too large
 games:
   - frames: 9-, -7, --, -5, 5-, 3/, 8-, 6-, S81, 8-
-    note: First training, perfect ball weight, layout too large
   - frames: 9/, S8-, 4/, S71, 7-, S81, 72, 8-, 54, 1-
-    note: First training, perfect ball weight, layout too large
   - frames: 9-, X, 3/, 7-, 62, S71, 44, 9-, 34, 35
-    note: First training, perfect ball weight, layout too large
 
 ---
 date: 2023-03-12
 ball: H14
+note: Perfect ball weight (house ball), layout too large
 games:
   - frames: -/, -9, X, 41, 9-, 8/, 7-, 45, 31, 7-
-    note: Perfect ball weight (house ball), layout too large
   - frames: 9-, -6, 8-, 7/, 4-, 1-, 33, 3-, 9-, 8/9
-    note: Perfect ball weight (house ball), layout too large
   - frames: 63, 9-, X, 9-, 9/, -7, 72, 52, 7-, 3/6
-    note: Perfect ball weight (house ball), layout too large
 
 ---
 date: 2023-03-15
 ball: H13
+note: Ball slightly light (house ball), good layout
 games:
   - frames: X, 81, 41, 1/, 8-, S81, 6-, S7-, 72, X9-
-    note: Ball slightly light (house ball), good layout
   - frames: 9-, 61, 9-, 62, 42, 1-, 8/, 7-, 7/, 5-
-    note: Ball slightly light (house ball), good layout
   - frames: 17, 9-, 1-, 32, 7-, -3, 9/, X, 62, -9
-    note: Ball slightly light (house ball), good layout
   - frames: 43, -3, 63, -5, X, 9-, 72, 5-, X, 9-
-    note: Ball slightly light (house ball), good layout
 
 ---
 date: 2023-03-18
@@ -136,40 +128,28 @@ games:
 date: 2023-03-29
 ball: 14
 oilPattern: Typical House Shot
+note: First games with new balls
 games:
-  - note: First games with new balls    
-    frames: 8-, 7-, 1-, 72, 16, 7-, 6/, -9, 6-, 8/X
-  - note: First games with new balls    
-    frames: 7/, 9-, 8/, -7, 8/, 71, 9-, 9-, 3-, 9/X
-  - note: First games with new balls    
-    frames: 35, 9/, 33, 81, 7-, X, 9-, -/, 7/, 81
-  - note: First games with new balls    
-    frames: S7-, 7-, -4, 9-, 4-, 72, X, 72, 8-, 7-
-  - note: First games with new balls    
-    frames: 71, 33, 18, 5/, 9-, 9/, 61, 71, 8-, 9-
-  - note: First games with new balls    
-    frames: 4/, 9-, 8-, S8-, 9-, 9-, 9-, X, 7-, 9-
+  - frames: 8-, 7-, 1-, 72, 16, 7-, 6/, -9, 6-, 8/X
+  - frames: 7/, 9-, 8/, -7, 8/, 71, 9-, 9-, 3-, 9/X
+  - frames: 35, 9/, 33, 81, 7-, X, 9-, -/, 7/, 81
+  - frames: S7-, 7-, -4, 9-, 4-, 72, X, 72, 8-, 7-
+  - frames: 71, 33, 18, 5/, 9-, 9/, 61, 71, 8-, 9-
+  - frames: 4/, 9-, 8-, S8-, 9-, 9-, 9-, X, 7-, 9-
     
 ---
 date: 2023-04-01
 ball: 14
+note: Long series of games in crowded lines
 games:
-  - note: Long series of games in crowded lines
-    frames: 62, 52, 1/, 35, 5/, -3, 9-, 34, -7, 72
-  - note: Long series of games in crowded lines
-    frames: 53, -/, 72, X, X, 51, -5, 7-, X, 71
-  - note: Long series of games in crowded lines
-    frames: 3/, 9-, 8-, X, X, 7-, X, 7-, 72, X7/
-  - note: Long series of games in crowded lines
-    frames: 11, 9/, 6-, -9, S7-, 51, -7, X, 9/, 18
-  - note: Long series of games in crowded lines
-    frames: S81, 9/, 8-, 9-, 8/, 9/, 9-, -4, 53, 71
-  - note: Long series of games in crowded lines
-    frames: X, S71, -/, 8/, 81, 9/, 8/, 71, S81, 9/9
-  - note: Long series of games in crowded lines
-    frames: 51, 7-, 71, 4/, 9-, 8/, -6, 9/, 71, 8-
-  - note: Long series of games in crowded lines
-    frames: X, -7, 9/, X, 44, 9-, S81, 9-, 8-, 6/4
+  - frames: 62, 52, 1/, 35, 5/, -3, 9-, 34, -7, 72
+  - frames: 53, -/, 72, X, X, 51, -5, 7-, X, 71
+  - frames: 3/, 9-, 8-, X, X, 7-, X, 7-, 72, X7/
+  - frames: 11, 9/, 6-, -9, S7-, 51, -7, X, 9/, 18
+  - frames: S81, 9/, 8-, 9-, 8/, 9/, 9-, -4, 53, 71
+  - frames: X, S71, -/, 8/, 81, 9/, 8/, 71, S81, 9/9
+  - frames: 51, 7-, 71, 4/, 9-, 8/, -6, 9/, 71, 8-
+  - frames: X, -7, 9/, X, 44, 9-, S81, 9-, 8-, 6/4
 
 ---
 date: 2023-04-05
@@ -295,17 +275,13 @@ games:
 ---
 date: 2023-05-10
 ball: 14
+note: Really casual games, on kids' day, with the son. Not really focused.    
 games:
-  - note: Really casual games, on kids' day, with the son. Not really focused.
-    frames: 6-, -4, 61, --, 3-, 45, S81, 12, -8, XX9
-  - note: Really casual games, on kids' day, with the son. Not really focused.
-    frames: 9/, 8-, 8-, -7, 8-, 8/, 8-, 54, S81, 9-
-  - note: Really casual games, on kids' day, with the son. Not really focused.
-    frames: -6, S8/, 5-, 63, 8-, 63, 72, X, 62, 4-
-  - note: Really casual games, on kids' day, with the son. Not really focused.
-    frames: 9/, 63, 6-, X, 8-, X, 36, 9-, 7/, 71
-  - note: Really casual games, on kids' day, with the son. Not really focused.
-    frames: 71, 7-, 9/, 8-, 36, 7/, X, 3-, 26, 18
+  - frames: 6-, -4, 61, --, 3-, 45, S81, 12, -8, XX9
+  - frames: 9/, 8-, 8-, -7, 8-, 8/, 8-, 54, S81, 9-
+  - frames: -6, S8/, 5-, 63, 8-, 63, 72, X, 62, 4-
+  - frames: 9/, 63, 6-, X, 8-, X, 36, 9-, 7/, 71
+  - frames: 71, 7-, 9/, 8-, 36, 7/, X, 3-, 26, 18
 
 ---
 date: 2023-05-17
@@ -423,8 +399,20 @@ games:
 date: 2023-07-11
 ball: 14
 oilPattern: Typical House Shot
+note: New main ball. Very hard to tame.
 games:
-  - frames: 6-, 7/, -7, 8/, 8/, 9/, -3, 3/, 8-, -5
-    note: New main ball. Very hard to tame.
+  - frames: 6-, 7/, -7, 8/, 8/, 9/, -3, 3/, 8-, -5    
   - frames: X, 9-, 35, -8, 8/, 6/, 8-, 7-, 5-, 7-
-    note: New main ball. Very hard to tame.
+
+---
+date: 2023-07-12
+ball: 14
+oilPattern: Typical House Shot
+note: Still learning (hardly) to tame new main ball. Very hard to find my way.
+games:
+  - frames: 4-, -6, 9/, -7, X, X, 71, -9, X, 6/-
+  - frames: 7-, 72, -8, -7, 17, -6, 7/, 7/, X, S8-
+  - frames: -7, X, 71, 16, X, 54, 71, 35, X, 7-
+  - frames: 9-, 51, 9/, 34, 72, X, X, X, -6, -8
+  - frames: 61, 9-, 62, -5, 7-, 9-, 7/, 3-, 9-, 7-
+  - frames: 1-, 7-, 54, -7, 62, 6/, -/, 72, X, 51

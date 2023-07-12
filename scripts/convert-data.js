@@ -32,12 +32,13 @@ const firstBallValue = outcome => {
             leagues: rawLeagues = [],
             ball: baseBall,
             oilPattern: baseOilPattern,
+            note: baseNote,
         } = doc.toJS();
         const [year, month, day] = date.split("-").map(s => +s);
 
         const games = rawGames.map(
             (
-                {ball = baseBall, oilPattern = baseOilPattern, frames, note},
+                {ball = baseBall, oilPattern = baseOilPattern, frames, note=baseNote},
                 idx,
             ) => {
                 const splits = [];
