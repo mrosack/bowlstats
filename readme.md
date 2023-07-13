@@ -54,7 +54,7 @@ Use `X` for a *strike*, `/` for a *spare*, `S` for a *split*, `-` for a *miss* o
 
 You can add a `note` entry to comment a game.
 
-### Leagues (in progress)
+### Leagues (in _beta_)
 
 You can encode your league nights as part of your scores, like this:
 
