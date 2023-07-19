@@ -425,3 +425,16 @@ games:
   - frames: -4, 71, S81, 9/, 18, 3-, X, 35, -7, 5-
   - frames: 8-, 3-, 8-, -1, S8-, 9-, 9-, 5-, -/, S71
   - frames: S81, 17, 71, 62, 54, 6-, 9/, 5/, 53, 9-
+
+---
+date: 2023-07-19
+ball: 14
+oilPattern: Typical House Shot
+games:
+  - frames: -6, S8-, -/, --, 3-, 8-, -/, 81, 63, 9-
+    note: Taming the new Turbo switchable thumb system. Swollen thumb, had a bit of a bad start.
+  - frames: S8-, S81, -/, 9-, S81, X, 9-, 62, X, 72
+  - frames: 8/, 63, S7-, 7-, X, X, 7/, 44, 9-, 8-
+  - frames: 8/, -7, 62, 5-, 8-, 7/, 9-, 9/, 9-, 7/8
+  - frames: 6/, S81, X, 8/, 9-, S81, 9/, 6/, X, 9/6
+  - frames: S8-, 9/, X, 8-, 9-, 35, X, 54, 81, 6/4
