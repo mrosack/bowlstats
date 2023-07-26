@@ -62,10 +62,7 @@ const Filters: FC<FiltersProps> = ({
             return [];
         }
 
-        return [
-            "All",
-            ...filters.lists.months,
-        ];
+        return ["All", ...filters.lists.months];
     }, [year, filters]);
 
     const days = useMemo<Array<number | All>>(() => {
@@ -73,10 +70,7 @@ const Filters: FC<FiltersProps> = ({
             return [];
         }
 
-        return [
-            "All",
-            ...filters.lists.days
-        ];
+        return ["All", ...filters.lists.days];
     }, [year, filters]);
 
     return (
@@ -117,7 +111,7 @@ const Filters: FC<FiltersProps> = ({
                                     key={i}
                                     className={classnames(
                                         ((i === "All" && month === null) ||
-                                            ( i as number + 1 ) === month) &&
+                                            (i as number) + 1 === month) &&
                                             "is-active",
                                     )}>
                                     <a
@@ -169,12 +163,24 @@ const Filters: FC<FiltersProps> = ({
             </div>
             <form>
                 <div className={classnames("pt-4")}>
-                    <div className={classnames("field", "mb-0", "is-flex", "is-flex-direction-row", "is-justify-content-flex-start", "is-align-items-center")}>
+                    <div
+                        className={classnames(
+                            "field",
+                            "mb-0",
+                            "is-flex",
+                            "is-flex-direction-row",
+                            "is-justify-content-flex-start",
+                            "is-align-items-center",
+                        )}>
                         <input
                             type={"checkbox"}
                             id={"withHouseBallGames"}
                             name={"withHouseBallGames"}
-                            className={classnames("switch", "is-small", "is-rounded")}
+                            className={classnames(
+                                "switch",
+                                "is-small",
+                                "is-rounded",
+                            )}
                             checked={withHouseBallGames}
                             onChange={() =>
                                 toggleHouseBallGames(!withHouseBallGames)
@@ -185,20 +191,32 @@ const Filters: FC<FiltersProps> = ({
                             {"Include House Ball Games"}
                         </label>
                     </div>
-                    <div className={classnames("field", "mb-0", "is-flex", "is-flex-direction-row", "is-justify-content-flex-start", "is-align-items-center")}>
+                    <div
+                        className={classnames(
+                            "field",
+                            "mb-0",
+                            "is-flex",
+                            "is-flex-direction-row",
+                            "is-justify-content-flex-start",
+                            "is-align-items-center",
+                        )}>
                         <input
                             type={"checkbox"}
                             id={"withDryLaneGames"}
                             name={"withDryLaneGames"}
-                            className={classnames("switch", "is-small", "is-rounded")}
+                            className={classnames(
+                                "switch",
+                                "is-small",
+                                "is-rounded",
+                            )}
                             checked={withDryLaneGames}
-                            onChange={() =>
-                                toggleDryLaneGames(!withDryLaneGames)
-                            }
+                            onChange={(): void => {
+                                toggleDryLaneGames(!withDryLaneGames);
+                            }}
                         />
                         {NBSP}
                         <label htmlFor={"withDryLaneGames"}>
-                        {"Include Dry Lanes Games"}
+                            {"Include Dry Lanes Games"}
                         </label>
                     </div>
                 </div>
