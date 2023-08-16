@@ -475,3 +475,17 @@ games:
   - frames: 8-, X, 72, 9-, S81, 5/, S7-, X, 72, 35
   - frames: 54, 6-, 9-, 63, S7-, 8/, -3, -/, 9/, 8/4
   - frames: 36, S81, 36, 36, 6/, 7/, X, 9-, -4, 7-
+
+---
+date: 2023-08-16
+ball: 14
+oilPattern: Ratio 5 / 43ft
+games:
+  - frames: -7, 7-, 3-, 7/, 35, X, 9/, 7/, 9-, -6
+    oilPattern: Typical House Shot
+  - frames: 8-, 7/, 16, 8-, X, 52, 6-, 9-, 63, 6/8
+    oilPattern: Typical House Shot
+  - frames: X, S6-, 71, 8-, 9-, 1/, 7-, -8, 9-, 8/6
+    note: New oil pattern, trying to find my marks.
+  - frames: 6/, 42, X, 63, 9-, 9/, -7, -7, 7-, 7-
+  - frames: 81, 71, S62, 9-, 18, 62, 7-, 7-, X, 72
