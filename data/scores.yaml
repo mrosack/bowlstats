@@ -489,3 +489,13 @@ games:
     note: New oil pattern, trying to find my marks.
   - frames: 6/, 42, X, 63, 9-, 9/, -7, -7, 7-, 7-
   - frames: 81, 71, S62, 9-, 18, 62, 7-, 7-, X, 72
+
+---
+date: 2023-08-22
+ball: 14
+oilPattern: Ratio 5 / 43ft
+games:
+  - frames: 3/, 45, 8/, X, 9-, 71, 9/, 7/, 6-, 54
+  - frames: 6/, -6, S71, 71, X, 13, X, 36, 8-, 9-
+  - frames: 6/, X, 71, 9/, 9-, S81, 62, 36, 72, 9-
+  - frames: 5-, 9-, 62, 9-, 7/, 4-, 8/, 9-, -/, 6/3
