@@ -8,14 +8,11 @@
 import type {FC, ReactElement} from "react";
 import type {League} from "types";
 
-import {useState, useMemo} from "react";
+import {useState} from "react";
 import classnames from "classnames";
 import {useData} from "core/hooks/use-data";
-import GameDetails from "components/game";
 import {preventDefault} from "core/utils";
 import LeagueDay from "./league-day";
-
-const NBSP: string = "\u00a0";
 
 const Leagues: FC = (): ReactElement => {
     const {leagues} = useData();
@@ -62,7 +59,7 @@ const Leagues: FC = (): ReactElement => {
             <div className={classnames("column", "is-three-fifths")}>
                 <h4 className={classnames("is-size-4", "mb-4")}>{selectedLeague.name}</h4>
                 <div>
-                    {selectedLeague.days.map((day,index) => (
+                    {Array.from( selectedLeague.days ).reverse().map((day,index) => (
                         <LeagueDay key={`league-${selectedLeague.name}-day-${day}-idx-${index}`} day={day} />
                     ))}
                 </div>
