@@ -76,10 +76,15 @@ export type Stats = {
 };
 
 export type LeagueDay = {
+    dayIndex: number;
     date: LeagueDate;
     bye: boolean;
+    team: string;
+    vs: string;
+    avg: number;
     handicap: number;
     games: Array<Game>;
+    note?: string;
 };
 
 export type League = {

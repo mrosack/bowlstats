@@ -26,6 +26,9 @@ const LeaguesContainer: FC = (): ReactElement => {
                             )}>
                             {"Records of my league nights."}
                         </h4>
+                        <p>
+                        {"Those records are only my scores, and not the whole team's."}
+                        </p>
                     </div>
                 </section>
                 <Leagues />

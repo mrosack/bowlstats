@@ -29,6 +29,21 @@ const LeagueDay: FC<LeagueDayProps> = ({day}: LeagueDayProps): ReactElement => {
 
     const $date = <GameDate date={date} showYear />;
 
+    const $dayTitle = (
+        <div className={classnames("columns", "mb-2")}>
+            <span className={classnames("column","is-one-fifth")}>
+                {"Day"}
+                {NBSP}
+                {day.dayIndex}
+            </span>
+            <h5 className={classnames("column","is-flex","is-justify-content-space-between","is-align-items-center")}>
+                <strong>{day.team}</strong>
+                <span className={classnames("is-size-7","has-text-grey")}>{"vs"}</span>
+                <strong>{day.vs}</strong>
+            </h5>
+        </div>
+    );
+
     if (day.bye) {
         return (
             <div
@@ -37,7 +52,7 @@ const LeagueDay: FC<LeagueDayProps> = ({day}: LeagueDayProps): ReactElement => {
                     "is-light",
                     "is-flex",
                     "is-justify-content-space-between",
-                    "is-align-items-center",
+                    "is-align-content-start",
                     "px-5",
                     "is-unselectable",
                 )}>
@@ -47,12 +62,22 @@ const LeagueDay: FC<LeagueDayProps> = ({day}: LeagueDayProps): ReactElement => {
                     className={classnames(
                         "is-flex-1",
                         "is-flex",
+                        "is-flex-direction-column",
                         "is-justify-content-center",
-                        "is-align-items-center",
                     )}>
-                    <p className={classnames("has-text-weight-bold")}>
+                    {$dayTitle}
+                    <p className={classnames("is-italic", "has-text-centered", "my-5")}>
                         {"bye"}
                     </p>
+                    {day.note && (
+                        <p className={classnames("mb-3")}>
+                            <strong>{"Note:"}</strong>
+                            {NBSP}
+                            <span className={classnames("is-italic")}>
+                                {day.note}
+                            </span>
+                        </p>
+                    )}
                 </div>
             </div>
         );
@@ -71,19 +96,55 @@ const LeagueDay: FC<LeagueDayProps> = ({day}: LeagueDayProps): ReactElement => {
             )}>
             {$date}
 
-            <ol className={classnames("is-flex-1", "is-no-list")}>
-                {day.games.map((game: Game, idx) => (
-                    <li key={game.id} className={classnames("mb-2")}>
-                        <GameFrames
-                            scratch={game.scratch}
-                            handicap={game.handicap}
-                            score={game.score}
-                            frames={game.frames}
-                            hideHeader={idx > 0}
-                        />
+            <div
+                className={classnames(
+                    "is-flex-1",
+                    "is-flex",
+                    "is-flex-direction-column",
+                    "is-justify-content-center",
+                )}>
+                {$dayTitle}
+                <ol className={classnames("is-no-list")}>
+                    {day.games.map((game: Game, idx) => (
+                        <li key={game.id} className={classnames("mb-2")}>
+                            <GameFrames
+                                scratch={game.scratch}
+                                handicap={game.handicap}
+                                score={game.score}
+                                frames={game.frames}
+                                hideHeader={idx > 0}
+                            />
+                        </li>
+                    ))}
+                </ol>
+                <ul className={classnames("mb-3")}>
+                    <li>
+                        <strong
+                            className={classnames(
+                                "has-text-grey",
+                            )}>{`Average:`}</strong>
+                        {NBSP}
+                        <span>{day.avg}</span>
                     </li>
-                ))}
-            </ol>
+                    <li>
+                        <strong
+                            className={classnames(
+                                "has-text-grey",
+                            )}>{`Handicap:`}</strong>
+                        {NBSP}
+                        <span>{day.handicap}</span>
+                    </li>
+                </ul>
+                {day.note && (
+                    <p className={classnames("mb-3")}>
+                        <strong>{"Note:"}</strong>
+                        {NBSP}
+                        <span className={classnames("is-italic")}>
+                            {day.note}
+                        </span>
+                    </p>
+                )}
+            </div>
         </div>
     );
 };
