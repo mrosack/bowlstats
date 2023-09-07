@@ -512,7 +512,7 @@ games:
   - frames: 8/, -3, 7/, X, 7/, 54, 7/, X, 81, 7-
 
 ---
-date: 2023-09-06
+date: 2023-09-05
 ball: 14
 oilPattern: Ratio 5 / 43ft
 games:
@@ -520,3 +520,21 @@ games:
   - frames: 35, 6-, X, X, 7-, 44, 71, S81, 3/, 9-
   - frames: X, 9-, 9/, 6-, 7/, 44, 8/, X, 7/, 9-
   - frames: X, 81, S81, 8/, 8/, X, 16, X, 7/, 9-
+
+---
+date: 2023-09-06
+ball: 14
+oilPattern: Ratio 5 / 43ft
+games:
+  - frames: 81, S62, 8-, -7, 53, 9/, S8-, X, S8-, 9- 
+  - frames: 5/, 9/, X, S7-, 7/, 44, 9-, 62, X, 7/5
+  - frames: 7-, 9-, X, 9-, 53, -7, 6/, 6/, X, -6
+leagues:
+  - name: ILB Trio League 2023-2024
+    team: The Barlos
+    vs: Plastidor
+    day: 1
+    avg: 160
+    handicap: 40
+    games: 1, 2, 3
+    note: Avg is fixed to 160 as it's my first league participation.
