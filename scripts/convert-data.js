@@ -38,7 +38,12 @@ const firstBallValue = outcome => {
 
         const games = rawGames.map(
             (
-                {ball = baseBall, oilPattern = baseOilPattern, frames, note=baseNote},
+                {
+                    ball = baseBall,
+                    oilPattern = baseOilPattern,
+                    frames,
+                    note = baseNote,
+                },
                 idx,
             ) => {
                 const splits = [];
@@ -185,20 +190,35 @@ const firstBallValue = outcome => {
         results.games.push(...games);
 
         rawLeagues.forEach(
-            ({name, day, bye = false, handicap, games: gamesIndexes}) => {
+            ({
+                name,
+                day: leagueDay,
+                bye = false,
+                team,
+                vs,
+                avg,
+                handicap,
+                games: gamesIndexes,
+                note,
+            }) => {
                 const league = leaguesHash[name] || {
                     name,
                     days: [],
                 };
 
                 league.days.push({
-                    day,
+                    dayIndex: leagueDay,
                     date: {
                         year,
                         month,
                         day,
                     },
                     bye,
+                    team,
+                    vs,
+                    avg,
+                    handicap,
+                    note,
                     games: bye
                         ? []
                         : gamesIndexes.split(",").map(idx => {
