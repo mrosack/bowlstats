@@ -122,6 +122,14 @@ const LeagueDay: FC<LeagueDayProps> = ({day}: LeagueDayProps): ReactElement => {
                         <strong
                             className={classnames(
                                 "has-text-grey",
+                            )}>{`Oil patterns (left, right):`}</strong>
+                        {NBSP}
+                        <span>{day.oilPatterns.join(", ")}</span>
+                    </li>
+                    <li>
+                        <strong
+                            className={classnames(
+                                "has-text-grey",
                             )}>{`Average:`}</strong>
                         {NBSP}
                         <span>{day.avg}</span>

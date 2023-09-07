@@ -84,6 +84,7 @@ export type LeagueDay = {
     avg: number;
     handicap: number;
     games: Array<Game>;
+    oilPatterns: Array<string>;
     note?: string;
 };
 

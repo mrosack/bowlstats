@@ -537,4 +537,7 @@ leagues:
     avg: 160
     handicap: 40
     games: 1, 2, 3
+    oilPatterns: 
+      - Ratio 5 / 43ft
+      - Ratio 5 / 43ft
     note: Avg is fixed to 160 as it's my first league participation.

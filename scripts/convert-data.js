@@ -200,6 +200,7 @@ const firstBallValue = outcome => {
                 handicap,
                 games: gamesIndexes,
                 note,
+                oilPatterns,
             }) => {
                 const league = leaguesHash[name] || {
                     name,
@@ -219,6 +220,7 @@ const firstBallValue = outcome => {
                     avg,
                     handicap,
                     note,
+                    oilPatterns,
                     games: bye
                         ? []
                         : gamesIndexes.split(",").map(idx => {
