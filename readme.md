@@ -67,7 +67,7 @@ games:
   - frames: 8-, 9-, 5/, 7-, 71, 9/, 6-, 7-, 8-, 7/X    
   - frames: 9/, 71, 7-, X, 7/, 9/, X, -5, 72, S81    
   - frames: 9/, 9/, 9-, X, 17, 9-, 4/, 9-, 7-, 9-
-    note: Slight leg pain    
+    note: An optional note about the game
   - frames: 8/, 8/, 81, 1/, S8-, 3/, 9/, 8/, 8-, 7/8    
   - frames: X, 9-, X, 36, 9-, S71, --, 9-, 9/, 41    
   - frames: 8-, 9-, S81, X, 9/, 9-, S62, 9/, 8/, 9/3
@@ -75,8 +75,15 @@ games:
 leagues:
   - name: Fantasy League 2023-2024
     day: 2
+    team: My super team
+    vs: The other team
+    avg: 160
     handicap: 36
     games: 1, 4, 5
+    oilPatterns:
+    	- Badger
+    	- Taj Mahal
+    note: An optional note about the match
 ```
 
 `leagues.games` are indexes (starting at `1`) of the days' games to use in named league.
