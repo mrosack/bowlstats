@@ -41,7 +41,7 @@ oilPattern: Typical House Shot
 games:
   - frames: X, 81, 41, 1/, 8-, S81, 6-, S7-, 72, X9/
   - frames: 9-, 61, 9-, 62, 42, 1-, 8/, 7-, 7/, 5-
-    note: Ball slightly light (house ball), good layout
+    note: An optional note about the game
   - frames: 17, 9-, 1-, 32, 7-, -3, 9/, X, 62, -9
   - ball: 14
     frames: 43, -3, 63, -5, X, 9-, 72, 5-, X, 9-
