@@ -541,3 +541,16 @@ leagues:
       - Ratio 5 / 43ft
       - Ratio 5 / 43ft
     note: Avg is fixed to 160 as it's my first league participation.
+
+---
+date: 2023-09-12
+ball: 14
+oilPattern: Ratio 5 / 43ft
+games:
+  - frames: 8/, X, 72, X, 8/, 62, 8/, 61, 8/, 8-
+  - frames: S71, 16, X, 52, 7-, -/, 81, 9-, 35, S8-
+  - frames: 71, 3-, X, 44, 8-, 9/, 7-, S81, 33, 71
+  - frames: 36, 7-, 8/, 8/, X, S81, X, X, 4-, 62
+  - frames: 35, 9-, 9-, 8/, 9/, 8-, 8-, 81, 71, 4/9
+  - frames: 53, 8/, 9-, -7, 63, 9/, 71, X, 9-, 7-
+  - frames: 71, 9/, 6/, 8/, X, 71, 8-, 81, S8-, 36
