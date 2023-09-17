@@ -554,3 +554,13 @@ games:
   - frames: 35, 9-, 9-, 8/, 9/, 8-, 8-, 81, 71, 4/9
   - frames: 53, 8/, 9-, -7, 63, 9/, 71, X, 9-, 7-
   - frames: 71, 9/, 6/, 8/, X, 71, 8-, 81, S8-, 36
+
+---
+date: 2023-09-13
+games: []
+leagues:
+  - name: ILB Trio League 2023-2024
+    team: The Barlos
+    vs: Atelier du charpentier
+    day: 2
+    bye: true
