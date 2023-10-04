@@ -564,6 +564,7 @@ leagues:
     vs: Atelier du charpentier
     day: 2
     bye: true
+    note: Player rotation, didn't play that match.
 
 ---
 date: 2023-09-19
@@ -597,3 +598,25 @@ leagues:
     oilPatterns: 
       - Ratio 5 / 43ft
       - Ratio 5 / 43ft    
+
+---
+date: 2023-09-27
+games: []
+leagues:
+  - name: ILB Trio League 2023-2024
+    team: The Barlos
+    vs: -
+    day: 3
+    bye: true
+    note: Player rotation, didn't play that match.    
+
+---
+date: 2023-10-04
+games: []
+leagues:
+  - name: ILB Trio League 2023-2024
+    team: The Barlos
+    vs: -
+    day: 4
+    bye: true
+    note: Health issue, on recovery.
