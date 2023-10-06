@@ -605,7 +605,7 @@ games: []
 leagues:
   - name: ILB Trio League 2023-2024
     team: The Barlos
-    vs: -
+    vs: Le Beau Vivier
     day: 3
     bye: true
     note: Player rotation, didn't play that match.    
@@ -616,7 +616,7 @@ games: []
 leagues:
   - name: ILB Trio League 2023-2024
     team: The Barlos
-    vs: -
+    vs: Terrassements Charlier
     day: 4
     bye: true
     note: Health issue, on recovery.
