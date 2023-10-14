@@ -631,3 +631,23 @@ games:
   - frames: X, 9-, 7/, S6-, 72, 6-, 7/, 7/, X, S52
   - frames: 7/, 6/, 7-, 9-, X, 32, 7-, X, 8/, 7-
   - frames: 9/, 9/, 7/, S8/, 17, 8/, 9-, 72, 7/, 7/-
+
+---
+date: 2023-10-11
+ball: 14
+oilPattern: Ratio 5 / 43ft
+games:
+  - frames: S72, 7-, X, X, 53, 9-, X, 8-, 6/, 9-
+  - frames: X, 7-, -5, X, X, 9-, 8-, S8-, 6/, 8-
+  - frames: 8-, 8/, 15, X, 9/, 62, X, X, -8, 8-
+leagues:
+  - name: ILB Trio League 2023-2024
+    team: The Barlos
+    vs: C. Sauvage infirmière
+    day: 3
+    avg: 144.7
+    handicap: 65
+    games: 1, 2, 3
+    oilPatterns: 
+      - Ratio 5 / 43ft
+      - Ratio 5 / 43ft    
