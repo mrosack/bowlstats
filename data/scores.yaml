@@ -683,4 +683,23 @@ games:
   - frames: 6/, X, X, 9/, 5-, 61, 7/, 8-, 5-, 81
   - frames: 8-, X, 62, 8-, 9-, X, 8/, 8/, 7/, 9-
   - frames: 9/, X, 62, X, 9/, 72, 7-, S81, 9-, 34
-  - frames: 71, 6/, S71, 72, 72, S7-, 9/, 9/, 9-, S8-
+  - frames: 71, 6/, S71, 72, 72, S7-, 9/, 9/, 9-, S8----
+
+date: 2023-11-29
+ball: 14
+oilPattern: Ratio 5 / 43ft
+games:
+  - frames: 42, 33, 9-, 34, X, -5, 3/, 6-, X, S8-
+  - frames: 9-, 9-, 72, 81, 9/, X, 6/, 9/, 6-, 81
+  - frames: 9-, 81, S81, X, 8-, S72, 9/, 4-, 9/, X7/
+leagues:
+  - name: ILB Trio League 2023-2024
+    team: The Barlos
+    vs: Atelier du Charpentier
+    day: 11
+    avg: 141.9
+    handicap: 68
+    games: 1, 2, 3
+    oilPatterns: 
+      - Ratio 5 / 43ft
+      - Ratio 5 / 43ft 
