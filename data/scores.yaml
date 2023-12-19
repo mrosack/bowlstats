@@ -683,8 +683,9 @@ games:
   - frames: 6/, X, X, 9/, 5-, 61, 7/, 8-, 5-, 81
   - frames: 8-, X, 62, 8-, 9-, X, 8/, 8/, 7/, 9-
   - frames: 9/, X, 62, X, 9/, 72, 7-, S81, 9-, 34
-  - frames: 71, 6/, S71, 72, 72, S7-, 9/, 9/, 9-, S8----
+  - frames: 71, 6/, S71, 72, 72, S7-, 9/, 9/, 9-, S8-
 
+---
 date: 2023-11-29
 ball: 14
 oilPattern: Ratio 5 / 43ft
@@ -703,3 +704,42 @@ leagues:
     oilPatterns: 
       - Ratio 5 / 43ft
       - Ratio 5 / 43ft 
+
+---
+date: 2023-12-12
+ball: 14
+oilPattern: Ratio 5 / 43ft
+games:
+  - frames: S81, 63, 8-, X, 9-, X, 8-, 9-, 8-, X72
+  - frames: 7-, 4-, 7/, X, 9-, S72, 6/, -8, 9-, -9
+  - frames: 8-, 71, 4-, 8/, -6, 9/, 8/, 9-, 7-, -5
+
+---
+date: 2023-12-13
+ball: 14
+oilPattern: Ratio 5 / 43ft
+games:
+  - frames: X, X, 9-, X, 62, 7-, 7/, 9-, 9-, 6/7
+  - frames: 63, 71, X, X, 72, 3/, 62, X, S7-, 5/7
+  - frames: 14, 16, X, 8-, 9-, 71, 71, 62, -/, X17
+leagues:
+  - name: ILB Trio League 2023-2024
+    team: The Barlos
+    vs: Le Beau Vivier
+    day: 13
+    avg: 136.8
+    handicap: 73
+    games: 1, 2, 3
+    oilPatterns: 
+      - Ratio 5 / 43ft
+      - Ratio 5 / 43ft 
+
+---
+date: 2023-12-19
+ball: 14
+oilPattern: Ratio 5 / 43ft
+games:
+  - frames: X, 7/, 71, 33, 9/, S7-, 8/, 9-, 72, 9/5
+  - frames: 44, 9-, 7/, 62, 7/, 72, 9/, 7/, 6-, 9-
+  - frames: 7-, X, 9/, 9-, 1/, 6/, 8-, X, 8/, 9/9
+  - frames: 62, 7/, 9/, S7-, S7-, 7-, 9/, S8-, 81, X8-
