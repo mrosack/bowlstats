@@ -745,6 +745,15 @@ games:
   - frames: 62, 7/, 9/, S7-, S7-, 7-, 9/, S8-, 81, X8-
 
 ---
+date: 2023-12-29
+ball: 14
+note: Really casual games, with the kid, on completely dry lane
+games:
+  - frames: --, 16, 63, X, S81, 41, 21, -6, 54, 36
+  - frames: S6-, -9, 9/, X, 6-, S8-, 63, 9-, 9-, 62
+  - frames: 9/, 7-, 8-, 9/, 8-, X, -7, S8-, 51, 8/8
+
+---
 date: 2024-01-10
 ball: 14
 oilPattern: Ratio 5 / 43ft
