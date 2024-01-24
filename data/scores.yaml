@@ -772,3 +772,23 @@ leagues:
     oilPatterns: 
       - Ratio 5 / 43ft
       - Ratio 5 / 43ft
+
+---
+date: 2024-01-25
+ball: 14
+oilPattern: Ratio 5 / 43ft
+games:
+  - frames: 45, X, 9-, 7-, 9-, 63, 9-, 9/, S81, 9/6
+  - frames: S8-, 9-, X, X, X, 6/, 9-, 9-, 9-, 9-
+  - frames: 6-, S81, 1/, 9/, 7/, 6/, S81, 72, 8/, 8/9
+leagues:
+  - name: ILB Trio League 2023-2024
+    team: The Barlos
+    vs: Lessimat
+    day: 17
+    avg: 135.4
+    handicap: 74
+    games: 1, 2, 3
+    oilPatterns: 
+      - Ratio 5 / 43ft
+      - Ratio 5 / 43ft
