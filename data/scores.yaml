@@ -792,3 +792,13 @@ leagues:
     oilPatterns: 
       - Ratio 5 / 43ft
       - Ratio 5 / 43ft
+
+---
+date: 2024-01-30
+ball: 14
+oilPattern: Ratio 5 / 43ft
+games:
+  - frames: X, S7/, 81, 6-, 9-, 72, 5/, X, S72, 7/7
+  - frames: X, 6/, 81, X, 7/, X, 9/, 54, S63, 54
+  - frames: 5/, 9-, 8/, X, 7/, S81, 81, 7-, X, S81
+  - frames: X, 8-, 8-, 3/, S6-, 9/, 9-, 9/, 81, 7/9
