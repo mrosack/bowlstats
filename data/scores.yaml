@@ -891,7 +891,7 @@ games:
     note: Slight left leg pain
 
 ---
-date: 2024-06-13
+date: 2024-06-12
 ball: 14
 oilPattern: Bourbon
 note: New oil pattern, challenging to find my spot
@@ -901,3 +901,17 @@ games:
   - frames: 72, 45, 7/, 61, -7, 36, 8-, 6-, 42, 71
   - frames: 7-, 61, 43, 53, 8-, 7-, X, X, 8-, 9-
   - frames: 5-, 8/, 9-, 9-, X, 7-, 9-, 9-, 9-, 9/X
+
+---
+date: 2024-06-26
+ball: 14
+oilPattern: Stone Street
+note: New oil pattern, next year league pattern
+games:
+  - frames: S8-, X, 8/, 9/, 8-, 7/, -6, 8-, 8-, 8/X
+  - frames: 9-, X, 7/, S8-, 9/, 9-, 6/, 8-, 7/, 72
+  - frames: 9/, 9-, 9/, 9/, 8-, 4/, 9/, 6-, 9-, 9/7
+  - frames: 9/, 9/, 8-, 9-, 9/, X, 7/, X, X, 9-
+  - frames: 81, 8/, 3/, -9, 72, 81, 9-, X, 9-, 9-
+  - frames: X, 9/, 9/, 9-, 8/, 71, S8-, 72, 7-, X8-
+
