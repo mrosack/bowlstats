@@ -915,3 +915,14 @@ games:
   - frames: 81, 8/, 3/, -9, 72, 81, 9-, X, 9-, 9-
   - frames: X, 9/, 9/, 9-, 8/, 71, S8-, 72, 7-, X8-
 
+---
+date: 2024-07-09
+ball: 14
+oilPattern: Stone Street
+note: Still need to tame this pattern
+games:
+  - frames: 16, 6-, 8-, 45, 9/, 9-, X, 9/, X, XXX
+  - frames: X, 6/, 81, 6-, 8/, 6/, 7/, 62, 71, X9-
+  - frames: 5-, 72, 7-, 7/, 6-, 51, 8-, X, 7/, 33
+  - frames: 71, 44, 72, S7-, 81, X, 12, 63, X, 51
+
