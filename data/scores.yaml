@@ -926,3 +926,15 @@ games:
   - frames: 5-, 72, 7-, 7/, 6-, 51, 8-, X, 7/, 33
   - frames: 71, 44, 72, S7-, 81, X, 12, 63, X, 51
 
+---
+date: 2024-08-13
+ball: 14
+oilPattern: Stone Street
+note: Back to training after a lot of pro work
+games:
+  - frames: 15, 63, 9-, 9/, 9-, 7-, 7-, 35, 7-, 7/X
+  - frames: 63, 36, 7/, 8-, 3/, X, 9-, 52, S72, 7/4
+  - frames: 9-, 81, -/, 7-, 7/, 8-, 9-, 17, 8/, 8-
+  - frames: 9/, X, S71, X, 9-, X, 8-, 8/, X, S81
+  - frames: X, 9/, X, 9/, S81, X, 8/, 8-, 9-, 9/9
+  - frames: 9/, 9-, X, S72, 45, 9-, S8-, 9/, X, S7-
