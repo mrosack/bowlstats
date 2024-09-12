@@ -938,3 +938,24 @@ games:
   - frames: 9/, X, S71, X, 9-, X, 8-, 8/, X, S81
   - frames: X, 9/, X, 9/, S81, X, 8/, 8-, 9-, 9/9
   - frames: 9/, 9-, X, S72, 45, 9-, S8-, 9/, X, S7-
+
+---
+date: 2024-09-12
+ball: 14
+oilPattern: Stone Street
+note: Fist match of the new league season
+games:
+  - frames: 63, S61, X, 8/, 9-, X, X, 9-, 9/, 9/7
+  - frames: X, 9/, X, 7/, X, X, 9-, 81, S71, 8-
+  - frames: S72, S81, 9/, 8-, X, 17, 9/, 12, S8-, 8-
+leagues:
+  - name: ILB Trio League 2024-2025
+    team: 2B1P
+    vs: Terrassements Charlier
+    day: 2
+    avg: 123
+    handicap: 87
+    games: 1, 2, 3
+    oilPatterns:
+      - Stone Street
+      - Stone Street
