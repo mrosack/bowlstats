@@ -959,3 +959,16 @@ leagues:
     oilPatterns:
       - Stone Street
       - Stone Street
+
+---
+date: 2024-09-24
+ball: 14
+games:
+  - frames: S5-, X, 7/, -8, X, X, 9/, 7/, 8-, 8-
+    oilPattern: Stone Street    
+  - frames: -9, -8, 71, -5, 36, -7, 63, 3/, 9-, 81
+    oilPattern: 42"
+    note: I'm really bad at adapting to never-saw oiling patterns
+  - frames: S72, 72, 7-, 9-, -5, S7-, 9/, 36, 9-, S71
+    oilPattern: Bourbon
+    note: Yep, really bad at adapting to oiling patterns
