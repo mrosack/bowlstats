@@ -75,7 +75,7 @@ const Filters: FC<FiltersProps> = ({
 
     return (
         <div className={classnames("columns")}>
-            <div className={classnames("column", "is-four-fifths")}>
+            <div className={classnames("column")}>
                 <div className={classnames("tabs", "is-large")}>
                     <ul>
                         {years.map((yr: number | string) => (
@@ -161,7 +161,7 @@ const Filters: FC<FiltersProps> = ({
                     </div>
                 )}
             </div>
-            <form>
+            {/* <form>
                 <div className={classnames("pt-4")}>
                     <div
                         className={classnames(
@@ -220,7 +220,7 @@ const Filters: FC<FiltersProps> = ({
                         </label>
                     </div>
                 </div>
-            </form>
+            </form> */}
         </div>
     );
 };

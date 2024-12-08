@@ -35,7 +35,6 @@ const GamesContainer: FC = (): ReactElement => {
                 <section className={classnames("hero")}>
                     <div className={classnames("hero-body")}>
                         <h3 className={classnames("title", "is-size-3")}>{"Games"}</h3>
-                        <h4 className={classnames("subtitle", "is-size-5", "has-text-grey")}>{"All the games I played, regardless of context."}</h4>
                     </div>
                 </section>
                 <section className={classnames("section", "pt-1")}>

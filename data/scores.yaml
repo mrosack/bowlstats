@@ -1,974 +1,144 @@
 ---
-date: 2023-01-17
-ball: H10
-games:
-  - frames: -8, X, 63, 8-, 36, X, -9, 35, X, 8-
-
----
-date: 2023-01-26
-ball: H10
-games:
-  - frames: -9, 9/, 7-, 44, 9-, 8-, 1-, --, 12, 9-
-
----
-date: 2023-02-02
-ball: H10
-games:
-  - frames: 9-, -3, 7-, 53, S8-, 4-, -7, 17, 7/, 6/7
-
----
-date: 2023-02-09
-ball: H10
-games:
-  - frames: -8, X, 7-, 8-, S81, X, X, 9-, X, 8/-
-
----
-date: 2023-02-16
-ball: H10
-games:
-  - frames: 7-, 63, 52, 9-, X, X, 9-, 81, 8/, X9/
-
----
-date: 2023-02-27
-ball: H12
-games:
-  - frames: 9-, 7-, -1, 6-, 6-, 3/, 9/, 7-, 7/, 71
-    note: First game with 12lbs ball
-
----
-date: 2023-03-02
-ball: H12
-games:
-  - frames: 5/, X, 7-, X, 8-, 9-, 8/, -9, X, 7-
-  - frames: 9-, X, X, 8-, -/, X, 8-, -6, -7, -3
-
----
-date: 2023-03-04
-ball: H12
-note: Slight leg pain
-games:
-  - frames: -6, 3-, 61, 71, 62, X, 7-, 1/, 81, 7-
-  - frames: 44, -5,8-,-8, 8-, 61, 16, 54, 71, 7/4
-
----
-date: 2023-03-06
-ball: H12
-games:
-  - frames: 11, 52, 61, 15, 8/, 5-, -7, 9/, 6/, 44
-  - frames: 3/, --, 7-, -/, 6-, 61, X, X, --, 11
-    note: First try to hook
-  - frames: 3-, 3-, 7-, -6, 26,-1,-6,--,16,-/-
-    note: Second try to hook
-
----
-date: 2023-03-08
-ball: H14
-note: First training, perfect ball weight, layout too large
-games:
-  - frames: 9-, -7, --, -5, 5-, 3/, 8-, 6-, S81, 8-
-  - frames: 9/, S8-, 4/, S71, 7-, S81, 72, 8-, 54, 1-
-  - frames: 9-, X, 3/, 7-, 62, S71, 44, 9-, 34, 35
-
----
-date: 2023-03-12
-ball: H14
-note: Perfect ball weight (house ball), layout too large
-games:
-  - frames: -/, -9, X, 41, 9-, 8/, 7-, 45, 31, 7-
-  - frames: 9-, -6, 8-, 7/, 4-, 1-, 33, 3-, 9-, 8/9
-  - frames: 63, 9-, X, 9-, 9/, -7, 72, 52, 7-, 3/6
-
----
-date: 2023-03-15
-ball: H13
-note: Ball slightly light (house ball), good layout
-games:
-  - frames: X, 81, 41, 1/, 8-, S81, 6-, S7-, 72, X9-
-  - frames: 9-, 61, 9-, 62, 42, 1-, 8/, 7-, 7/, 5-
-  - frames: 17, 9-, 1-, 32, 7-, -3, 9/, X, 62, -9
-  - frames: 43, -3, 63, -5, X, 9-, 72, 5-, X, 9-
-
----
-date: 2023-03-18
-ball: H13
-games:
-  - frames: -6, 31, 61, 34, 71, 54, 7-, 72, -6, -8
-  - frames: X, 9/, 5/, X, 3-, 7-, 1/, S7-, 9-, 72
-  - frames: 9-, 4-, X, 61, 6-, 7/, 6-, X, 4-, -/6
-  - frames: 5-, S81, 3/, S81, 7/, 62, 8/, 7-, 72, 52
-
----
-date: 2023-03-20
-ball: H13
-games:
-  - frames: S7-, S8-, 6/, 8-, 9-, 1/, -/, 9-, X, 9-
-  - frames: X, 7/, S81, -1, 8-, 61, 7/, X, X, 9-
-
----
-date: 2023-03-22
-ball: H13
-games:
-  - frames: 16, 7-, 72, 1/, 71, 81, 63, 7/, 9-, 54
-  - frames: -9, -7, X, X, 5/, 62, X, 72, 63, 3-
-  - frames: 6-, 9-, -6, 3-, -4, 18, 8-, S81, 63, X71
-  - frames: 9-, 3/, 34, 71, 9/, X, 6-, X, 9/, 63
-  - frames: 7-, 33, 7/, 6-, 43, 9-, -3, -1, X, 1-
-
----
-date: 2023-03-24
-ball: H13
-games:
-  - frames: X, -9, 9/, -9, 72, 9/, 9-, 7/, 9-, S81
-  - frames: 81, 45, 9/, 6-, S81, 9-, 17, 6/, 8/, S72
-  - frames: 7-, 7-, 72, 7-, -9, 6-, 43, S7-, 3-, -7
-    note: Out of focus, loudy players on next lane (need to focus on my focus)
-  - frames: 8-, 1-, 9/, 9-, S8-, X, 8/, 7-, 8-, 62
-
----
-date: 2023-03-29
-ball: 14
-oilPattern: Typical House Shot
-note: First games with new balls
-games:
-  - frames: 8-, 7-, 1-, 72, 16, 7-, 6/, -9, 6-, 8/X
-  - frames: 7/, 9-, 8/, -7, 8/, 71, 9-, 9-, 3-, 9/X
-  - frames: 35, 9/, 33, 81, 7-, X, 9-, -/, 7/, 81
-  - frames: S7-, 7-, -4, 9-, 4-, 72, X, 72, 8-, 7-
-  - frames: 71, 33, 18, 5/, 9-, 9/, 61, 71, 8-, 9-
-  - frames: 4/, 9-, 8-, S8-, 9-, 9-, 9-, X, 7-, 9-
-
----
-date: 2023-04-01
-ball: 14
-note: Long series of games in crowded lines
-games:
-  - frames: 62, 52, 1/, 35, 5/, -3, 9-, 34, -7, 72
-  - frames: 53, -/, 72, X, X, 51, -5, 7-, X, 71
-  - frames: 3/, 9-, 8-, X, X, 7-, X, 7-, 72, X7/
-  - frames: 11, 9/, 6-, -9, S7-, 51, -7, X, 9/, 18
-  - frames: S81, 9/, 8-, 9-, 8/, 9/, 9-, -4, 53, 71
-  - frames: X, S71, -/, 8/, 81, 9/, 8/, 71, S81, 9/9
-  - frames: 51, 7-, 71, 4/, 9-, 8/, -6, 9/, 71, 8-
-  - frames: X, -7, 9/, X, 44, 9-, S81, 9-, 8-, 6/4
-
----
-date: 2023-04-05
-ball: 14
+date: 2023-04-30
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: 9-, 9-, 72, 9-, 33, 7-, 62, 9-, 9/, 24
-  - frames: 9/, 7-, -3, 71, 9-, 5/, 7-, 62, X, 3/6
-  - frames: 9-, 72, 4/, 6-, 8-, S72, X, 1/, -7, 62
-  - frames: 7-, 45, -3, -6, 6/, 6-, 7/, 72, S8-, 5-
-  - frames: X, 72, 9/, X, -8, 8-, 6-, 7/, 9-, 9/8
-  - frames: 3-, 8-, X, 3-, --, X, 3/, 71, 4-, 3-
+  - frames: 62, 8/, X, 9/, X, 9/, X, S8-, S81, 9-
+  - frames: 71, 8-, 9-, -6, 9/, X, X, 72, 9/, 9/9
 
 ---
-date: 2023-04-12
-ball: 14
+date: 2023-05-14
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: 5-, 6/, 9/, 9/, 42, 6-, 8/, 8/, -9, S7-
-  - frames: S71, 5/, 16, S81, 72, X, 9/, 1/, 4-, 9/9
-  - frames: S81, 63, 9-, 14, 9/, 36, 8/, 9-, 9-, 4-
-  - frames: 1/, 81, 6/, 17, 72, 9/, X, 35, 81, 9-
-  - frames: 8/, 7/, 52, 7-, -7, 7-, X, 9-, 53, 8/3
-  - frames: 72, X, X, 34, 7/, X, 9-, 8/, 9-, -8
-
+  - frames: 9/, 9-, 8/, X, 63, X, X, X, S72, X9/
+  - frames: 8/, 9-, S8-, 7/, 7/, X, 8/, X, 9-, X72
+  
 ---
-date: 2023-04-15
-ball: 14
-games:
-  - frames: 1/, 53, 6-, 61, 35, 7/, X, 15, 9-, 71
-  - frames: X, S8/, 6-, 9-, S7-, X, 8-, 51, S81, 14
-    note: First converted split!
-  - frames: 16, 9/, S81, 8/, 9-, 52, 9/, 33, 8-, X81
-  - frames: -9, X, 7/, X, X, 6-, 8-, 7-, 42, 1-
-    note: It started so well… then I panicked.
-  - frames: 9/, S8-, X, 9-, 9/, 5/, X, 9/, 8/, 7-
-  - frames: 5-, 9-, X, 8/, 71, 9/, 9-, 8-, 9-, 8/4
-
----
-date: 2023-04-19
-ball: 14
+date: 2023-06-11
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: 5-, 81, S81, 72, 72, -7, 6/, X, 9-, 71
-  - frames: 3/, 7-, 5-, 62, 9-, 9-, 7/, 7/, 1-, X32
-  - frames: 52, 9-, 81, 62, X, 6-, 6/, X, 9-, -3
-  - frames: 9-, X, 3/, 12, 8-, 9/, 6/, 71, 81, X9/
-  - frames: 34, 7/, X, X, 9/, X, 72, S71, -7, 13
-  - frames: 72, 7-, X, 6/, 35, 9-, 62, 33, 8/, 7/-
+  - frames: 9-, 9-, 9/, X, X, S81, X, X, X, 9-
+  - frames: 8/, 9/, X, X, X, X, X, 72, S8-, S81
 
 ---
-date: 2023-04-22
-ball: 14
-games:
-  - frames: -6, 7/, 9-, --, --, --, 52, X, 35, 9-
-    note: Worst oil condition ever. Wasn't able to figure how to properly hook. Still a lot to learn…
-  - frames: 8/, 52, 54, 54, X, 72, 3-, 17, 9-, XX1
-  - frames: X, 34, 61, -8, 7/, 3-, X, 6/, 7/, 9-
-  - frames: 35, X, X, 9/, 7/, 63, -7, 4/, 18, 62
-  - frames: 7-, 6-, 9-, 8-, 16, S71, 1/, S81, 16, S81
-  - frames: -8, 8/, 72, 9/, S81, 63, 9-, 35, 4/, 6/1
-  - frames: 72, X, -3, 35, 9-, 9-, 15, 7-, 7-, 16
-    note: The "I should have stopped before". I need to listen to my body.
-
----
-date: 2023-04-26
-ball: 14
+date: 2023-08-27
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: -6, X, 9-, S6-, S8-, S72, X, 5/, X, 9/7
-  - frames: X, 9/, 9-, -7, 1/, 81, 71, 35, S7-, 3/9
-  - frames: 8/, 9-, 41, 53, 9/, 8-, 62, 9-, X, 8/5
-  - frames: 9/, 9/, 81, X, S81, 7/, 9-, 9/, 62, 71
-  - frames: 71, 9-, 9-, 72, 63, X, S81, 62, 8-, 71
-  - frames: 9-, X, 53, X, 8/, S81, 71, 61, 8/, 6/8
+  - frames: X, X, S81, S63, 9/, 7/, -8, 9/, 8-, 9-
+  - frames: 8/, X, X, 9-, 9/, S8-, 62, 9/, 8/, 8/8
 
 ---
-date: 2023-05-01
-ball: 14
-games:
-  - frames: -/, 8-, 31, 8-, S7-, X, 36, 9-, -6, -/1
-    note: Bad oil (nearly dry lane) condition. Time to train position and form.
-  - frames: 8/, 8/, S81, 53, 33, 9/, 9-, X, 8-, 5/7
-    note: Bad oil (nearly dry lane) condition. Time to train position and form.
-  - frames: 8-, X, 3-, X, 16, 72, X, 9-, 9-, 62
-    note: Played only straight, with spare ball.
-  - frames: 8-, 8-, 9-, 7-, 63, 9-, 8-, 62, 9/, 9-
-    note: Played only straight, with spare ball.
-  - frames: -7, -9, 8/, 8/, 3/, 9/, 9/, 7/, 7/, 3/5
-    note: Very proud of my closing, here. :)
-  - frames: 4/, 7/, 3-, -8, -7, -7, 9-, 44, 3/, 7/6
-    note: Slight pain at the end.
-
----
-date: 2023-05-03
-ball: 14
+date: 2023-09-24
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: --, 81, X, 9-, 18, 9/, 8-, 36, 44, 9/4
-  - frames: 6-, 9-, 4-, 9-, 5/, 8-, -6, -7, S7-, 54
-    note: Big family with kids running everywhere and on the lines. Hard to focus while watching to not kill people running in my legs.
-  - frames: 32, 35, 8-, 71, 72, 54, 62, S72, 8/, 6/7
-    note: Big family with kids running everywhere and on the lines. Hard to focus while watching to not kill people running in my legs.
-  - frames: X, X, 33, 8/, 9-, 5-, 9/, X, 6/, 7/-
-    note: Big family with kids running everywhere and on the lines. Hard to focus while watching to not kill people running in my legs.
-  - frames: 61, 61, 9/, S81, 3-, -3, 53, 35, 71, 52
-    note: Big family with kids running everywhere and on the lines. Hard to focus while watching to not kill people running in my legs.
-  - frames: 18, 61, 8-, 3/, 9/, 8-, 61, -3, 6-, 9-
-    note: Big family with kids running everywhere and on the lines. Hard to focus while watching to not kill people running in my legs.
-  - frames: 9-, 54, S81, 8/, S81, 54, X, 8/, 9-, 8/9
+  - frames: 9/, X, S81, 62, 63, 9-, X, X, X, XXX
+  - frames: 9-, X, X, 9/, X, X, 9-, 7/, 9-, 8/6
 
 ---
-date: 2023-05-07
-ball: 14
-games:
-  - frames: S72, -/, 54, 7-, 7-, --, -3, 9-, 9-, 7-
-  - frames: 63, 9-, 45, 15, 8-, -9, 72, 16, 6-, 9-
-  - frames: 9-, 17, 54, 1/, X, 71, 7-, 7-, 9-, 7/3
-  - frames: 54, X, 8-, X, 6-, 3-, X, 9-, -1, 7-
-  - frames: 36, 8/, 5/, 72, -/, 72, --, S7-, 8/, 6/7
-  - frames: 54, 71, X, X, 7/, 71, -7, 9-, X, 7/3
-
----
-date: 2023-05-10
-ball: 14
-note: Really casual games, on kids' day, with the son. Not really focused.
-games:
-  - frames: 6-, -4, 61, --, 3-, 45, S81, 12, -8, XX9
-  - frames: 9/, 8-, 8-, -7, 8-, 8/, 8-, 54, S81, 9-
-  - frames: -6, S8/, 5-, 63, 8-, 63, 72, X, 62, 4-
-  - frames: 9/, 63, 6-, X, 8-, X, 36, 9-, 7/, 71
-  - frames: 71, 7-, 9/, 8-, 36, 7/, X, 3-, 26, 18
-
----
-date: 2023-05-17
-ball: 14
+date: 2023-10-08
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: -5, 7-, 6-, S81, 35, 61, 72, 53, 9/, 9-
-  - frames: X, 31, X, 9-, X, 7/, 5/, 3/, S81, S8-
-    note: First usage of a "grip glove" I bought
-  - frames: S8-, 8-, 9/, S6/, 18, X, 9-, 9-, -5, S8-
-    note: First usage of a "grip glove" I bought
-  - frames: 72, 7-, X, S81, 9-, 4/, 9-, X, 9-, 7/8
-    note: First usage of a "grip glove" I bought
-  - frames: X, 72, 9-, 9-, 9/, 72, X, 9-, 9-, 9-
-    note: First usage of a "grip glove" I bought
-  - frames: X, 53, 9/, -4, X, 8-, --, X, 9-, 53
-    note: First usage of a "grip glove" I bought
+  - frames: S71, X, X, X, X, S81, 61, X, 9/, XX8
+  - frames: 7/, 8-, 8/, 9/, X, 8/, 8/, X, X, S7-
 
 ---
-date: 2023-05-21
-ball: 14
-games:
-  - frames: 44, 6-, 1-, S81, -9, X, 8-, 9/, -8, S62
-  - frames: 72, X, -9, 7/, 43, 8-, 8/, 8/, 6-, 45
-  - frames: 72, 6-, 1/, S71, 9-, 32, 7/, 3-, 7/, 9/X
-  - frames: 9-, 63, 61, 71, 9-, 9/, X, 9/, 9-, S8-
-  - frames: 7/, 9/, 7-, 7/, X, X, 35, 9/, X, X9/
-
----
-date: 2023-05-24
-ball: 14
+date: 2023-10-22
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: 3/, 9-, 51, 9/, 7-, 8-, -5, 8-, X, X7-
-  - frames: 6/, 3-, 8-, 3/, 9-, X, 81, 36, --, 9-
-  - frames: S8-, 33, 9/, 7-, 7/, 52, -7, X, 9-, 8/6
-  - frames: 8-, X, 6-, -3, 9-, 72, X, 62, 72, 44
-  - frames: 6/, X, -3, S71, X, 6-, 7/, 9/, 9-, 71
-  - frames: 72, S72, X, X, X, S7-, 8-, 63, 9-, 9-
-  - frames: 8/, X, 81, 7-, 35, 9-, 9/, 9-, 9-, 8-
+  - frames: S8-, 9-, X, S63, X, 81, 8-, 7/, X, 9-
+  - frames: 7-, X, 9/, X, 9-, X, 7-, 9/, 9/, X7/
 
 ---
-date: 2023-05-28
-ball: 14
-games:
-  - frames: 8-, S7-, X, 9-, X, 7/, 3/, 9-, 9/, 42
-  - frames: 5-, 7-, 16, 9-, X, 41, 72, 44, 6/, 8/X
-
----
-date: 2023-06-14
-ball: 14
+date: 2023-10-29
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: 8-, X, 7-, 7-, 7/, 8/, -6, 6/, S7-, -1
-  - frames: 6/, 6-, -/, X, 7-, 8-, X, --, 52, 9/9
-  - frames: 6-, X, 7-, 4-, 8-, 72, -8, 8/, X, 62
-  - frames: 9/, -/, 5/, 9-, -9, 72, 9-, 5-, 61, 8-
-  - frames: 3/, 9-, 9/, 9-, X, 8/, X, 9-, 72, 8-
-  - frames: X, 5/, 6-, 6/, X, X, S81, 72, -9, S81
-  - frames: 54, -9, 7/, 61, 81, 8-, 4/, S8/, 7/, 61
+  - frames: 1/, X, 9/, 7/, 9/, 9/, 81, X, 9/, 9/9
+  - frames: X, 9/, 9/, X, 8/, 8/, 81, 72, X, XXX
 
 ---
-date: 2023-06-21
-ball: 14
+date: 2023-11-26
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: 35, S81, --, 5-, 7-, 52, 8-, 9/, S81, 9/-
-  - frames: -5, 33, -7, 5-, -3, 7-, 9-, 7/, 6/, 9-
-  - frames: 33, 9-, 6-, -6, 9/, 62, 7-, -7, X, 9-
-  - frames: 6/, X, X, X, X, 81, 1-, 7-, 9-, --
-  - frames: X, -6, -7, 44, 9-, X, 7-, S6-, 8/, 52
-  - frames: 9/, X, 9-, 1-, 4/, 9/, 9/, 81, 8-, 8-
-  - frames: 1/, 81, 9-, -3, X, 9-, X, S8-, -6, 8/8
+  - frames: X, 8/, S81, S8-, 8-, 81, 9-, 72, X, 6-
+  - frames: 7-, 8-, X, X, 9/, X, X, X, 9/, 9/X
 
 ---
-date: 2023-06-28
-ball: 14
+date: 2023-12-03
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: --, X, 9-, X, X, 36, 81, 7/, 5-, 9/5
-  - frames: X, 9-, 8-, S7-, 72, X, 7/, 9-, S81, 52
-  - frames: 72, 8/, -9, -3, 1/, X, 9-, -8, 9-, 9-
-  - frames: 63, 8-, 72, --, X, 6/, S8/, 72, 7-, 71
-  - frames: 6-, X, 8/, 9-, 5/, 81, S81, 9-, 1-, X9-
-  - frames: X, X, X, 62, 8-, 9/, 63, X, 45, XX6
+  - frames: X, X, X, X, X, X, 9/, 9/, 9/, 9-
+  - frames: X, X, X, X, 9-, X, X, 9-, X, 9-
 
 ---
-date: 2023-07-01
-ball: 14
+date: 2024-01-07
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: 63, X, X, 72, 9/, X, X, 9-, 9-, 9-
-  - frames: 34, X, 1/, 81, 63, X, 6/, X, 8-, -5
-  - frames: 8-, 1/, S62, 7-, 9/, S8-, 8-, -4, X, 18
-  - frames: 9/, 62, 8-, 7/, 81, 9-, 9/, 13, X, S81
-  - frames: 17, 6-, X, 63, 9/, X, 9-, 3/, 9/, 7-
-  - frames: 6/, 7/, X, S7-, 8-, 9-, 9-, 9-, S81, 9-
-  - frames: X, 54, X, X, 43, 9-, 72, 9/, S8-, 9/8
-  - frames: 6-, 8-, 8/, 9/, S81, 9/, S81, -9, 72, 54
+  - frames: X, 8-, 44, 9-, 9-, 9/, 9/, -/, X, 9/X
+  - frames: X, 8/, 81, 8/, 9/, 7/, 9/, 9/, 9/, 9/X
 
 ---
-date: 2023-07-05
-ball: 14
+date: 2024-01-14
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: 8-, 9-, 5/, 7-, 71, 9/, 6-, 7-, 8-, 7/X
-  - frames: 9/, 71, 7-, X, 7/, 9/, X, -5, 72, S81
-  - frames: 9/, 9/, 9-, X, 17, 9-, 4/, 9-, 7-, 9-
-  - frames: 8/, 8/, 81, 1/, S8-, 3/, 9/, 8/, 8-, 7/8
-  - frames: X, 9-, X, 36, 9-, S71, --, 9-, 9/, 41
-  - frames: 8-, 9-, S81, X, 9/, 9-, S62, 9/, 8/, 9/3
-  - frames: S7-, S8/, 35, S71, X, 7-, 61, 8-, X, 1/X
+  - frames: 81, X, 9/, X, 9/, 9-, 9/, S81, 9/, X9-
+  - frames: 9/, X, 9-, X, X, X, X, X, 81, 9-
 
 ---
-date: 2023-07-11
-ball: 14
-oilPattern: Typical House Shot
-note: New main ball. Very hard to tame.
-games:
-  - frames: 6-, 7/, -7, 8/, 8/, 9/, -3, 3/, 8-, -5
-  - frames: X, 9-, 35, -8, 8/, 6/, 8-, 7-, 5-, 7-
-
----
-date: 2023-07-12
-ball: 14
-oilPattern: Typical House Shot
-note: Still learning (hardly) to tame new main ball. Very hard to find my way.
-games:
-  - frames: 4-, -6, 9/, -7, X, X, 71, -9, X, 6/-
-  - frames: 7-, 72, -8, -7, 17, -6, 7/, 7/, X, S8-
-  - frames: -7, X, 71, 16, X, 54, 71, 35, X, 7-
-  - frames: 9-, 51, 9/, 34, 72, X, X, X, -6, -8
-  - frames: 61, 9-, 62, -5, 7-, 9-, 7/, 3-, 9-, 7-
-  - frames: 1-, 7-, 54, -7, 62, 6/, -/, 72, X, 51
-
----
-date: 2023-07-17
-ball: 14
-note: Dry lane, trying new Turbo switchable thumb system.
-games:
-  - frames: -4, 71, S81, 9/, 18, 3-, X, 35, -7, 5-
-  - frames: 8-, 3-, 8-, -1, S8-, 9-, 9-, 5-, -/, S71
-  - frames: S81, 17, 71, 62, 54, 6-, 9/, 5/, 53, 9-
-
----
-date: 2023-07-19
-ball: 14
+date: 2024-03-31
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: -6, S8-, -/, --, 3-, 8-, -/, 81, 63, 9-
-    note: Taming the new Turbo switchable thumb system. Swollen thumb, had a bit of a bad start.
-  - frames: S8-, S81, -/, 9-, S81, X, 9-, 62, X, 72
-  - frames: 8/, 63, S7-, 7-, X, X, 7/, 44, 9-, 8-
-  - frames: 8/, -7, 62, 5-, 8-, 7/, 9-, 9/, 9-, 7/8
-  - frames: 6/, S81, X, 8/, 9-, S81, 9/, 6/, X, 9/6
-  - frames: S8-, 9/, X, 8-, 9-, 35, X, 54, 81, 6/4
+  - frames: 9/, 7/, 8/, X, 9/, 81, S7-, X, X, 81
+  - frames: -7, S7-, 7/, 9/, 9-, 72, X, X, 9/, 8-
+  - frames: 53, 9/, X, 8/, 7/, 9-, X, X, X, X81
 
 ---
-date: 2023-07-26
-ball: 14
+date: 2024-05-19
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: 9-, S8-, X, 8-, 9-, 9-, X, 44, S8/, 9-
-  - frames: 6/, S8-, 8-, 63, 81, 4-, 18, X, S81, 9-
-  - frames: 62, 71, 8-, 36, X, 71, 16, 9/, 7-, 9/7
-  - frames: X, 63, X, 9-, 34, X, X, 9-, 9-, S81
-  - frames: 9/, 9/, X, 8-, 62, 7-, S81, X, -6, 63
-  - frames: 81, 9-, 71, 9-, 9-, 7/, 8/, 9-, 54, X72
+  - frames: X, X, X, S7-, X, X, 7/, X, 63, X9/
+  - frames: 8-, 43, X, X, 9-, 71, X, S72, X, XX7
 
 ---
-date: 2023-08-02
-ball: 14
+date: 2024-07-07
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: -8, X, 43, S8-, 8-, 72, 7/, 9-, 9-, X8-
-  - frames: 7-, -8, 7/, -7, 8-, -9, 44, 9-, 8-, 8-
-  - frames: 8-, 9/, 18, 9-, 9/, 9-, 9/, X, 9-, 9/9
-  - frames: 9-, 8/, 9/, 45, 8-, 62, 81, -9, 18, 7-
-  - frames: X, 63, X, 72, 71, 8-, 7/, 7/, 63, 9-
-  - frames: X, 9-, 9/, 9/, X, 71, X, 9/, S8/, 72
-  - frames: 9-, X, --, 6/, 9/, 7/, 63, S8-, S7-, 6/3
+  - frames: 8/, S62, X, X, X, S63, 71, 8-, X, XX7
+  - frames: 9/, X, X, 81, X, 8/, 6/, 9/, 9/, 9/7
 
 ---
-date: 2023-08-09
-ball: 14
+date: 2024-08-04
+ball: Unknown
 oilPattern: Typical House Shot
 games:
-  - frames: 8-, 1/, X, X, --, 8-, X, -8, 8-, XX3
-  - frames: X, S8-, -9, 36, -8, X, 7/, 16, 9-, X45
-  - frames: 3-, 72, 16, 7/, 8/, S71, 9-, 9/, 45, 44
-  - frames: 8-, X, 72, 9-, S81, 5/, S7-, X, 72, 35
-  - frames: 54, 6-, 9-, 63, S7-, 8/, -3, -/, 9/, 8/4
-  - frames: 36, S81, 36, 36, 6/, 7/, X, 9-, -4, 7-
+  - frames: 9/, S7-, 8/, X, 9/, 8/, X, 9/, 6-, 9/X
+  - frames: 9-, X, 9-, 9/, X, S7-, X, 9/, 63, 9-
 
 ---
-date: 2023-08-16
-ball: 14
-oilPattern: Ratio 5 / 43ft
+date: 2024-12-01
+ball: Unknown
+oilPattern: Typical House Shot
 games:
-  - frames: -7, 7-, 3-, 7/, 35, X, 9/, 7/, 9-, -6
-    oilPattern: Typical House Shot
-  - frames: 8-, 7/, 16, 8-, X, 52, 6-, 9-, 63, 6/8
-    oilPattern: Typical House Shot
-  - frames: X, S6-, 71, 8-, 9-, 1/, 7-, -8, 9-, 8/6
-    note: New oil pattern, trying to find my marks.
-  - frames: 6/, 42, X, 63, 9-, 9/, -7, -7, 7-, 7-
-  - frames: 81, 71, S62, 9-, 18, 62, 7-, 7-, X, 72
+  - frames: 9/, 81, 62, 9-, 9/, 9/, 9-, X, X, XX7
+  - frames: 9/, S71, -8, X, X, X, X, X, 7/, S72
 
 ---
-date: 2023-08-22
-ball: 14
-oilPattern: Ratio 5 / 43ft
+date: 2024-12-08
+ball: Unknown
+oilPattern: Typical House Shot
 games:
-  - frames: 3/, 45, 8/, X, 9-, 71, 9/, 7/, 6-, 54
-  - frames: 6/, -6, S71, 71, X, 13, X, 36, 8-, 9-
-  - frames: 6/, X, 71, 9/, 9-, S81, 62, 36, 72, 9-
-  - frames: 5-, 9-, 62, 9-, 7/, 4-, 8/, 9-, -/, 6/3
-
----
-date: 2023-08-29
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 35, 17, X, 7/, 4/, 3/, 62, 8-, 54, 7/7
-  - frames: 44, 63, 7-, 6/, X, 7-, 63, X, S8-, 8-
-  - frames: 9-, 72, 61, 45, 81, 7/, 17, 9/, X, 8-
-  - frames: 61, S7-, 44, X, 63, 3-, -9, X, X, 6/8
-  - frames: 8/, -3, 7/, X, 7/, 54, 7/, X, 81, 7-
-
----
-date: 2023-09-05
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 6/, 7/, 8/, 7-, X, X, X, 7/, X, 7/3
-  - frames: 35, 6-, X, X, 7-, 44, 71, S81, 3/, 9-
-  - frames: X, 9-, 9/, 6-, 7/, 44, 8/, X, 7/, 9-
-  - frames: X, 81, S81, 8/, 8/, X, 16, X, 7/, 9-
-
----
-date: 2023-09-06
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 81, S62, 8-, -7, 53, 9/, S8-, X, S8-, 9-
-  - frames: 5/, 9/, X, S7-, 7/, 44, 9-, 62, X, 7/5
-  - frames: 7-, 9-, X, 9-, 53, -7, 6/, 6/, X, -6
-leagues:
-  - name: ILB Trio League 2023-2024
-    team: The Barlos
-    vs: Plastidor
-    day: 1
-    avg: 160
-    handicap: 40
-    games: 1, 2, 3
-    oilPatterns:
-      - Ratio 5 / 43ft
-      - Ratio 5 / 43ft
-    note: Avg is fixed to 160 as it's my first league participation.
-
----
-date: 2023-09-12
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 8/, X, 72, X, 8/, 62, 8/, 61, 8/, 8-
-  - frames: S71, 16, X, 52, 7-, -/, 81, 9-, 35, S8-
-  - frames: 71, 3-, X, 44, 8-, 9/, 7-, S81, 33, 71
-  - frames: 36, 7-, 8/, 8/, X, S81, X, X, 4-, 62
-  - frames: 35, 9-, 9-, 8/, 9/, 8-, 8-, 81, 71, 4/9
-  - frames: 53, 8/, 9-, -7, 63, 9/, 71, X, 9-, 7-
-  - frames: 71, 9/, 6/, 8/, X, 71, 8-, 81, S8-, 36
-
----
-date: 2023-09-13
-games: []
-leagues:
-  - name: ILB Trio League 2023-2024
-    team: The Barlos
-    vs: Atelier du charpentier
-    day: 2
-    bye: true
-    note: Player rotation, didn't play that match.
-
----
-date: 2023-09-19
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 7-, 9/, 9/, 9/, X, -6, 34, 36, 72, X7/
-  - frames: 72, 71, -/, 8-, 72, X, 1/, 9/, 8-, 9-
-  - frames: 7/, X, X, 8/, S7-, 6/, 63, 9/, 7/, X9/
-  - frames: 63, 81, 9/, S81, 63, X, 81, 9-, 8-, 72
-  - frames: 62, 63, S8-, X, 9-, 9-, 9/, 6-, 9-, 81
-  - frames: 53, 9-, 9/, 71, 7-, 9/, 7/, 44, 62, X8/
-  - frames: 36, 8/, 16, X, X, 6/, 5-, 7-, 72, 72
-
----
-date: 2023-09-20
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 81, S63, 6-, 62, 7/, 7/, 7/, 7/, X, 7-
-  - frames: S7-, X, 61, 9-, 8-, 7/, 62, X, 35, 9/1
-  - frames: -/, X, 9/, 81, S8-, 5-, 63, S72, 63, 9/7
-leagues:
-  - name: ILB Trio League 2023-2024
-    team: The Barlos
-    vs: Lambdas
-    day: 3
-    avg: 150.4
-    handicap: 59
-    games: 1, 2, 3
-    oilPatterns:
-      - Ratio 5 / 43ft
-      - Ratio 5 / 43ft
-
----
-date: 2023-09-27
-games: []
-leagues:
-  - name: ILB Trio League 2023-2024
-    team: The Barlos
-    vs: Le Beau Vivier
-    day: 3
-    bye: true
-    note: Player rotation, didn't play that match.
-
----
-date: 2023-10-04
-games: []
-leagues:
-  - name: ILB Trio League 2023-2024
-    team: The Barlos
-    vs: Terrassements Charlier
-    day: 4
-    bye: true
-    note: Health issue, on recovery.
-
----
-date: 2023-10-10
-ball: 14
-oilPattern: Ratio 5 / 43ft
-note: First games after health issues & recovery
-games:
-  - frames: 44, 3-, S81, 81, 9/, 6-, X, X, X, X36
-  - frames: 5/, X, S8-, 5/, 8-, 8/, S81, 62, X, 71
-  - frames: X, 9-, 7/, S6-, 72, 6-, 7/, 7/, X, S52
-  - frames: 7/, 6/, 7-, 9-, X, 32, 7-, X, 8/, 7-
-  - frames: 9/, 9/, 7/, S8/, 17, 8/, 9-, 72, 7/, 7/-
-
----
-date: 2023-10-11
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: S72, 7-, X, X, 53, 9-, X, 8-, 6/, 9-
-  - frames: X, 7-, -5, X, X, 9-, 8-, S8-, 6/, 8-
-  - frames: 8-, 8/, 15, X, 9/, 62, X, X, -8, 8-
-leagues:
-  - name: ILB Trio League 2023-2024
-    team: The Barlos
-    vs: C. Sauvage infirmière
-    day: 5
-    avg: 144.7
-    handicap: 65
-    games: 1, 2, 3
-    oilPatterns:
-      - Ratio 5 / 43ft
-      - Ratio 5 / 43ft
-
----
-date: 2023-10-18
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 72, 71, X, 9-, 7-, 62, X, 53, X, 9-
-  - frames: X, 53, X, S8-, -8, 7-, 8/, 8/, X, -/7
-  - frames: S72, 9-, 9/, 8/, 81, 71, 9-, 8-, X, 6/9
-  - frames: 9-, S72, 7-, X, 18, 9/, 71, 6-, 9/, 6-
-
----
-date: 2023-11-07
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 8/, 81, X, 72, 71, 8/, -8, 9-, X, S72
-  - frames: X, 9-, 9-, 81, X, 8-, 53, 81, 7-, 8-
-  - frames: 9-, 8-, 7/, 63, 6/, 8-, 9/, 54, 8/, 8/9
-  - frames: 8-, X, 9/, 9-, 9-, X, 17, --, 7/, 9-
-
----
-date: 2023-11-28
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: -/, 9/, X, 7-, X, X, 12, -7, 9/, S81
-  - frames: X, 8-, 63, 7-, 9/, 7/, 6/, 9-, 16, X6-
-  - frames: 6/, X, X, 9/, 5-, 61, 7/, 8-, 5-, 81
-  - frames: 8-, X, 62, 8-, 9-, X, 8/, 8/, 7/, 9-
-  - frames: 9/, X, 62, X, 9/, 72, 7-, S81, 9-, 34
-  - frames: 71, 6/, S71, 72, 72, S7-, 9/, 9/, 9-, S8-
-
----
-date: 2023-11-29
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 42, 33, 9-, 34, X, -5, 3/, 6-, X, S8-
-  - frames: 9-, 9-, 72, 81, 9/, X, 6/, 9/, 6-, 81
-  - frames: 9-, 81, S81, X, 8-, S72, 9/, 4-, 9/, X7/
-leagues:
-  - name: ILB Trio League 2023-2024
-    team: The Barlos
-    vs: Atelier du Charpentier
-    day: 11
-    avg: 141.9
-    handicap: 68
-    games: 1, 2, 3
-    oilPatterns:
-      - Ratio 5 / 43ft
-      - Ratio 5 / 43ft
-
----
-date: 2023-12-12
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: S81, 63, 8-, X, 9-, X, 8-, 9-, 8-, X72
-  - frames: 7-, 4-, 7/, X, 9-, S72, 6/, -8, 9-, -9
-  - frames: 8-, 71, 4-, 8/, -6, 9/, 8/, 9-, 7-, -5
-
----
-date: 2023-12-13
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: X, X, 9-, X, 62, 7-, 7/, 9-, 9-, 6/7
-  - frames: 63, 71, X, X, 72, 3/, 62, X, S7-, 5/7
-  - frames: 14, 16, X, 8-, 9-, 71, 71, 62, -/, X17
-leagues:
-  - name: ILB Trio League 2023-2024
-    team: The Barlos
-    vs: Le Beau Vivier
-    day: 13
-    avg: 136.8
-    handicap: 73
-    games: 1, 2, 3
-    oilPatterns:
-      - Ratio 5 / 43ft
-      - Ratio 5 / 43ft
-
----
-date: 2023-12-19
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: X, 7/, 71, 33, 9/, S7-, 8/, 9-, 72, 9/5
-  - frames: 44, 9-, 7/, 62, 7/, 72, 9/, 7/, 6-, 9-
-  - frames: 7-, X, 9/, 9-, 1/, 6/, 8-, X, 8/, 9/9
-  - frames: 62, 7/, 9/, S7-, S7-, 7-, 9/, S8-, 81, X8-
-
----
-date: 2023-12-29
-ball: 14
-note: Really casual games, with the kid, on completely dry lane
-games:
-  - frames: --, 16, 63, X, S81, 41, 21, -6, 54, 36
-  - frames: S6-, -9, 9/, X, 6-, S8-, 63, 9-, 9-, 62
-  - frames: 9/, 7-, 8-, 9/, 8-, X, -7, S8-, 51, 8/8
-
----
-date: 2024-01-10
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 8-, 54, X, 6-, 7/, 9-, 71, X, 7/, 81
-  - frames: 8-, 8/, X, S6-, 35, 63, 3/, 6-, 44, 9/1
-  - frames: X, 6/, 6-, X, 9/, 8/, S8-, S8F, S72, 9/8
-leagues:
-  - name: ILB Trio League 2023-2024
-    team: The Barlos
-    vs: C. Sauvage infirmière
-    day: 15
-    avg: 136.8
-    handicap: 73
-    games: 1, 2, 3
-    oilPatterns:
-      - Ratio 5 / 43ft
-      - Ratio 5 / 43ft
-
----
-date: 2024-01-25
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 45, X, 9-, 7-, 9-, 63, 9-, 9/, S81, 9/6
-  - frames: S8-, 9-, X, X, X, 6/, 9-, 9-, 9-, 9-
-  - frames: 6-, S81, 1/, 9/, 7/, 6/, S81, 72, 8/, 8/9
-leagues:
-  - name: ILB Trio League 2023-2024
-    team: The Barlos
-    vs: Lessimat
-    day: 17
-    avg: 135.4
-    handicap: 74
-    games: 1, 2, 3
-    oilPatterns:
-      - Ratio 5 / 43ft
-      - Ratio 5 / 43ft
-
----
-date: 2024-01-30
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: X, S7/, 81, 6-, 9-, 72, 5/, X, S72, 7/7
-  - frames: X, 6/, 81, X, 7/, X, 9/, 54, S63, 54
-  - frames: 5/, 9-, 8/, X, 7/, S81, 81, 7-, X, S81
-  - frames: X, 8-, 8-, 3/, S6-, 9/, 9-, 9/, 81, 7/9
-
----
-date: 2024-02-06
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 6/, S81, 7/, 81, 9/, 61, X, 18, X, S8-
-  - frames: 9-, 7/, 7/, 9-, -9, -3, 9-, 9/, X, S8/X
-  - frames: 9/, S63, 9-, 43, 7/, X, 9/, 1/, X, 8/8
-  - frames: 9/, 3/, X, 8-, X, 62, X, 9-, 8-, S7-
-  - frames: X, 7-, 72, 8-, X, 8/, S8-, 7-, 8-, 8-
-
----
-date: 2024-03-19
-ball: 14
-oilPattern: Ratio 5 / 43ft
-note: Back to training after a few weeks, after a crooked ankle.
-games:
-  - frames: 15, 8-, X, 17, 8-, 62, X, 7/, -9, 72
-  - frames: 7-, 6/, 8-, 9-, 6-, 72, -8, 9/, X, 9-
-  - frames: 9-, 45, X, X, S81, 8/, 9/, 7/, 9/, 9-
-  - frames: X, 6-, 8-, S81, X, X, 6/, 72, S7/, 9/9
-  - frames: 9/, 8/, X, 9-, 7/, X, S71, X, 9-, 9-
-
----
-date: 2024-03-26
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 8/, -6, 7-, X, 72, 7-, X, X, 6/, 9/7
-  - frames: 63, 7/, S8-, X, 6/, S8/, X, 81, X, 7/X
-  - frames: 63, X, 8-, 9-, 62, X, S8-, 9/, 8-, 71
-  - frames: 72, 8/, 7/, 8-, 71, 63, 9-, 9/, 9-, 35
-  - frames: 9-, 81, 9-, -7, 9/, 8/, X, 35, X, 51
-  - frames: S63, 9/, 7-, 9/, S7-, 9/, 6-, 9/, 9-, X8-
-
----
-date: 2024-04-10
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 3/, 8-, S81, X, 43, X, 1-, 81, 8-, X12
-  - frames: 9-, 9-, X, 8/, X, 9-, 6/, 1/, X, 9-
-  - frames: 9-, 71, 9-, X, 7/, 53, X, 8-, 9/, 6/9
-  - frames: 72, 44, 81, 9-, 9/, 9/, X, 8-, 16, X6-
-
----
-date: 2024-04-17
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 62, X, S71, 16, 9/, 14, 63, 8-, 71, 8-
-  - frames: 8-, 9-, 9/, 9-, S8-, 9-, 9-, 9/, X, XX9
-  - frames: 72, 61, S81, X, 35, X, S81, X, -/, XX9
-  - frames: 71, 9/, 3/, 9-, 9-, 5-, 9/, 7-, 8/, X18
-  - frames: 9/, S81, S8/, 63, X, 6-, X, 1/, 5-, 63
-
----
-date: 2024-04-23
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 7-, 81, 8/, 7/, S71, 17, 81, S6-, 72, 3/X
-  - frames: 8-, 9/, X, 9/, X, 9-, 7/, 71, 7-, X9/
-  - frames: 7-, 8-, 44, 6/, 8-, 63, X, 6-, 8-, X53
-  - frames: X, 6-, 9/, 7-, 35, 9-, 7/, X, S8-, 81
-
----
-date: 2024-05-14
-ball: 14
-oilPattern: Ratio 5 / 43ft
-games:
-  - frames: 36, --, 63, 13, 9/, 8-, S81, X, -5, S7-
-  - frames: 4-, 9/, 9/, 8-, 9-, 5/, 6/, 7/, X, 9-
-  - frames: 9-, X, X, 6-, 7/, 71, 8/, 53, S7-, 9/7
-  - frames: 62, 9/, 72, 5-, S72, 9-, 7-, 9/, 34, 8/9
-
----
-date: 2024-05-21
-ball: 14
-oilPattern: Ratio 3 / 42ft
-note: New oil pattern, new urethane ball
-games:
-  - frames: -8, 8/, 8/, X, X, 6/, 8/, 8-, S72, 9-
-  - frames: X, 9-, 8-, 72, X, S8-, 3-, 6/, S8-, 9/7
-  - frames: 9-, 5-, 33, 7-, 9-, 9-, 54, 7-, 1-, -9
-    note: Slight left leg pain
-
----
-date: 2024-06-12
-ball: 14
-oilPattern: Bourbon
-note: New oil pattern, challenging to find my spot
-games:
-  - frames: X, 43, 51, 35, -7, 8/, 61, 7-, X, X3/
-  - frames: 7/, 7-, 72, X, 6-, 9/, 8-, --, 7/, 9-
-  - frames: 72, 45, 7/, 61, -7, 36, 8-, 6-, 42, 71
-  - frames: 7-, 61, 43, 53, 8-, 7-, X, X, 8-, 9-
-  - frames: 5-, 8/, 9-, 9-, X, 7-, 9-, 9-, 9-, 9/X
-
----
-date: 2024-06-26
-ball: 14
-oilPattern: Stone Street
-note: New oil pattern, next year league pattern
-games:
-  - frames: S8-, X, 8/, 9/, 8-, 7/, -6, 8-, 8-, 8/X
-  - frames: 9-, X, 7/, S8-, 9/, 9-, 6/, 8-, 7/, 72
-  - frames: 9/, 9-, 9/, 9/, 8-, 4/, 9/, 6-, 9-, 9/7
-  - frames: 9/, 9/, 8-, 9-, 9/, X, 7/, X, X, 9-
-  - frames: 81, 8/, 3/, -9, 72, 81, 9-, X, 9-, 9-
-  - frames: X, 9/, 9/, 9-, 8/, 71, S8-, 72, 7-, X8-
-
----
-date: 2024-07-09
-ball: 14
-oilPattern: Stone Street
-note: Still need to tame this pattern
-games:
-  - frames: 16, 6-, 8-, 45, 9/, 9-, X, 9/, X, XXX
-  - frames: X, 6/, 81, 6-, 8/, 6/, 7/, 62, 71, X9-
-  - frames: 5-, 72, 7-, 7/, 6-, 51, 8-, X, 7/, 33
-  - frames: 71, 44, 72, S7-, 81, X, 12, 63, X, 51
-
----
-date: 2024-08-13
-ball: 14
-oilPattern: Stone Street
-note: Back to training after a lot of pro work
-games:
-  - frames: 15, 63, 9-, 9/, 9-, 7-, 7-, 35, 7-, 7/X
-  - frames: 63, 36, 7/, 8-, 3/, X, 9-, 52, S72, 7/4
-  - frames: 9-, 81, -/, 7-, 7/, 8-, 9-, 17, 8/, 8-
-  - frames: 9/, X, S71, X, 9-, X, 8-, 8/, X, S81
-  - frames: X, 9/, X, 9/, S81, X, 8/, 8-, 9-, 9/9
-  - frames: 9/, 9-, X, S72, 45, 9-, S8-, 9/, X, S7-
-
----
-date: 2024-09-12
-ball: 14
-oilPattern: Stone Street
-note: Fist match of the new league season
-games:
-  - frames: 63, S61, X, 8/, 9-, X, X, 9-, 9/, 9/7
-  - frames: X, 9/, X, 7/, X, X, 9-, 81, S71, 8-
-  - frames: S72, S81, 9/, 8-, X, 17, 9/, 12, S8-, 8-
-leagues:
-  - name: ILB Trio League 2024-2025
-    team: 2B1P
-    vs: Terrassements Charlier
-    day: 2
-    avg: 123
-    handicap: 87
-    games: 1, 2, 3
-    oilPatterns:
-      - Stone Street
-      - Stone Street
-
----
-date: 2024-09-24
-ball: 14
-games:
-  - frames: S5-, X, 7/, -8, X, X, 9/, 7/, 8-, 8-
-    oilPattern: Stone Street    
-  - frames: -9, -8, 71, -5, 36, -7, 63, 3/, 9-, 81
-    oilPattern: 42"
-    note: I'm really bad at adapting to never-saw oiling patterns
-  - frames: S72, 72, 7-, 9-, -5, S7-, 9/, 36, 9-, S71
-    oilPattern: Bourbon
-    note: Yep, really bad at adapting to oiling patterns
+  - frames: X, X, X, 61, X, S81, S8-, X, 8/, 71
+  - frames: 81, 9-, 9/, 7/, X, X, X, X, X, XX6

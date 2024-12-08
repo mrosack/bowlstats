@@ -38,7 +38,7 @@ const Header: FC<HeaderProps> = ({
                         {params.subtitle}
                     </h2>
                 </div>
-                <div
+                {/* <div
                     className={classnames(
                         "is-flex-1",
                         "is-flex",
@@ -78,7 +78,7 @@ const Header: FC<HeaderProps> = ({
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className={classnames("is-flex-1")} />
             </div>
         </header>
