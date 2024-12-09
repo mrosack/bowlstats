@@ -49,7 +49,7 @@
       "distDir": "./docs",
       "context": "browser",
       "isLibrary": false,
-      "publicUrl": "/bowlstats"
+      "publicUrl": "/"
     }
   },
   "devDependencies": {
