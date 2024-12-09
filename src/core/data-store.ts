@@ -37,6 +37,7 @@ export type DataStore = {
     games: Array<Game>;
     leagues: Array<League>;
     filters: {
+        user: string;
         year: Nullable<number>;
         month: Nullable<number>;
         day: Nullable<number>;
@@ -52,6 +53,7 @@ export type DataStore = {
 };
 
 export const getDataStore = (
+    user: string = "Mike",
     year: Nullable<number> = null,
     month: Nullable<number> = null,
     day: Nullable<number> = null,
@@ -64,7 +66,8 @@ export const getDataStore = (
         )
         .filter((game: Game): boolean =>
             withDryLaneGames ? true : !!game.oilPattern,
-        );
+        )
+        .filter(game => game.user === user);
 
     const games = filteredGames.filter((game: Game): boolean =>
         year === null

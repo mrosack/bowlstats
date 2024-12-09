@@ -40,6 +40,7 @@ export type GameStats = {
 
 export type Game = {
     id: string;
+    user: string;
     date: GameDate;
     frames: Array<GameFrame>;
     ball: string;

@@ -26,6 +26,7 @@ const currentMonth: number = new Date().getMonth();
 const NBSP: string = "\u00a0";
 
 export type FiltersProps = {
+    user: string;
     year: Nullable<number>;
     month: Nullable<number>;
     day: Nullable<number>;
@@ -35,11 +36,13 @@ export type FiltersProps = {
     onYearChange: (year: Nullable<number>) => void;
     onMonthChange: (month: Nullable<number>) => void;
     onDayChange: (day: Nullable<number>) => void;
+    onUserChange: (user: string) => void;
     toggleHouseBallGames: (state: boolean) => void;
     toggleDryLaneGames: (state: boolean) => void;
 };
 
 const Filters: FC<FiltersProps> = ({
+    user,
     year,
     month,
     day,
@@ -48,6 +51,7 @@ const Filters: FC<FiltersProps> = ({
     onYearChange,
     onMonthChange,
     onDayChange,
+    onUserChange,
     toggleHouseBallGames,
     toggleDryLaneGames,
 }): ReactElement => {
@@ -73,95 +77,123 @@ const Filters: FC<FiltersProps> = ({
         return ["All", ...filters.lists.days];
     }, [year, filters]);
 
+    const users = ["Mike", "Sara", "Calvin"];
+
     return (
-        <div className={classnames("columns")}>
-            <div className={classnames("column")}>
-                <div className={classnames("tabs", "is-large")}>
-                    <ul>
-                        {years.map((yr: number | string) => (
-                            <li
-                                key={yr}
-                                className={classnames(
-                                    ((year === null && yr === "All") ||
-                                        year === yr) &&
-                                        "is-active",
-                                )}>
-                                <a
-                                    href={"#"}
-                                    onClick={preventDefault(() => {
-                                        onYearChange(
-                                            yr === "All"
-                                                ? null
-                                                : (yr as number),
-                                        );
-                                        onMonthChange(null);
-                                        onDayChange(null);
-                                    })}>
-                                    {yr}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                {year !== null && (
-                    <div className={classnames("tabs")}>
+        <>
+            <div className={classnames("columns")}>
+                <div className={classnames("column")}>
+                    <div className={classnames("tabs", "is-large")}>
                         <ul>
-                            {months.map(i => (
+                            {users.map((u: string) => (
                                 <li
-                                    key={i}
+                                    key={u}
                                     className={classnames(
-                                        ((i === "All" && month === null) ||
-                                            (i as number) + 1 === month) &&
+                                        user === u && "is-active",
+                                    )}>
+                                    <a
+                                        href={"#"}
+                                        onClick={preventDefault(() => {
+                                            onUserChange(u);
+                                        })}>
+                                        {u}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div className={classnames("columns")}>
+                <div className={classnames("column")}>
+                    <div className={classnames("tabs", "is-large")}>
+                        <ul>
+                            {years.map((yr: number | string) => (
+                                <li
+                                    key={yr}
+                                    className={classnames(
+                                        ((year === null && yr === "All") ||
+                                            year === yr) &&
                                             "is-active",
                                     )}>
                                     <a
-                                        className={classnames("px-3")}
                                         href={"#"}
                                         onClick={preventDefault(() => {
-                                            onMonthChange(
-                                                i === "All" ? null : i + 1,
+                                            onYearChange(
+                                                yr === "All"
+                                                    ? null
+                                                    : (yr as number),
                                             );
+                                            onMonthChange(null);
                                             onDayChange(null);
                                         })}>
-                                        {i === "All"
-                                            ? "All"
-                                            : dayjs()
-                                                  .set("month", i)
-                                                  .format("MMM")}
+                                        {yr}
                                     </a>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                )}
-                {year !== null && month !== null && (
-                    <div className={classnames("tabs", "is-small")}>
-                        <ul>
-                            {days.map(i => (
-                                <li
-                                    key={i}
-                                    className={classnames(
-                                        ((i === "All" && day === null) ||
-                                            i === day) &&
-                                            "is-active",
-                                    )}>
-                                    <a
-                                        className={classnames("px-1")}
-                                        href={"#"}
-                                        onClick={preventDefault(() => {
-                                            onDayChange(i === "All" ? null : i);
-                                        })}>
-                                        {i === "All"
-                                            ? "All"
-                                            : `${i}`.padStart(2, "0")}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
-            </div>
-            {/* <form>
+                    {year !== null && (
+                        <div className={classnames("tabs")}>
+                            <ul>
+                                {months.map(i => (
+                                    <li
+                                        key={i}
+                                        className={classnames(
+                                            ((i === "All" && month === null) ||
+                                                (i as number) + 1 === month) &&
+                                                "is-active",
+                                        )}>
+                                        <a
+                                            className={classnames("px-3")}
+                                            href={"#"}
+                                            onClick={preventDefault(() => {
+                                                onMonthChange(
+                                                    i === "All" ? null : i + 1,
+                                                );
+                                                onDayChange(null);
+                                            })}>
+                                            {i === "All"
+                                                ? "All"
+                                                : dayjs()
+                                                      .set("month", i)
+                                                      .format("MMM")}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                    {year !== null && month !== null && (
+                        <div className={classnames("tabs", "is-small")}>
+                            <ul>
+                                {days.map(i => (
+                                    <li
+                                        key={i}
+                                        className={classnames(
+                                            ((i === "All" && day === null) ||
+                                                i === day) &&
+                                                "is-active",
+                                        )}>
+                                        <a
+                                            className={classnames("px-1")}
+                                            href={"#"}
+                                            onClick={preventDefault(() => {
+                                                onDayChange(
+                                                    i === "All" ? null : i,
+                                                );
+                                            })}>
+                                            {i === "All"
+                                                ? "All"
+                                                : `${i}`.padStart(2, "0")}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </div>
+                {/* <form>
                 <div className={classnames("pt-4")}>
                     <div
                         className={classnames(
@@ -221,7 +253,8 @@ const Filters: FC<FiltersProps> = ({
                     </div>
                 </div>
             </form> */}
-        </div>
+            </div>
+        </>
     );
 };
 

@@ -15,6 +15,7 @@ import Graphs from "components/graphs";
 import {getDataStore, DataStoreContextProvider} from "core/data-store";
 
 const GamesContainer: FC = (): ReactElement => {
+    const [user, setUser] = useState('Mike');
     const [year, setYear] = useState<Nullable<number>>(null);
     const [month, setMonth] = useState<Nullable<number>>(null);
     const [day, setDay] = useState<Nullable<number>>(null);
@@ -25,6 +26,7 @@ const GamesContainer: FC = (): ReactElement => {
     return (
         <DataStoreContextProvider
             value={getDataStore(
+                user,
                 year,
                 month,
                 day,
@@ -39,6 +41,7 @@ const GamesContainer: FC = (): ReactElement => {
                 </section>
                 <section className={classnames("section", "pt-1")}>
                     <Filters
+                        user={user}
                         year={year}
                         month={month}
                         day={day}
@@ -53,6 +56,7 @@ const GamesContainer: FC = (): ReactElement => {
                         onDayChange={(d: Nullable<number>): void => {
                             setDay(d);
                         }}
+                        onUserChange={(u => setUser(u))}
                         toggleHouseBallGames={(b: boolean): void => {
                             setWithHouseBallGames(b);
                         }}
