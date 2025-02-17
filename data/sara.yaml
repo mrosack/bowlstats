@@ -149,3 +149,10 @@ oilPattern: Typical House Shot
 games:
   - frames: 34, X, 7/, 9-, S8-, S8-, 8-, X, X, XX9
   - frames: 9/, 9-, 9-, 9-, 9-, X, S7-, 9/, 7/, X8-
+---
+date: 2025-02-16
+ball: Unknown
+oilPattern: Typical House Shot
+games:
+  - frames: 9/, 9/, 9-, 7/, S81, 3/, 9-, 9-, 9-, 9/9
+  - frames: X, 6-, 8/, S81, 8/, 3/, 8/, 62, S81, 7/8
