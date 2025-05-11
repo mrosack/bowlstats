@@ -1,7 +1,7 @@
 ---
 date: 2023-04-30
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 13, 43, S8-, 61, 43, 9-, 33, 8-, 51, 3-
   - frames: 7-, 35, S81, 6/, 7-, 6/, 81, S61, 35, 7-
@@ -9,7 +9,7 @@ games:
 ---
 date: 2023-05-07
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 8-, S62, 8-, 4-, 8/, 9-, 8-, 52, 8-, S61
   - frames: 44, 35, 17, 63, 36, 32, 51, 6-, 6-, 61
@@ -17,7 +17,7 @@ games:
 ---
 date: 2023-05-14
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 35, 44, 51, 43, 8-, 34, S71, 4-, 62, 52
   - frames: 71, 33, 62, 3-, 7-, 6-, 6-, S7-, 7/, 36
@@ -25,7 +25,7 @@ games:
 ---
 date: 2023-06-11
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: S52, 9-, 3-, 62, 33, 6-, S7-, 8/, 9-, 7/8
   - frames: X, 72, 44, 8-, 62, 62, S8-, 8-, S7-, 9-
@@ -33,7 +33,7 @@ games:
 ---
 date: 2023-08-27
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 6-, 44, 42, 62, S71, S52, 8-, 63, 61, S72
   - frames: S71, 36, 4/, 35, 42, 36, 81, 5-, 71, 8/7
@@ -41,7 +41,7 @@ games:
 ---
 date: 2023-09-24
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 34, 36, 6-, 7/, 54, 54, 8/, 53, 43, X9/
   - frames: 7-, 63, 3/, 36, 7-, 36, 7-, 6-, 8-, 3/7
@@ -49,7 +49,7 @@ games:
 ---
 date: 2023-10-08
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 34, S81, 63, 7-, 72, 41, 6-, 71, 52, 7-
   - frames: 9-, 54, 7-, S7-, 35, 51, 25, 33, 43, 72
@@ -57,7 +57,7 @@ games:
 ---
 date: 2023-10-22
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: S81, 9/, 72, 51, 54, 9-, 8-, 63, 43, 9-
   - frames: 72, 51, 6-, 81, 9/, 5-, 8-, 36, 3-, 62
@@ -65,7 +65,7 @@ games:
 ---
 date: 2023-10-29
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 3-, 62, 53, S8-, S7-, 17, S7-, 51, S7-, 15
   - frames: 3-, 4/, 7-, 53, 35, X, 33, 5-, 7-, 14
@@ -73,7 +73,7 @@ games:
 ---
 date: 2023-11-26
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 61, 5-, 7/, X, 33, 7-, 6-, 3-, 7-, 36
   - frames: S52, 5-, 7-, 81, 8-, 34, 34, S81, 6-, 42
@@ -81,7 +81,7 @@ games:
 ---
 date: 2023-12-03
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 8-, 61, 6-, 62, 36, 6-, 6-, 9-, 71, 3-
   - frames: 62, 7-, 12, 35, 53, 2-, S6-, 3-, 9-, 9/7
@@ -89,7 +89,7 @@ games:
 ---
 date: 2024-01-07
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 52, 3/, 6-, 63, 35, 51, 62, 31, 63, 8-
   - frames: 8-, S62, 6-, 34, 71, 63, S81, 61, 63, 72
@@ -97,7 +97,7 @@ games:
 ---
 date: 2024-01-14
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 4-, 52, 52, S53, 42, 61, 32, S61, 21, 53
   - frames: 51, 8/, 53, 61, 71, 42, 8/, 61, S71, 17
@@ -105,7 +105,7 @@ games:
 ---
 date: 2024-03-31
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 51, 53, S52, S81, 6-, 35, S52, 3-, 4-, 3/X
   - frames: 9-, 53, 42, 9-, 34, X, X, S7/, 7/, 72
@@ -114,7 +114,7 @@ games:
 ---
 date: 2024-07-07
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 42, 52, 62, 53, 7-, 3-, 8/, 33, 8/, 34
   - frames: 36, 53, 51, 3/, 63, 6-, 41, 1/, 7/, 5-
@@ -122,7 +122,7 @@ games:
 ---
 date: 2024-08-04
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 81, 8-, X, X, 71, 5-, 71, 9-, 8-, 34
   - frames: 9-, 33, 6-, 33, 35, 44, 33, 9-, 7/, 72
@@ -130,7 +130,7 @@ games:
 ---
 date: 2024-12-01
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 7-, 8/, 7/, 6-, 8/, 34, X, X, 3-, 34
   - frames: 9-, 12, 9/, 15, 9/, 53, 7-, 35, 44, 3/7
@@ -138,7 +138,7 @@ games:
 ---
 date: 2024-12-08
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 6-, 7-, 9-, S8-, 8-, 4/, 63, S8-, 3-, 44
   - frames: X, 63, 51, 9/, 32, 72, S81, S72, 81, 63
@@ -146,14 +146,35 @@ games:
 ---
 date: 2025-01-05
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 54, 36, S81, 63, X, 45, 9-, 63, 8-, 63
   - frames: 3/, 8-, 9-, 6-, 71, 14, 42, 9/, 81, 7/8
 ---
 date: 2025-02-16
 ball: Unknown
-oilPattern: Typical House Shot
+oilPattern: Bumpers
 games:
   - frames: 61, 8-, 71, 7-, 3-, 3/, 7-, 6-, X, X71
   - frames: 7-, S72, 72, 7-, 8-, 32, 62, 7/, X, -5
+---
+date: 2025-03-16
+ball: Unknown
+oilPattern: Typical House Shot
+games:
+  - frames: -7, --, --, --, --, --, -3, 1-, -7, -7
+  - frames: --, -4, --, --, 3-, --, 35, --, --, 71
+---
+date: 2025-04-27
+ball: Unknown
+oilPattern: Typical House Shot
+games:
+  - frames: --, --, --, 8-, 9-, --, --, --, 3-, --
+  - frames: --, -6, --, 8-, X, -1, -6, --, 63, --
+---
+date: 2025-05-11
+ball: Unknown
+oilPattern: Typical House Shot
+games:
+  - frames: 6-, -7, --, 1-, 9-, --, 4-, 3-, S7-, 6-
+  - frames: --, 8-, 3-, --, 6-, -8, --, -5, 3-, --
